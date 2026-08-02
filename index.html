@@ -18,6 +18,7 @@
   --green:#4F7A52; --green-soft:#EAF2E9;
   --amber:#B0781F; --amber-soft:#FBF0DC;
   --red:#B04A3A; --red-soft:#FBE9E5;
+  --ice:#2F6D8C; --ice-soft:#E4F0F6;
   --shadow:0 1px 2px rgba(40,30,20,.06), 0 6px 18px rgba(40,30,20,.05);
   --tabh:64px;
 }
@@ -28,6 +29,7 @@
     --green:#8FBF92; --green-soft:#1C2A1D;
     --amber:#E0AC55; --amber-soft:#2C2416;
     --red:#E58873; --red-soft:#2E1C18;
+    --ice:#7FBAD6; --ice-soft:#16242B;
     --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
   }
 }
@@ -80,6 +82,7 @@ main{padding:2px 16px 26px;max-width:640px;margin:0 auto}
 .c-fun{background:var(--accent-soft);color:var(--accent)}
 .c-fast{background:var(--green-soft);color:var(--green)}
 .c-plain{background:transparent;color:var(--muted);border-color:var(--line)}
+.c-thaw{background:var(--ice-soft);color:var(--ice)}
 
 /* ---------- week ---------- */
 .day{width:100%;text-align:left;display:block;padding:14px 15px}
@@ -220,180 +223,150 @@ footer{text-align:center;font-size:11.5px;color:var(--muted);padding:20px 0 4px;
    PLAN DATA — this is the only block that changes each Saturday.
    ========================================================================== */
 const PLAN = {
-  weekRange: "Sat Aug 1 – Fri Aug 7",
+  weekRange: "Sun Aug 2 – Thu Aug 6",
   stamp: "Updated Sat 8/1",
-  budgetNote: "Week 2 of tracking. Send me last week's receipt totals when you get a second — one more week of real numbers and I'll set an actual weekly target instead of an estimate. The Costco run is due in 2–3 weeks; that's where the avocado oil, almond flour and frozen salmon drop 30–50%.",
+  spent:178.56,
+  budgetNote: "First tracked week. Send me the receipt total and after 2–3 weeks I'll set a real weekly target instead of an estimate.",
 
   days: [
     {
-      day:"Saturday", date:"Aug 1", emoji:"🍗",
-      title:"Chicken Nuggets + Real-Potato Fries",
-      chips:[["Fun night","c-fun"],["Shop today","c-plain"],["Freeze a triple batch","c-fast"]],
-      need:["3 lb organic chicken breast","2 eggs for the wash","Almond flour + paprika, garlic powder, salt","Russet potatoes","Avocado oil","Primal Kitchen ketchup","Frozen broccoli"],
+      day:"Sunday", date:"Aug 2", emoji:"🍗",
+      title:"Roast Chicken + Potatoes + Green Beans",
+      chips:[["Start here","c-fun"],["❄️ Thaw tonight","c-thaw"],["Feeds Wednesday","c-fast"]],
+      need:["Whole organic chicken (~4.5 lb)","Russet potatoes","Green beans","Avocado oil, salt, pepper, paprika","1 lemon"],
       steps:[
-        "Cut the chicken into thumb-sized chunks. Do all 3 lb — two-thirds of tonight's work is going straight into the freezer.",
-        "Egg wash, then almond flour seasoned with paprika, garlic powder and salt. Press it on so it sticks.",
-        "Fries first: russets cut thick, tossed in avocado oil and salt, 425°F for 30 min, flip once.",
-        "Nuggets air-fried 10–12 min at 400°F, or baked on a rack. <b>Freeze the extras flat on a sheet pan</b>, then bag them once they're solid."
+        "Pat the bird dry — that's the whole crispy-skin secret. Oil, salt, pepper, paprika. Lemon halves in the cavity.",
+        "425°F, ~70 min, until the thigh hits 175°F. Potatoes go in the same pan at the 25-minute mark.",
+        "Green beans steam in 6 minutes at the end with butter and salt.",
+        "Rest 10 min, carve. <b>Then pull every scrap off the bone</b> and put 3 cups of shredded chicken in the fridge — that's Wednesday."
       ],
-      why:"<b>This is the meal that makes the next three weeks easier.</b> You eat a third of it tonight; the rest becomes the freezer nuggets that beat the drive-thru at 5pm on a Tuesday."
+      why:"<b>The one meal this week that takes real effort</b> — and Sunday is the only night with room for it. It pays for itself again on Wednesday."
     },
     {
-      day:"Sunday", date:"Aug 2", emoji:"🥘",
-      title:"Pot Roast + Carrots + Potatoes",
-      chips:[["Anchor meal","c-plain"],["Slow cooker","c-fast"],["Feeds Wednesday","c-fast"]],
-      need:["Chuck roast, ~3 lb","Carrots, onions, celery","Russet or baby potatoes","Beef broth","Avocado oil, salt, pepper, thyme"],
+      day:"Monday", date:"Aug 3", emoji:"🌶️",
+      title:"Slow-Cooker Chili",
+      chips:[["Busy night","c-busy"],["❄️ Beef out tonight","c-thaw"],["5 min at 1pm","c-fast"]],
+      need:["Browned ground beef (from Sunday prep)","2 cans organic beans","2 cans diced tomatoes","1 onion","Chili powder, cumin, garlic","Cheddar + Siete chips for the top"],
       steps:[
-        "Sear the roast hard on every side in avocado oil first. Those 8 minutes decide how the whole thing tastes.",
-        "Slow cooker: roast, onions, carrots, celery, broth halfway up the sides, low for 8 hours.",
-        "Potatoes go in for the last 3 hours only — any longer and they turn to mush.",
-        "Shred it right in the pot. <b>Pull 2 cups aside before you serve</b> — that's Wednesday, already done."
+        "1pm: everything in the slow cooker, low for 5 hours. That's the entire job.",
+        "At dinner: bowls out, let everyone top their own.",
+        "Kid move — cheese and a handful of Siete chips on top so it reads as nachos, not chili."
       ],
-      why:"<b>The one meal this week that takes real effort, on the only day with room for it.</b> Everything from Monday on is assembly, not cooking."
+      why:"<b>Busy night, zero evening cooking.</b> The 4-year-old can eat this deconstructed: beans and cheese and chips on separate parts of the plate."
     },
     {
-      day:"Monday", date:"Aug 3", emoji:"🌮",
-      title:"Slow-Cooker Chicken Tacos",
-      chips:[["Busy night","c-busy"],["5 min at 1pm","c-fast"],["Build your own","c-fast"]],
-      need:["Organic chicken thighs, 2 lb","1 jar clean salsa","Taco seasoning — check for anti-caking agents","Siete tortillas","Cheddar, romaine, tomato, avocado, limes"],
+      day:"Tuesday", date:"Aug 4", emoji:"🍝",
+      title:"Spaghetti + Hidden-Veg Meat Sauce",
+      chips:[["Busy night","c-busy"],["❄️ Beef out tonight","c-thaw"],["20 min","c-fast"]],
+      need:["Organic pasta","Clean marinara (check the label)","Browned beef (from Sunday prep)","1 zucchini + 1 carrot, grated"],
       steps:[
-        "1pm: thighs, a jar of salsa and the seasoning in the slow cooker, low for 4 hours. That is the entire recipe.",
-        "Shred with two forks right in the pot and let it sit in the juice.",
-        "Taco bar on the counter. Everyone builds their own — that's the part that gets the 4-year-old to eat it."
+        "Water on before you take your shoes off.",
+        "Beef + marinara + the grated zucchini and carrot in a pan on medium. It disappears into the sauce in 10 minutes — no one will find it.",
+        "Drain pasta, save a splash of the water to loosen the sauce."
       ],
-      why:"<b>Second slow-cooker night in a row, and zero evening cooking on the busy half of the week.</b> Build-your-own has the best compliance across all three ages."
+      why:"<b>20 minutes start to table.</b> The grated veg is the whole trick — it dissolves, so there is nothing to pick out."
     },
     {
-      day:"Tuesday", date:"Aug 4", emoji:"🐟",
-      title:"Honey-Mustard Salmon + Rice + Green Beans",
-      chips:[["New this week","c-plain"],["25 min","c-fast"]],
-      need:["Wild-caught salmon, ~1.5 lb","Honey and Dijon","Rice (cooked Sunday)","Green beans","Butter, lemon"],
+      day:"Wednesday", date:"Aug 5", emoji:"🍚",
+      title:"Chicken Fried Rice",
+      chips:[["Busy night","c-busy"],["15 min","c-fast"],["Sunday's chicken","c-plain"]],
+      need:["Sunday's shredded chicken","Cold cooked rice (from Sunday prep)","2 eggs","Frozen peas & carrots","Coconut aminos","Avocado oil"],
       steps:[
-        "Whisk 2 parts honey to 1 part Dijon and spoon it over the salmon.",
-        "400°F for 12–14 min. It's done when it flakes — pull it a minute early rather than a minute late.",
-        "Green beans in butter and salt, 6 minutes. Reheat Sunday's rice with a splash of water.",
-        "Plate the 4-year-old's deconstructed — salmon, rice and beans not touching. Same food, different geometry."
+        "Screaming hot pan, avocado oil. Scramble the eggs first, set aside.",
+        "Cold rice in, spread flat, leave it alone for 2 minutes to crisp.",
+        "Chicken + frozen peas and carrots in straight from the freezer, coconut aminos, toss.",
+        "Eggs back in. Done."
       ],
-      why:"<b>The one new meal this week.</b> Honey-mustard is what makes salmon kid-viable, and it rides alongside rice and green beans — two things they already eat without argument."
+      why:"<b>Sunday's roast, wearing a costume.</b> Rice has to be cold from the fridge or it steams instead of frying — that's why it's cooked Sunday."
     },
     {
-      day:"Wednesday", date:"Aug 5", emoji:"🫓",
-      title:"Pot-Roast Quesadillas",
-      chips:[["Busy night","c-busy"],["15 min","c-fast"],["Leftovers, disguised","c-plain"]],
-      need:["Sunday's shredded pot roast","Siete or organic tortillas","Sharp cheddar off the block","Salsa, sour cream, avocado","Frozen broccoli"],
-      steps:[
-        "Dry skillet on medium. Tortilla down, cheese, a handful of beef, more cheese, second tortilla.",
-        "Three minutes a side, pressing with a spatula. Cut into wedges.",
-        "Broccoli steams in the time it takes you to flip the second one."
-      ],
-      why:"<b>Leftovers night wearing a costume.</b> Nobody at that table is going to identify Sunday's roast, and you cooked once for two dinners."
-    },
-    {
-      day:"Thursday", date:"Aug 6", emoji:"🥣",
-      title:"Tomato Soup + Grilled Cheese",
+      day:"Thursday", date:"Aug 6", emoji:"🍳",
+      title:"Breakfast for Dinner",
       chips:[["Busy night","c-busy"],["15 min","c-fast"],["Cheapest night","c-plain"]],
-      need:["Clean tomato soup — read the label for canola and added sugar","Sourdough loaf","Sharp cheddar, sliced off the block","Butter","Apples"],
+      need:["Pasture-raised eggs","Uncured bacon","Almond-flour pancake mix","Real maple syrup","Fruit"],
       steps:[
-        "Soup on low. Butter the outside of the bread, not the pan.",
-        "Slice the cheddar off the block — pre-shredded is coated in cellulose and anti-caking agents.",
-        "Medium-low heat with a lid on for a minute, so the cheese actually melts before the bread burns.",
-        "Cut them into triangles. It matters more than it should."
+        "Bacon in a cold oven, 400°F, 18 min — no babysitting, no splatter.",
+        "Pancakes on the griddle while it runs.",
+        "Scramble the eggs low and slow in butter at the very end.",
+        "Fruit on the table, done."
       ],
-      why:"<b>This is your flex night.</b> If Thursday goes sideways, this is the one to move — 15 minutes, and everything for it keeps."
-    },
-    {
-      day:"Friday", date:"Aug 7", emoji:"🥔",
-      title:"Baked Potato Bar",
-      chips:[["Fun night","c-fun"],["Build your own","c-fast"],["Uses up the week","c-plain"]],
-      need:["Russet potatoes ×6","Butter, sour cream, shredded cheddar","Whatever's left — pot roast, taco chicken, broccoli","Green onions"],
-      steps:[
-        "Scrub, oil, salt, straight onto the oven rack at 425°F for an hour. <b>No foil</b> — foil steams them instead of baking them.",
-        "Everything else goes in bowls on the counter while they bake.",
-        "Split, fluff with a fork, let everyone wreck their own."
-      ],
-      why:"<b>Friday's fun night and the week's cleanup at the same time.</b> Anything still in the fridge becomes a topping instead of trash."
+      why:"<b>Never fails, absurdly cheap, and the kids think they're getting away with something.</b> Good note to end the week on — and Friday's already handled."
     }
   ],
 
+  thaw:{
+    urgent:"Tonight — Saturday",
+    items:[
+      ["🐔 Whole chicken","Roasts Sunday. A 4–5 lb bird needs 24–36 hours in the fridge, so tonight is the deadline, not tomorrow morning."],
+      ["🥩 2 lb ground beef","Gets browned during Sunday's prep block and carries both Monday's chili and Tuesday's sauce."]
+    ],
+    clear:"Nothing to pull for Wednesday or Thursday — Wednesday runs on Sunday's cooked chicken, and Thursday is eggs and bacon straight from the fridge.",
+    rule:"Never thaw on the counter. If you forget: sealed bag, cold water, change the water every 30 minutes. Ground beef comes back in about an hour; a whole bird is not rescuable that way — switch that night to breakfast-for-dinner and move the roast."
+  },
+
+  friday:"Friday is yours — you've already got plans. Nothing to cook, nothing to shop for.",
+
   prep: {
-    when:"Sunday, while the pot roast finishes",
+    when:"Sunday, right after the roast chicken comes out",
     mins:35,
     tasks:[
-      "Cook 4 cups of rice → into the fridge (Tuesday reheats it)",
-      "Pull 2 cups of pot roast aside and seal it — that's Wednesday's quesadillas, already made",
-      "Bag Monday's slow cooker now: thighs + salsa + seasoning into one container. Monday becomes a pour, not a recipe.",
-      "Shred a big bowl of cheddar — tacos Monday, quesadillas Wednesday, potatoes Friday",
-      "Wash apples and grapes, cut carrot and celery sticks — kills the after-school snack scramble"
+      "Cook 4 cups of rice → straight to the fridge uncovered (Wednesday needs it cold and dry)",
+      "Brown 2 lb ground beef → split into two containers: Monday's chili, Tuesday's sauce",
+      "Pull all the roast chicken off the bone → 3 cups shredded, sealed",
+      "Grate 1 zucchini + 1 carrot for Tuesday's sauce",
+      "Wash grapes and apples, cut veg sticks — kills the after-school snack scramble"
     ]
   },
 
   stores:[
     {
-      name:"Aldi", tagline:"Main budget run — go here first",
+      name:"In the house", tagline:"Bought at Publix 8/1 — $178.56, saved $27.36 on BOGOs",
       aisles:[
         {name:"Produce", items:[
-          ["Russet potatoes, 10 lb",6.49],["Yellow onions, 3 lb",2.79],["Carrots, 2 lb",1.99],
-          ["Celery",1.79],["Green beans, 1 lb",2.99],["Roma tomatoes",2.49],["Romaine",1.99],
-          ["Avocados ×3",2.37],["Limes ×4",1.56],["Bananas ×8",1.36],
-          ["Organic apples, 2 lb",4.49],["Green onions",0.99]
+          ["Idaho potatoes",5.99],["Organic yellow onion",5.99],["Green beans",2.99],
+          ["Organic zucchini",3.99],["Whole carrots",2.50],["Baby carrots",1.59],
+          ["Lemons",0.89],["Organic Pink Lady apples ×2",8.99],["Strawberries ×2",4.99],
+          ["White seedless grapes",6.88],["Mandarins",5.89],["Organic bananas",1.76]
         ]},
         {name:"Meat & Dairy", items:[
-          ["Simply Nature organic chicken breast, 3 lb",14.97],["Chuck roast, ~3 lb",17.97],
-          ["Butter",3.79],["Sharp cheddar block ×2",5.58],["Eggs, 2 dozen",6.00],
-          ["Whole milk",3.29],["Sour cream",1.89],["Plain whole-milk Greek yogurt",4.29]
+          ["GreenWise hickory bacon ×2",8.00],["Boar's Head maple honey turkey",12.31],
+          ["Sharp cheddar wedge",5.99],["GreenWise sour cream",3.29],
+          ["GreenWise Greek vanilla yogurt",6.29],["Purity whole chocolate milk",6.99]
         ]},
-        {name:"Pantry & Frozen", items:[
-          ["Long-grain rice, 2 lb",2.49],["Beef broth ×2",3.98],["Almond flour",5.49],
-          ["Honey",3.99],["Frozen broccoli ×3",3.87],["Canned organic beans ×2",1.98]
-        ]}
-      ]
-    },
-    {
-      name:"Kroger", tagline:"The clean-label things Aldi doesn't carry",
-      aisles:[
-        {name:"Meat & Seafood", items:[
-          ["Simple Truth organic chicken thighs, 2 lb",9.99],
-          ["Wild-caught salmon fillets, 1.5 lb",16.99]
+        {name:"Pantry", items:[
+          ["Organic marinara ×2",5.29],["Organic kidney beans",1.49],
+          ["Organic pinto beans",1.49],["Organic black beans",1.49],
+          ["Extra-long grain rice",1.29],["Publix chili powder",2.49],
+          ["GreenWise organic plant protein, vanilla",15.99]
         ]},
-        {name:"Oils & Condiments", items:[
-          ["Avocado oil — Chosen Foods or Simple Truth",9.99],
-          ["Primal Kitchen ketchup",6.49],["Dijon mustard — clean label",3.99],
-          ["Simple Truth salsa",3.49],["Taco seasoning — scan it for anti-caking agents",2.29]
-        ]},
-        {name:"Pantry & Snacks", items:[
-          ["Siete grain-free tortillas ×2",12.98],
-          ["Clean tomato soup ×2 — read the label for canola and sugar",7.98],
-          ["Organic strawberries — Dirty Dozen, buy organic",4.99]
-        ]}
-      ]
-    },
-    {
-      name:"Publix", tagline:"Three items. In and out — skip the bakery aisle.",
-      aisles:[
-        {name:"Bakery & Shelf Restock", items:[
-          ["Sourdough loaf",4.99],["Canned wild tuna ×3",8.97],["Organic pasta ×2",5.98]
+        {name:"Snacks & Drinks", items:[
+          ["Siete tortilla chips ×2",10.98],["Organic pretzel crisps",5.99],
+          ["Spindrift ×2",14.78],["Fiji water",2.49]
         ]}
       ]
     }
   ],
 
-  tier2:"Three things on this list are tier-2, not perfect: the sourdough, the tomato soup and the taco seasoning. Scan the soup and the seasoning in the aisle — canola in the soup and anti-caking agents in the seasoning are the two most likely misses. That's the right trade. The oils and the artificial colors are where you hold the line, not a little cane sugar in a loaf of bread.",
+  tier2:"Protein for all five dinners was already in the freezer, so the meat aisle got skipped entirely. The vanilla yogurt and chocolate milk are deliberate tier-2 calls — kids who eat it beat a tub of plain that gets thrown out.",
+  ready:"Everything the five dinners need is in the house. Shopping done, pantry checked, freezer reminder set for tonight. Nothing left to do but cook.",
+
+  skipNote:"Shopping done and pantry confirmed — nothing left to buy for Sunday through Thursday. The list below is what came home; check things off as you use them through the week.",
 
   sos:[
     {name:"Breakfast for dinner", time:"15 min", protein:["eggs"], note:"Scrambled eggs, toast or pancakes, fruit. Has literally never failed."},
     {name:"Emergency spaghetti", time:"15 min", protein:["beef","none"], note:"Pasta + jarred marinara. Add browned beef if you've got 10 extra minutes."},
     {name:"Quesadillas + frozen veg", time:"10 min", protein:["chicken","none"], note:"Tortillas, real cheese, any leftover protein. Guac and salsa on the side."},
-    {name:"Freezer nuggets + fries", time:"15 min", protein:["chicken"], note:"Air fryer, zero thought required. This is exactly what Saturday's batch was for."},
+    {name:"Freezer nuggets + fries", time:"15 min", protein:["chicken"], note:"Air fryer, zero thought required. This is what the batch days are for."},
     {name:"Fried rice", time:"15 min", protein:["eggs","chicken"], note:"Rice pouch + eggs + frozen peas and carrots + coconut aminos."},
-    {name:"Tuna melts", time:"10 min", protein:["fish"], note:"Canned wild tuna + avo mayo on toast, cheddar, broil. Apples alongside."},
     {name:"Pantry chili", time:"20 min", protein:["beef"], note:"Ground beef + canned beans + canned tomatoes + chili powder. Cheese and chips on top."},
+    {name:"Grilled cheese + tomato soup", time:"12 min", protein:["none"], note:"Real cheddar on sourdough in butter. Check the soup label for canola and sugar."},
     {name:"Clean frozen pizza + veggie sticks", time:"15 min", protein:["none"], note:"Tier-2 and completely fine. Avocado-oil ranch for dipping."}
   ],
 
   shelf:[
     ["Freezer","Homemade nuggets from batch days · wild salmon or cod · organic ground beef · frozen broccoli, peas & carrots, green beans · frozen berries · a clean frozen pizza"],
-    ["Pantry","Organic pasta + 2 jars marinara · rice or 90-second pouches · canned wild tuna · canned organic beans · chicken stock · Siete tortillas · avocado-oil mayo · coconut aminos · honey · peanut butter"],
-    ["Fridge (rolling)","Eggs — always 2+ dozen · real cheddar and mozzarella · butter · whole-milk Greek yogurt · apples and bananas"]
+    ["Pantry","Organic pasta + 2 jars marinara · rice or 90-second pouches · canned organic beans · chicken stock · Siete tortillas · avocado-oil mayo · coconut aminos · honey · peanut butter"],
+    ["Fridge (rolling)","Eggs — always 2+ dozen · real cheddar · butter · whole-milk Greek yogurt · apples and bananas"]
   ]
 };
 
@@ -409,7 +382,15 @@ $("#stamp").textContent = PLAN.stamp;
 
 /* ---- Week ---- */
 (function(){
-  let h = '<div class="sec">This week\'s dinners</div>';
+  let h = '<div class="sec">Freezer — pull these out</div>'
+    + '<div class="card" style="border-color:var(--ice)"><div class="rule">'
+    + '<h3>❄️ '+PLAN.thaw.urgent+'</h3>'
+    + PLAN.thaw.items.map(t=>'<p style="margin:0 0 9px"><b>'+t[0]+'</b><br>'
+        + '<span style="color:var(--muted);font-size:13.5px">'+t[1]+'</span></p>').join('')
+    + '<p style="color:var(--muted);font-size:13.5px;margin:0 0 8px">'+PLAN.thaw.clear+'</p>'
+    + '<div class="hill"><b>Rule:</b> '+PLAN.thaw.rule+'</div>'
+    + '</div></div>'
+    + '<div class="sec">This week\'s dinners</div>';
   PLAN.days.forEach((d,i) => {
     h += '<div class="card"><button class="day" data-day="'+i+'"><div class="day-top">'
       + '<div class="day-emoji">'+d.emoji+'</div><div class="day-body">'
@@ -423,6 +404,9 @@ $("#stamp").textContent = PLAN.stamp;
       + '<div class="why">'+d.why+'</div>'
       + '</div></div></div>';
   });
+
+  h += '<div class="card"><div class="rule" style="background:var(--accent-soft)">'
+    + '<h3>🎉 Friday · Aug 7</h3><p style="margin:0">'+PLAN.friday+'</p></div></div>';
 
   h += '<div class="sec">Sunday prep block · '+PLAN.prep.mins+' min</div>'
     + '<div class="card"><div class="rule"><h3>🔪 '+PLAN.prep.when+'</h3><ul>'
@@ -441,10 +425,13 @@ $("#stamp").textContent = PLAN.stamp;
   let grand = 0;
   PLAN.stores.forEach(s => s.aisles.forEach(a => a.items.forEach(it => grand += it[1])));
 
-  let h = '<div class="total"><div><div style="font-size:12px;color:var(--muted);'
-    + 'text-transform:uppercase;letter-spacing:.08em;font-weight:700">Estimated total</div>'
+  let h = '<div class="card" style="border-color:var(--green)"><div class="rule">'
+    + '<h3><span class="tag t-yes">ALL SET</span> Ready for the week</h3>'
+    + '<p style="margin:0">'+PLAN.ready+'</p></div></div>'
+    + '<div class="total"><div><div style="font-size:12px;color:var(--muted);'
+    + 'text-transform:uppercase;letter-spacing:.08em;font-weight:700">Spent Saturday</div>'
     + '<div style="font-size:13px;color:var(--muted);margin-top:3px" id="leftTxt">Nothing checked off yet</div></div>'
-    + '<div class="total-n">'+money(grand)+'</div></div>';
+    + '<div class="total-n">'+money(PLAN.spent)+'</div></div>';
 
   PLAN.stores.forEach((s,si) => {
     const count = s.aisles.reduce((n,a)=>n+a.items.length,0);
@@ -467,7 +454,8 @@ $("#stamp").textContent = PLAN.stamp;
     h += '</div></div>';
   });
 
-  h += '<div class="note"><b>Tier check.</b> '+PLAN.tier2+'</div>'
+  h += '<div class="note"><b>Where things stand.</b> '+PLAN.skipNote+'</div>'
+     + '<div class="note"><b>Notes.</b> '+PLAN.tier2+'</div>'
      + '<div class="note"><b>Budget.</b> '+PLAN.budgetNote+'</div>'
      + '<div class="note" style="opacity:.75">Check marks are just for this trip — they clear if you close and reopen the app.</div>';
 
@@ -489,8 +477,8 @@ $("#stamp").textContent = PLAN.stamp;
     });
     const left = total - done;
     $("#leftTxt").textContent = left === 0
-      ? "All " + total + " items — done. Go home."
-      : (done === 0 ? "Nothing checked off yet" : left + " item" + (left>1?"s":"") + " left");
+      ? "Everything accounted for"
+      : (done === 0 ? "Publix, 8/1 · tap to check things off" : left + " item" + (left>1?"s":"") + " left");
   }
 
   box.querySelectorAll(".item").forEach(b =>
@@ -502,7 +490,7 @@ $("#stamp").textContent = PLAN.stamp;
 (function(){
   const FILTERS = [
     ["all","Everything"],["eggs","Eggs"],["beef","Ground beef"],
-    ["chicken","Chicken"],["fish","Canned fish"],["none","Pantry only"]
+    ["chicken","Chicken"],["none","Pantry only"]
   ];
   let h = '<div class="sos-hd"><h2>No plan. Kids are hungry.</h2>'
     + '<p>Pick what you actually have. Dinner in 20 minutes beats 40 minutes of ordering and $60.</p></div>'
@@ -580,6 +568,49 @@ $("#stamp").textContent = PLAN.stamp;
     <p>Nothing gets taken away — it gets rebuilt clean. Nuggets become almond-flour baked nuggets. Fries become real russets in avocado oil. Mac becomes real cheddar and butter. Pizza night becomes Friday at home.</p>
   </div></div>
 
+  <div class="card"><div class="rule">
+    <h3>❄️ Thaw timing, by protein</h3>
+    <ul>
+      <li><b>Whole chicken, 4–5 lb</b> — 24–36 hours in the fridge. Pull it two nights ahead.</li>
+      <li><b>Ground beef, 1–2 lb</b> — 12–24 hours. The night before is fine.</li>
+      <li><b>Chicken breasts or thighs, 1–2 lb</b> — 12–24 hours. Night before.</li>
+      <li><b>Fish fillets</b> — 12 hours in the fridge, or 30 minutes in cold water if you forgot.</li>
+      <li><b>Pork roast or beef roast, 3–4 lb</b> — a full 48 hours. These are the ones people underestimate.</li>
+    </ul>
+    <div class="hill"><b>Never the counter.</b> Room-temperature thawing puts the outside of the meat in the danger zone for hours while the middle is still frozen. Cold water in a sealed bag, changed every 30 minutes, is the only fast method worth using.</div>
+  </div></div>
+
+  <div class="sec">Lunchboxes &amp; school mornings</div>
+  <div class="card"><div class="rule">
+    <h3>🎒 What packs well and passes</h3>
+    <ul>
+      <li><b>Crackers</b> — Simple Mills almond flour. <b>Chips</b> — Siete, Jackson's sweet potato, Boulder Canyon avocado-oil.</li>
+      <li><b>Protein</b> — string cheese, no-nitrate deli turkey roll-ups, hard-boiled eggs, peanut butter on apple slices, homemade oat + peanut butter protein bars.</li>
+      <li><b>Sweet</b> — fruit, raisins or freeze-dried fruit with no added sugar, That's It fruit bars, dates with peanut butter, Simple Mills cookies, dark chocolate with a short label.</li>
+      <li><b>Yogurt</b> — plain whole-milk Greek portioned into containers with a drizzle of honey. Never the pre-flavored kid tubes.</li>
+      <li><b>Drinks</b> — water, or seltzer with a splash of real juice.</li>
+    </ul>
+  </div></div>
+  <div class="card"><div class="rule">
+    <h3><span class="tag t-no">TRAPS</span> The lunchbox aisle</h3>
+    <p>Three categories are almost always red-flagged no matter how the box is marketed:</p>
+    <ul>
+      <li><b>Flavored kid yogurts and tubes</b> — sugar plus artificial colors, every time.</li>
+      <li><b>"Fruit" snacks and fruit leathers</b> — candy with a produce photo on the front.</li>
+      <li><b>Granola and breakfast bars</b> — seed oils, brown rice syrup, "natural flavors." A few clean ones exist; scan before trusting one.</li>
+    </ul>
+    <p style="color:var(--muted)">Portion into reusable containers on Sunday rather than buying single-serve. Cheaper, cleaner labels, less packaging.</p>
+  </div></div>
+  <div class="card"><div class="rule">
+    <h3>🍳 Breakfast on a school clock</h3>
+    <ul>
+      <li><b>Sunday batch:</b> double the pancakes, freeze flat, toaster on weekday mornings.</li>
+      <li><b>Overnight oats</b> — oats, milk, honey, frozen berries. Assemble five jars Sunday night.</li>
+      <li><b>Hard-boiled eggs</b> — a dozen on Sunday covers breakfasts and lunchboxes both.</li>
+      <li>Eggs and toast when there's time; nothing here needs a recipe.</li>
+    </ul>
+  </div></div>
+
   <div class="sec">How the week is built</div>
   <div class="card"><div class="rule">
     <h3>📅 The shape of every week</h3>
@@ -600,17 +631,23 @@ $("#stamp").textContent = PLAN.stamp;
       <li><b>Costco</b> — every 3–4 weeks for bulk staples. Single biggest budget lever, 30–50% under grocery prices.</li>
       <li><b>Whole Foods</b> — targeted, ≤10 items, never a full shop. That's how the budget died last time.</li>
     </ul>
-    <p>Always shop from a list, ideally after eating. The list is already built — just walk it.</p>
+    <p>Always shop from the list, ideally after eating.</p>
+  </div></div>
+  <div class="card"><div class="rule">
+    <h3>🍓 Where organic actually matters</h3>
+    <p><b>Buy organic</b> (Dirty Dozen): berries, apples, spinach, grapes, peaches, strawberries.</p>
+    <p><b>Conventional is fine</b> (Clean Fifteen): avocado, banana, onion, corn, pineapple.</p>
+    <p style="color:var(--muted)">This split alone reclaims most of the "buy everything organic" overspend.</p>
   </div></div>`;
 })();
 
 /* ---- Tabs ---- */
-document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
   document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
-  document.querySelectorAll(".panel").forEach(p => p.classList.remove("on"));
-  b.classList.add("on");
-  document.getElementById("p-" + b.dataset.t).classList.add("on");
-  window.scrollTo(0,0);
+  document.querySelectorAll(".panel").forEach(x => x.classList.remove("on"));
+  t.classList.add("on");
+  document.getElementById("p-" + t.dataset.t).classList.add("on");
+  window.scrollTo({top:0});
 }));
 </script>
 </body>
