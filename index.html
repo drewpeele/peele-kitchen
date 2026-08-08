@@ -246,24 +246,26 @@ const PLAN = {
   updated: "Aug 8, 2026",
 
   assumptions: [
-    "Updated: fish sticks are out. Thursday is sheet-pan chicken sausage instead, and there are two new meals this week rather than one — you asked, so the cap is off for a week.",
-    "Both new ones are stacked toward safe: Thursday is sausage and potatoes on one pan, Saturday is breakfast-for-dinner in a tortilla. Neither is a leap.",
-    "Still assumed, no check-in yet: no evening is committed, and the freezer holds a whole chicken (4–5 lb) and 2 lb ground beef. If a night is spoken for, slide that dinner to Saturday."
+    "Three new meals this week instead of the usual one — Tuesday's Florentine, Thursday's sheet pan, Saturday's burritos. That's over the normal cap, and it's on purpose because you asked for each one.",
+    "The safety net: all three are built on food these kids already eat. Creamy pasta and cheese, sausage and potatoes, eggs in a tortilla. Monday and Wednesday are known quantities, so no more than one unfamiliar thing lands on any given night.",
+    "Ground beef is off the list — chili is out, so nothing this week needs it. Chicken thighs took its place on the thaw schedule.",
+    "Still assumed, no check-in yet: no evening is committed, and the freezer holds a whole chicken (4–5 lb). If a night is spoken for, slide that dinner to Saturday."
   ],
 
   thaw: {
+    lede: "Three pull nights this week. Everything else takes care of itself.",
     items: [
       {
         protein: "Whole chicken, 4–5 lb",
         pull: "TODAY — Saturday Aug 8, afternoon",
         forMeal: "Sunday's roast chicken",
-        why: "A 4–5 lb bird needs 24–36 hrs in the fridge. Sunday dinner is ~28 hrs out, so it goes in now, not tonight."
+        why: "A 4–5 lb bird needs 24–36 hrs in the fridge. Sunday dinner is ~28 hrs out, so it goes in now, not tonight. It's the only thing coming out today."
       },
       {
-        protein: "Ground beef, 2 lb",
-        pull: "Tonight — Saturday Aug 8 evening",
-        forMeal: "Tuesday's chili — but browned during Sunday's prep block",
-        why: "The beef gets cooked Sunday afternoon, not Tuesday night. Working back from the PREP BLOCK: 12–24 hrs means tonight."
+        protein: "Chicken thighs, 1.5 lb",
+        pull: "Monday Aug 10 evening",
+        forMeal: "Tuesday's sun-dried tomato chicken Florentine",
+        why: "Chicken pieces need 12–24 hrs. Monday night is the window — earlier and it just sits."
       },
       {
         protein: "Clean chicken sausage, 2 packs",
@@ -272,7 +274,7 @@ const PLAN = {
         why: "Buy it this weekend and freeze it — Thursday is too far out for fresh sausage from a Saturday shop. 12–24 hrs in the fridge, so Wednesday night."
       }
     ],
-    nothing: "Sunday, Monday, Tuesday, Thursday and Friday evenings — those five nights need nothing from the freezer at all. Two pull nights all week: tonight and Wednesday.",
+    nothing: "Sunday, Tuesday, Thursday and Friday evenings — those four nights need nothing from the freezer at all. Three pull nights: tonight, Monday and Wednesday. Ground beef is off the list entirely now that chili is out.",
     counterRule: "Never thaw on the counter. Fridge, or a sealed bag in a cold-water bath changed every 30 min. Room-temp thawing puts the outside of the meat in the danger zone for hours while the middle is still frozen."
   },
 
@@ -296,38 +298,50 @@ const PLAN = {
       dow:"Mon", date:"10", title:"Chicken fried rice", type:"planned",
       note:"Cold rice + leftover chicken. Everything is already cooked.",
       tags:[{t:"15 min",c:"green"},{t:"Busy night",c:"amber"},{t:"Uses Sunday's chicken",c:"plain"}],
-      thaw:null,
+      thaw:{chip:"❄️ Pull chicken thighs tonight", detail:"Move 1.5 lb chicken thighs from the freezer to the fridge before bed — they're Tuesday's Florentine pasta and need 12–24 hrs."},
       need:["Sunday's shredded chicken","Cold cooked rice from the prep block","4 eggs","Frozen peas & carrots, 2 cups","Coconut aminos","Avocado oil, garlic"],
       how:[
         "Screaming-hot pan, avocado oil. Scramble the eggs, slide them out.",
         "Frozen peas & carrots straight in, 2 min. Garlic, 30 sec.",
         "Cold rice in, press it flat, leave it alone 2 min so it crisps.",
-        "Chicken + eggs back in, big splash of coconut aminos, toss. Done."
+        "Chicken + eggs back in, big splash of coconut aminos, toss. Done.",
+        "Before bed: chicken thighs out of the freezer, into the fridge."
       ],
       why:"Monday is busy and this is pure assembly — no protein to thaw, no chopping, nothing to decide. Cold day-old rice fries far better than fresh."
     },
     {
-      dow:"Tue", date:"11", title:"Slow-cooker chili", type:"planned",
-      note:"Beef was already browned Sunday. Morning: dump and go.",
-      tags:[{t:"5 min AM",c:"green"},{t:"Busy night",c:"amber"},{t:"Slow cooker",c:"plain"}],
+      dow:"Tue", date:"11", title:"Sun-dried tomato chicken Florentine pasta", type:"planned",
+      note:"Your pick, from Pinch of Yum. One skillet, 30 min. Made at 1.5× so Wednesday is covered.",
+      tags:[{t:"30 min",c:"green"},{t:"Busy night",c:"amber"},{t:"NEW this week",c:"accent"},{t:"One skillet",c:"plain"}],
       thaw:null,
-      need:["Browned beef from the prep block","2 cans diced tomatoes","3 cans beans, drained","1 onion, chopped","Chili powder, cumin, salt","Toppings: shredded cheddar, Siete chips"],
-      how:[
-        "Morning: everything into the slow cooker, low 6–8 hrs. That's the whole job.",
-        "5:45pm: taste, adjust salt.",
-        "Kids' bowls get cheese on top and chips on the side so it reads as nachos.",
-        "Box the leftovers straight away — that's Wednesday."
+      need:[
+        "12 oz ziti or penne",
+        "1.5 lb chicken thighs (thawed since Monday), bite-sized",
+        "1 tbsp butter, all-purpose seasoning, pinch of cayenne",
+        "10 oz sun-dried tomatoes, drained and chopped — get the olive-oil-packed jar, most are packed in sunflower or canola",
+        "3 cloves garlic",
+        "1½ cups heavy cream + ¾ cup chicken stock",
+        "¾ cup mozzarella + ¾ cup parmesan, grated Sunday",
+        "3 cups baby spinach"
       ],
-      why:"The busiest kind of night deserves a dinner that finished cooking before anyone got home. Doubles as Wednesday's dinner."
+      how:[
+        "Pasta on to boil first. Drain and set aside.",
+        "Butter in a big skillet over medium-high. Chicken in, seasoning and cayenne on top, sauté until cooked through.",
+        "Sun-dried tomatoes and garlic in — 2 to 3 minutes, until it smells like a restaurant.",
+        "Heavy cream in, bring to a slow simmer. Mozzarella and parmesan, stir until melted and smooth.",
+        "Pasta and spinach in. The spinach collapses on contact. Loosen with chicken stock until the sauce coats. Salt to taste.",
+        "Box the leftovers before you sit down — that's Wednesday."
+      ],
+      why:"Creamy pasta with two cheeses is about as kid-safe as a new meal gets, and one skillet in 30 minutes still works on a Tuesday. Leave the cayenne out of the pot and put hot sauce on the table instead — the 4-year-old will never know it was supposed to be there."
     },
     {
-      dow:"Wed", date:"12", title:"Fend night — chili leftovers", type:"leftovers",
+      dow:"Wed", date:"12", title:"Fend night — Florentine leftovers", type:"leftovers",
       note:"Named on purpose. Nobody cooks.",
       tags:[{t:"0 min",c:"green"},{t:"Leftovers",c:"plain"}],
       thaw:{chip:"❄️ Pull sausage tonight", detail:"Move the chicken sausage from the freezer to the fridge before bed — it's Thursday's dinner and needs 12–24 hrs."},
-      need:["Tuesday's chili","Whatever needs eating: cheese, chips, carrot sticks, fruit"],
+      need:["Tuesday's pasta","Whatever needs eating: cheese, chips, carrot sticks, fruit"],
       how:[
-        "Reheat the chili. Put the odds and ends on the table alongside it.",
+        "Reheat the pasta with a splash of stock or cream — cream sauces tighten up overnight. Put the odds and ends on the table alongside it.",
         "Before bed: sausage out of the freezer, onto a plate, into the fridge."
       ],
       why:"A named leftovers night keeps Wednesday from becoming a drive-thru night. The only chore is moving the fish."
@@ -382,7 +396,7 @@ const PLAN = {
     when: "Sunday ~4:00pm — while the chicken roasts",
     mins: "40 min",
     tasks: [
-      {t:"Brown 2 lb ground beef", d:"With chopped onion, garlic, chili powder. Cool, box it, fridge. This is Tuesday's chili and it's why Tuesday takes five minutes.", m:"12 min"},
+      {t:"Grate the cheese for the week", d:"Mozzarella and parmesan for Tuesday's pasta, mozzarella for Friday's pizza. Bagged pre-shredded carries potato starch and cellulose to keep it from clumping — grating your own is the cheapest clean swap there is, and it melts better.", m:"10 min"},
       {t:"Cook 3 cups dry rice", d:"Spread it on a sheet pan to cool fast, then fridge. Cold rice is Monday's fried rice — it has to be day-old to fry right.", m:"5 min hands-on"},
       {t:"Hard-boil 12 eggs", d:"Ice bath, then fridge in the shell. Lunchboxes all week and Thursday's egg wash.", m:"5 min hands-on"},
       {t:"Cut 3 lb russets into 1-inch cubes", d:"Cover with cold water in a container in the fridge. Thursday they get drained, dried and go straight onto the sheet pan.", m:"6 min"},
@@ -408,9 +422,11 @@ const PLAN = {
         {n:"Avocados ×3", p:3.99, t:"Clean Fifteen — conventional is fine"},
         {n:"Cucumbers ×3", p:2.97},
         {n:"Baby carrots, 2 lb", p:3.29},
-        {n:"Bell peppers ×3", p:5.97, t:"Thursday's sheet pan"}
+        {n:"Bell peppers ×3", p:5.97, t:"Thursday's sheet pan"},
+        {n:"Organic baby spinach, 10 oz", p:5.49, t:"Tuesday's Florentine — Dirty Dozen, buy organic"}
       ]},
-      {name:"Meat", stockup:false, note:"Whole chicken and ground beef are assumed to be in your freezer — they're left off. Add them back only if you're out.", items:[
+      {name:"Meat", stockup:false, note:"The whole chicken is assumed to be in your freezer — it's left off. Ground beef is no longer needed this week at all.", items:[
+        {n:"Boneless chicken thighs, 1.5 lb", p:8.99, t:"Tuesday's Florentine. Skip it if there are thighs in the freezer already"},
         {n:"Clean chicken sausage ×2 packs", p:13.98, t:"No nitrates unless celery-based. Freeze it when you get home — Thursday is too far out for fresh"},
         {n:"No-nitrate bacon or breakfast sausage, 12 oz", p:7.49, t:"Saturday's breakfast burritos"}
       ]},
@@ -419,17 +435,19 @@ const PLAN = {
         {n:"Whole milk, 1 gal", p:4.79},
         {n:"Chocolate milk, half gal", p:4.29, t:"Tier-2 — on the list on purpose"},
         {n:"Sharp cheddar block, 8 oz ×2", p:9.98},
-        {n:"Whole-milk mozzarella, 16 oz", p:5.99, t:"Friday pizza"},
+        {n:"Whole-milk mozzarella, 16 oz", p:5.99, t:"Tuesday pasta + Friday pizza"},
+        {n:"Parmesan wedge, 8 oz", p:6.49, t:"Grate it Sunday"},
+        {n:"Heavy cream, 16 oz", p:4.99, t:"Tuesday's sauce"},
         {n:"Kerrygold butter, 8 oz", p:4.99},
         {n:"Vanilla Greek yogurt, 32 oz", p:6.49, t:"Tier-2 — the one the kids actually eat"}
       ]},
       {name:"Pantry — this week", stockup:false, items:[
         {n:"Clean marinara / pizza sauce", p:4.49, t:"Check for canola and added sugar"},
         {n:"Sourdough par-baked crusts ×2", p:6.99},
-        {n:"Organic diced tomatoes ×2", p:4.58},
-        {n:"Organic kidney + black beans ×3", p:5.37},
+        {n:"Organic ziti or penne, 16 oz", p:3.49, t:"Tuesday's Florentine"},
+        {n:"Sun-dried tomatoes, 7 oz ×2 jars", p:11.98, t:"Get olive-oil-packed — most jars are sunflower or canola. This is the one label to actually read"},
+        {n:"Organic chicken stock, 32 oz", p:4.29, t:"Tuesday, and it's an emergency-shelf staple"},
         {n:"Coconut aminos", p:6.49, t:"The clean soy-sauce swap"},
-        {n:"Chili powder + cumin", p:4.29},
         {n:"Large tortillas — Siete or organic", p:6.49, t:"Saturday's burritos"}
       ]},
       {name:"Pantry stock-up", stockup:true, note:"These last months. Skip anything you still have — that's where the number drops.", items:[
@@ -464,6 +482,7 @@ const PLAN = {
     notes: [
       {h:"The stock-up split", b:"Pantry stock-up is __STOCKUP__ of the total and lasts two to three months. This week's actual food is __WEEKLY__ — that's the number to judge the week on. Skip the protein powder alone if you still have some and you're down about $30."},
       {h:"Tier-2, flagged once", b:"Chocolate milk and vanilla Greek yogurt are tier-2 and they're on the list on purpose — the kids drink and eat them. Plain yogurt with honey and berries is there whenever you want it. Not mentioning it again."},
+      {h:"What the Florentine swap cost", b:"Trading chili for the Florentine ran about $31 net. Cream, parmesan, sun-dried tomatoes and chicken thighs are simply pricier than beans and canned tomatoes — that's the whole difference, and it's a fine trade for a meal you actually want to eat. Worth knowing the number, not worth feeling bad about."},
       {h:"Budget", b:"Receipts logged: 8/1 Publix $178.56. That's one. Send me this week's total and we'll have two — at three I'll put a weekly target on the table and hold the plans to it."}
     ]
   },
@@ -572,7 +591,7 @@ function buildWeek(){
   // (a) Freezer card — always first
   const f = el("div","card freezer");
   f.appendChild(el("h2",null,"Freezer — pull these out"));
-  f.appendChild(el("p","small","Two pull nights this week. Everything else takes care of itself."));
+  f.appendChild(el("p","small", esc(PLAN.thaw.lede)));
   PLAN.thaw.items.forEach(it=>{
     const r = el("div","thaw-row");
     r.appendChild(el("div","thaw-dot"));
