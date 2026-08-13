@@ -73,7 +73,9 @@ b,strong{font-weight:650}
 
 /* ---------- chips / pills ---------- */
 .chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:650;
-  padding:3px 9px;border-radius:999px;white-space:nowrap;line-height:1.5}
+  padding:3px 9px;border-radius:999px;white-space:nowrap;line-height:1.5;
+  max-width:100%;overflow-wrap:anywhere}
+@media (max-width:430px){.chip{white-space:normal}}
 .chip.ice{background:var(--ice-soft);color:var(--ice);border:1px solid var(--ice)}
 .chip.green{background:var(--green-soft);color:var(--green)}
 .chip.amber{background:var(--amber-soft);color:var(--amber)}
@@ -242,248 +244,225 @@ nav{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);
    Swap this object each week; the rest of the app is generic.
    ============================================================ */
 const PLAN = {
-  week: "Sun Aug 9 – Sat Aug 15, 2026",
-  updated: "Aug 8, 2026",
+  week: "Sun Aug 16 – Sat Aug 22, 2026",
+  updated: "Aug 13, 2026",
 
   assumptions: [
-    "Three new meals this week instead of the usual one — Tuesday's Florentine, Thursday's sheet pan, Saturday's burritos. That's over the normal cap, and it's on purpose because you asked for each one.",
-    "The safety net: all three are built on food these kids already eat. Creamy pasta and cheese, sausage and potatoes, eggs in a tortilla. Monday and Wednesday are known quantities, so no more than one unfamiliar thing lands on any given night.",
-    "Ground beef is off the list — chili is out, so nothing this week needs it. Chicken thighs took its place on the thaw schedule.",
-    "Still assumed, no check-in yet: no evening is committed, and the freezer holds a whole chicken (4–5 lb). If a night is spoken for, slide that dinner to Saturday."
+    "Sunday's out — birthday party in the afternoon, dinner already handled. So the anchor moved to Monday and the prep block moved to Saturday. Six dinners this week, not seven.",
+    "Shopping Friday night Aug 14 instead of Saturday, so this list has to carry eight days. Everything in Produce is deliberately sturdy — no fresh spinach, no fresh berries, nothing that dies by day six.",
+    "You said you're good on protein, so the meat section is nearly empty. The whole week is built out of your freezer: a chuck roast, 3 lb of ground beef, and chicken thighs.",
+    "Zero new meals this week, on purpose. Three landed last week — this one is all proven, to let those settle before adding anything else."
   ],
 
   thaw: {
-    lede: "Three pull nights this week. Everything else takes care of itself.",
+    lede: "Three pull nights, and two of them happen on the same evening. Nothing comes out tonight.",
     items: [
       {
-        protein: "Whole chicken, 4–5 lb",
-        pull: "TODAY — Saturday Aug 8, afternoon",
-        forMeal: "Sunday's roast chicken",
-        why: "A 4–5 lb bird needs 24–36 hrs in the fridge. Sunday dinner is ~28 hrs out, so it goes in now, not tonight. It's the only thing coming out today."
+        protein: "Beef chuck roast, 3–4 lb",
+        pull: "Friday Aug 14 — when you get home from Publix",
+        forMeal: "Monday's pot roast",
+        why: "The roast now goes into the slow cooker Monday morning, not Sunday, so Friday night clears 48 hrs easily. Buying it fresh instead? Then nothing to pull — it just goes in the fridge."
+      },
+      {
+        protein: "Ground beef, 1.5 lb",
+        pull: "Friday Aug 14 — same trip, same night",
+        forMeal: "Tuesday's spaghetti — but browned during Saturday's prep block",
+        why: "The beef gets cooked Saturday afternoon, not Tuesday night. Working back from the PREP BLOCK, not the meal: 12–24 hrs means Friday evening."
       },
       {
         protein: "Chicken thighs, 1.5 lb",
-        pull: "Monday Aug 10 evening",
-        forMeal: "Tuesday's sun-dried tomato chicken Florentine",
-        why: "Chicken pieces need 12–24 hrs. Monday night is the window — earlier and it just sits."
+        pull: "Wednesday Aug 19 evening",
+        forMeal: "Thursday's Greek chicken bowls",
+        why: "Chicken pieces need 12–24 hrs. Wednesday night is the window."
       },
       {
-        protein: "Clean chicken sausage, 2 packs",
-        pull: "Wednesday Aug 12 evening",
-        forMeal: "Thursday's sheet-pan sausage and potatoes",
-        why: "Buy it this weekend and freeze it — Thursday is too far out for fresh sausage from a Saturday shop. 12–24 hrs in the fridge, so Wednesday night."
+        protein: "Ground beef, 1.5 lb",
+        pull: "Thursday Aug 20 evening",
+        forMeal: "Friday's burger night",
+        why: "Second batch of beef, kept frozen until now. A week in the fridge would have been far too long, so it waits."
       }
     ],
-    nothing: "Sunday, Tuesday, Thursday and Friday evenings — those four nights need nothing from the freezer at all. Three pull nights: tonight, Monday and Wednesday. Ground beef is off the list entirely now that chili is out.",
+    nothing: "Tonight, Saturday, Sunday, Monday, Tuesday, Friday and Saturday the 22nd — nothing comes out on any of them. Friday is a double, then it's quiet until Wednesday.",
     counterRule: "Never thaw on the counter. Fridge, or a sealed bag in a cold-water bath changed every 30 min. Room-temp thawing puts the outside of the meat in the danger zone for hours while the middle is still frozen."
   },
 
   days: [
     {
-      dow:"Sun", date:"9", title:"Roast chicken, potatoes & carrots", type:"anchor",
-      note:"The one slightly-bigger cook of the week. ~15 min hands-on, then the oven does it.",
-      tags:[{t:"Anchor meal",c:"accent"},{t:"~90 min, mostly oven",c:"plain"}],
+      dow:"Mon", date:"17", title:"Slow-cooker pot roast", type:"anchor",
+      note:"Loaded Saturday, so this morning is 60 seconds: insert into base, press low.",
+      tags:[{t:"Anchor meal",c:"accent"},{t:"1 min AM",c:"green"},{t:"Busy night",c:"amber"},{t:"Slow cooker",c:"plain"}],
       thaw:null,
-      need:["Whole chicken 4–5 lb (thawed since Saturday)","3 lb russets, quartered","1 lb carrots, big chunks","1 onion, halved","Avocado oil, salt, pepper, paprika","Butter, 2 tbsp"],
+      need:["The slow-cooker insert you loaded Saturday — roast, carrots, onions, broth","6 russets, halved (add mid-day if you're home, or skip and serve over nothing)","Frozen green beans on the side"],
       how:[
-        "Heat oven to 425°F. Pat the bird bone-dry — dry skin is the whole trick.",
-        "Rub with avocado oil, salt heavily, pepper, paprika. Half an onion in the cavity.",
-        "Toss potatoes and carrots in oil + salt, spread around the bird in the roasting pan.",
-        "Roast 70–85 min until the thigh hits 165°F. Rest 15 min before carving.",
-        "Pull all remaining meat off the carcass tonight and box it — that's Monday's dinner."
+        "Morning: lift the insert out of the fridge, into the base, low for 9 hours. That is the entire job.",
+        "If someone's home mid-afternoon, drop the halved russets in for the last 3 hours. If not, they keep for Wednesday.",
+        "6pm: shred, taste, salt.",
+        "Shred half the meat straight into a container before you sit down — that's Wednesday."
       ],
-      why:"This is the anchor: one cook, two dinners. Monday's fried rice is built entirely out of tonight's leftovers, one day later."
+      why:"The anchor moved here because Sunday's gone. A slow cooker is the only thing that belongs on a busy Monday, and doing the loading Saturday means Monday morning costs you a minute. Wednesday's potato bar is built entirely out of tonight, two days later."
     },
     {
-      dow:"Mon", date:"10", title:"Chicken fried rice", type:"planned",
-      note:"Cold rice + leftover chicken. Everything is already cooked.",
-      tags:[{t:"15 min",c:"green"},{t:"Busy night",c:"amber"},{t:"Uses Sunday's chicken",c:"plain"}],
-      thaw:{chip:"❄️ Pull chicken thighs tonight", detail:"Move 1.5 lb chicken thighs from the freezer to the fridge before bed — they're Tuesday's Florentine pasta and need 12–24 hrs."},
-      need:["Sunday's shredded chicken","Cold cooked rice from the prep block","4 eggs","Frozen peas & carrots, 2 cups","Coconut aminos","Avocado oil, garlic"],
+      dow:"Tue", date:"18", title:"Spaghetti with hidden-veg meat sauce", type:"planned",
+      note:"Sauce was made Saturday. Tonight is boiling water and reheating.",
+      tags:[{t:"15 min",c:"green"},{t:"Busy night",c:"amber"}],
+      thaw:null,
+      need:["Meat sauce from the prep block","1 lb spaghetti","Parmesan or cheddar to grate over","Frozen green beans on the side"],
       how:[
-        "Screaming-hot pan, avocado oil. Scramble the eggs, slide them out.",
-        "Frozen peas & carrots straight in, 2 min. Garlic, 30 sec.",
-        "Cold rice in, press it flat, leave it alone 2 min so it crisps.",
-        "Chicken + eggs back in, big splash of coconut aminos, toss. Done.",
+        "Water on. Sauce into a pan over low heat.",
+        "Spaghetti in, cook to the box. Reserve a splash of pasta water to loosen the sauce.",
+        "Green beans in the microwave with butter and salt.",
+        "Cheese on the table, not in the pot."
+      ],
+      why:"Two zucchini and a carrot are grated into that sauce and nobody will find them. Busy night, and every component was already cooked Saturday."
+    },
+    {
+      dow:"Wed", date:"19", title:"Baked potato bar — off Monday's roast", type:"leftovers",
+      note:"Doubles as this week's fend night. Build-your-own, nothing new cooked.",
+      tags:[{t:"10 min hands-on",c:"green"},{t:"Busy night",c:"amber"},{t:"Uses Monday's roast",c:"plain"}],
+      thaw:{chip:"❄️ Pull chicken thighs tonight", detail:"Move 1.5 lb chicken thighs from the freezer to the fridge before bed — they're Thursday's Greek bowls and need 12–24 hrs."},
+      need:["6 russets, scrubbed and poked Saturday","Shredded pot roast from Monday","Shredded cheddar","Butter, Greek yogurt (stands in for sour cream)","Broccoli, steamed","Chives or green onion if you have them"],
+      how:[
+        "Potatoes at 400°F for an hour, or microwave 8–10 min each if the day got away from you.",
+        "Reheat the shredded roast with a splash of its own broth so it doesn't dry out.",
+        "Everything in bowls down the counter. Everyone builds their own.",
+        "The 4-year-old's version is butter, cheese, and nothing else. That's a win, not a compromise.",
         "Before bed: chicken thighs out of the freezer, into the fridge."
       ],
-      why:"Monday is busy and this is pure assembly — no protein to thaw, no chopping, nothing to decide. Cold day-old rice fries far better than fresh."
+      why:"With Sunday gone there's one fewer dinner, so the leftovers night and the potato bar merged into the same night. Nothing new gets cooked, it's still build-your-own, and Monday's roast does the work. The only chore is moving the chicken."
     },
     {
-      dow:"Tue", date:"11", title:"Sun-dried tomato chicken Florentine pasta", type:"planned",
-      note:"Your pick, from Pinch of Yum. One skillet, 30 min. Made at 1.5× so Wednesday is covered.",
-      tags:[{t:"30 min",c:"green"},{t:"Busy night",c:"amber"},{t:"NEW this week",c:"accent"},{t:"One skillet",c:"plain"}],
+      dow:"Thu", date:"20", title:"Greek chicken bowls", type:"planned",
+      note:"Build-your-own again. Tzatziki was mixed Saturday and has only gotten better.",
+      tags:[{t:"20 min",c:"green"},{t:"Busy night",c:"amber"},{t:"Build-your-own",c:"plain"}],
       thaw:null,
-      need:[
-        "12 oz ziti or penne",
-        "1.5 lb chicken thighs (thawed since Monday), bite-sized",
-        "1 tbsp butter, all-purpose seasoning, pinch of cayenne",
-        "10 oz sun-dried tomatoes, drained and chopped — get the olive-oil-packed jar, most are packed in sunflower or canola",
-        "3 cloves garlic",
-        "1½ cups heavy cream + ¾ cup chicken stock",
-        "¾ cup mozzarella + ¾ cup parmesan, grated Sunday",
-        "3 cups baby spinach"
-      ],
+      need:["1.5 lb chicken thighs (thawed since Wednesday), cut into chunks","Oregano, garlic powder, lemon, salt","2 cups dry rice — cook it fresh tonight, it's hands-off","Cucumbers, tomatoes, diced","Feta, crumbled","Tzatziki from Saturday's prep block"],
       how:[
-        "Pasta on to boil first. Drain and set aside.",
-        "Butter in a big skillet over medium-high. Chicken in, seasoning and cayenne on top, sauté until cooked through.",
-        "Sun-dried tomatoes and garlic in — 2 to 3 minutes, until it smells like a restaurant.",
-        "Heavy cream in, bring to a slow simmer. Mozzarella and parmesan, stir until melted and smooth.",
-        "Pasta and spinach in. The spinach collapses on contact. Loosen with chicken stock until the sauce coats. Salt to taste.",
-        "Box the leftovers before you sit down — that's Wednesday."
+        "Rice on first — it cooks itself while you do everything else.",
+        "Toss the chicken with oregano, garlic powder, lemon juice, salt. Hot pan with avocado oil, 8–10 min until the edges char.",
+        "Everything in bowls down the counter — rice, chicken, cucumber, tomato, feta, tzatziki.",
+        "Build your own. Theirs can be rice and chicken and nothing else."
       ],
-      why:"Creamy pasta with two cheeses is about as kid-safe as a new meal gets, and one skillet in 30 minutes still works on a Tuesday. Leave the cayenne out of the pot and put hot sauce on the table instead — the 4-year-old will never know it was supposed to be there."
+      why:"Chicken and rice with things on the side — the format is already familiar, only the seasoning is new. Anyone who wants a plain bowl gets a plain bowl, no comment."
     },
     {
-      dow:"Wed", date:"12", title:"Fend night — Florentine leftovers", type:"leftovers",
-      note:"Named on purpose. Nobody cooks.",
-      tags:[{t:"0 min",c:"green"},{t:"Leftovers",c:"plain"}],
-      thaw:{chip:"❄️ Pull sausage tonight", detail:"Move the chicken sausage from the freezer to the fridge before bed — it's Thursday's dinner and needs 12–24 hrs."},
-      need:["Tuesday's pasta","Whatever needs eating: cheese, chips, carrot sticks, fruit"],
-      how:[
-        "Reheat the pasta with a splash of stock or cream — cream sauces tighten up overnight. Put the odds and ends on the table alongside it.",
-        "Before bed: sausage out of the freezer, onto a plate, into the fridge."
-      ],
-      why:"A named leftovers night keeps Wednesday from becoming a drive-thru night. The only chore is moving the fish."
-    },
-    {
-      dow:"Thu", date:"13", title:"Sheet-pan chicken sausage, potatoes & peppers", type:"planned",
-      note:"One pan, mostly oven. Sausage and potatoes is about as safe as a new meal gets.",
-      tags:[{t:"35 min, mostly oven",c:"green"},{t:"Busy night",c:"amber"},{t:"NEW this week",c:"accent"}],
+      dow:"Fri", date:"21", title:"Burger night", type:"fun",
+      note:"Fun night, rotating off pizza. Smash burgers and real-potato fries.",
+      tags:[{t:"30 min",c:"green"},{t:"Fun night",c:"accent"}],
       thaw:null,
-      need:["Clean chicken sausage ×2 packs (thawed since Wednesday), cut into coins","Potato cubes from the prep block, drained and patted dry","3 bell peppers, 1 onion, thick strips","Avocado oil, salt, paprika, garlic powder"],
+      need:["1.5 lb ground beef (thawed since Thursday)","Clean buns","Sharp cheddar","Russets cut into fries","Lettuce, tomato, onion, pickles","Avocado oil, salt"],
       how:[
-        "425°F. Potatoes onto the sheet pan first, oiled and salted — give them a 15 min head start.",
-        "Add the sausage coins, peppers and onion. Toss it all together on the pan.",
-        "Back in for 18–20 min, until the sausage edges brown and the potato corners crisp.",
-        "Serve as-is, or components separated on the 4-year-old's plate."
+        "Fries first — 425°F, oiled and salted, 25 min, flip once.",
+        "Loose balls of beef into a screaming-hot cast iron. Smash flat, salt, 2 min, flip, cheese on, 1 min.",
+        "Toast the buns in the beef fat. This is the step people skip and shouldn't.",
+        "Toppings on the counter, everyone builds."
       ],
-      why:"New, but it's sausage and potatoes on one pan — the lowest-risk new thing you can put in front of these three. The peppers just ride along; nobody has to eat them."
+      why:"Friday is when eating out pulls hardest. Burger night at home wins on being better, not on being disciplined."
     },
     {
-      dow:"Fri", date:"14", title:"Homemade pizza night", type:"fun",
-      note:"Fun night. Kids build their own — this is the one that beats ordering out.",
-      tags:[{t:"30 min",c:"green"},{t:"Fun night",c:"accent"},{t:"Build-your-own",c:"plain"}],
+      dow:"Sat", date:"22", title:"Rotisserie chicken night", type:"flex",
+      note:"The legal cheat code. Buy the bird that day, do almost nothing.",
+      tags:[{t:"10 min",c:"green"},{t:"Flex night",c:"plain"}],
       thaw:null,
-      need:["2 sourdough / clean par-baked crusts","Clean marinara","16 oz whole-milk mozzarella","Toppings on the counter: spinach, onion, whatever's left"],
+      need:["Rotisserie chicken (check the label — some are clean, some aren't)","Thursday's leftover rice, or a fresh pot","Frozen veg with butter and salt","Fruit"],
       how:[
-        "Oven as hot as it goes, 475–500°F.",
-        "Everyone builds their own. The 10-year-old runs the cheese and the timer.",
-        "8–12 min until the cheese bubbles and the edges brown."
+        "Pull the bird apart onto a platter.",
+        "Rice reheated, frozen veg microwaved with butter.",
+        "Done. Sit down."
       ],
-      why:"Friday is when eating out has the strongest pull. Pizza night at home wins on fun, not on discipline."
-    },
-    {
-      dow:"Sat", date:"15", title:"Breakfast burritos for dinner", type:"flex",
-      note:"New spin on the flex night that never fails. Build-your-own, everything on the counter.",
-      tags:[{t:"20 min",c:"green"},{t:"Flex night",c:"plain"},{t:"NEW this week",c:"accent"}],
-      thaw:null,
-      need:["8–10 eggs","No-nitrate bacon or breakfast sausage","Shredded cheddar","Large tortillas","Any leftover potato cubes from Thursday","Salsa, avocado"],
-      how:[
-        "Bacon or sausage in the oven at 400°F while you go.",
-        "Big pan of soft scrambled eggs — pull them a touch early, they keep cooking.",
-        "Everything onto the counter. Everyone builds their own; roll it or leave it open-face.",
-        "Scramble extra eggs if you want a second round for school mornings."
-      ],
-      why:"Second new meal this week because you asked — but it's breakfast-for-dinner in a tortilla, on the night with the least riding on it. Build-your-own is still the best compliance format you have. If the day gets away from you, it collapses back to plain scrambled eggs and toast with zero loss."
+      why:"Flex night has no requirements and nothing frozen. It's the release valve if the week went sideways, and it beats ordering out on both time and money."
     }
   ],
 
-  committed: [],
+  committed: [
+    {
+      title: "Sunday Aug 16 — birthday party, dinner handled",
+      body: "No Peele Kitchen dinner planned and no prep block. The party runs through the afternoon and dinner is already covered, so Sunday is genuinely off. That's why the anchor sits on Monday this week and the prep block moved back to Saturday."
+    }
+  ],
 
   prep: {
-    title: "Sunday prep block",
-    when: "Sunday ~4:00pm — while the chicken roasts",
+    title: "Saturday prep block",
+    when: "Saturday Aug 15, morning",
     mins: "40 min",
     tasks: [
-      {t:"Grate the cheese for the week", d:"Mozzarella and parmesan for Tuesday's pasta, mozzarella for Friday's pizza. Bagged pre-shredded carries potato starch and cellulose to keep it from clumping — grating your own is the cheapest clean swap there is, and it melts better.", m:"10 min"},
-      {t:"Cook 3 cups dry rice", d:"Spread it on a sheet pan to cool fast, then fridge. Cold rice is Monday's fried rice — it has to be day-old to fry right.", m:"5 min hands-on"},
-      {t:"Hard-boil 12 eggs", d:"Ice bath, then fridge in the shell. Lunchboxes all week and Thursday's egg wash.", m:"5 min hands-on"},
-      {t:"Cut 3 lb russets into 1-inch cubes", d:"Cover with cold water in a container in the fridge. Thursday they get drained, dried and go straight onto the sheet pan.", m:"6 min"},
-      {t:"Wash and cut the raw veg", d:"Carrot sticks, cucumber spears, broccoli florets, grapes off the stem. Into containers at eye level.", m:"8 min"},
-      {t:"Press the protein bars", d:"2 cups oats + 1 cup peanut butter + 2 scoops protein powder + honey. Press into a pan, chill, cut 12. Lunchbox + breakfast currency.", m:"8 min"}
+      {t:"Load the slow-cooker insert", d:"Chuck roast salted hard, carrots and onions around it, 2 cups beef broth over the top. Cover the insert and put the whole thing in the fridge. Monday morning it lifts straight into the base — a 60-second job on a busy morning. Sear the roast first if you feel like it; skip it if you don't.", m:"10 min"},
+      {t:"Brown 1.5 lb ground beef into meat sauce", d:"With chopped onion, garlic, and 2 grated zucchini plus a grated carrot. Add both jars of marinara, simmer 10 min. Cool and fridge — it holds fine through Tuesday. This is why Tuesday takes fifteen minutes.", m:"12 min"},
+      {t:"Mix the tzatziki", d:"Plain Greek yogurt, one grated and squeezed cucumber, lemon, garlic, dill, salt. Five days in the fridge only improves it.", m:"5 min"},
+      {t:"Hard-boil 12 eggs", d:"Ice bath, then fridge in the shell. Lunchboxes and school mornings.", m:"5 min hands-on"},
+      {t:"Scrub and poke 6 russets", d:"Ready to go straight into Wednesday's oven with zero prep on a busy night.", m:"3 min"},
+      {t:"Carrot sticks and grapes into containers", d:"Eye level in the fridge. Leave the cucumbers and tomatoes whole — cut those Wednesday night so they're crisp for Thursday's bowls.", m:"5 min"}
     ],
-    why: "Forty minutes on Sunday is what buys you a 15-minute Monday and a 5-minute Tuesday. Everything downstream this week depends on this block."
+    why: "Sunday's gone, so this whole block slid back to Saturday. Forty minutes buys you a one-minute Monday, a fifteen-minute Tuesday and a ten-minute Wednesday. Rice is the one thing that did NOT move here — cooked rice doesn't want to sit five days, so Thursday cooks it fresh."
   },
 
   shop: {
     shopped: false,
     store: "Publix — Winchester Plaza",
-    tagline: "GreenWise for the clean-label stuff, and walk the BOGO endcaps — that's the real lever here.",
+    tagline: "Friday night shop. GreenWise for the clean-label items, and walk the BOGO endcaps — that's still the real lever.",
     receiptTotal: null,
     sections: [
-      {name:"Produce", stockup:false, note:"Russets, carrots and yellow onions are left off — you've got plenty from last week. For the record, the week burns about 3 lb potatoes, 1 lb carrots and 3 onions, so eyeball it before you go.", items:[
+      {name:"Produce", stockup:false, note:"Deliberately sturdy — this has to survive eight days. Nothing here wilts by Wednesday.", items:[
+        {n:"Russet potatoes, 8 lb", p:7.99, t:"Pot roast, potato bar, and Friday's fries"},
+        {n:"Carrots, 2 lb", p:2.49},
+        {n:"Yellow onions, 3 lb", p:3.79},
+        {n:"Zucchini ×2", p:2.98, t:"Grated into the meat sauce — invisible"},
+        {n:"Cucumbers ×3", p:2.97, t:"Greek bowls and tzatziki"},
+        {n:"Roma tomatoes ×6", p:3.99},
+        {n:"Lemons ×2", p:1.30},
         {n:"Garlic, 3-pack", p:2.19},
-        {n:"Broccoli crowns ×2", p:4.29},
-        {n:"Green beans, 1 lb", p:3.29},
         {n:"Organic grapes, 2 lb", p:6.99, t:"Dirty Dozen — buy organic"},
-        {n:"Mandarins, 3 lb bag", p:5.99},
         {n:"Bananas", p:1.59},
-        {n:"Avocados ×3", p:3.99, t:"Clean Fifteen — conventional is fine"},
-        {n:"Cucumbers ×3", p:2.97},
+        {n:"Mandarins, 3 lb bag", p:5.99},
         {n:"Baby carrots, 2 lb", p:3.29},
-        {n:"Bell peppers ×3", p:5.97, t:"Thursday's sheet pan"},
-        {n:"Organic baby spinach, 10 oz", p:5.49, t:"Tuesday's Florentine — Dirty Dozen, buy organic"}
+        {n:"Broccoli crowns ×2", p:4.29}
       ]},
-      {name:"Meat", stockup:false, note:"The whole chicken is assumed to be in your freezer — it's left off. Ground beef is no longer needed this week at all.", items:[
-        {n:"Boneless chicken thighs, 1.5 lb", p:8.99, t:"Tuesday's Florentine. Skip it if there are thighs in the freezer already"},
-        {n:"Clean chicken sausage ×2 packs", p:13.98, t:"No nitrates unless celery-based. Freeze it when you get home — Thursday is too far out for fresh"},
-        {n:"No-nitrate bacon or breakfast sausage, 12 oz", p:7.49, t:"Saturday's breakfast burritos"}
+      {name:"Meat", stockup:false, note:"Nearly empty on purpose — you said you're good on protein. The chuck roast, both batches of ground beef and the chicken thighs all come out of your freezer.", items:[
+        {n:"Rotisserie chicken", p:8.99, t:"Buy it the day of — Saturday the 22nd, not Friday. Check the label, some are clean"}
       ]},
       {name:"Dairy & Eggs", stockup:false, items:[
-        {n:"Pasture-raised eggs, 2 dozen", p:11.98, t:"Fried rice, hard-boiled, breakfasts"},
+        {n:"Pasture-raised eggs, 2 dozen", p:11.98},
         {n:"Whole milk, 1 gal", p:4.79},
         {n:"Chocolate milk, half gal", p:4.29, t:"Tier-2 — on the list on purpose"},
-        {n:"Sharp cheddar block, 8 oz ×2", p:9.98},
-        {n:"Whole-milk mozzarella, 16 oz", p:5.99, t:"Tuesday pasta + Friday pizza"},
-        {n:"Parmesan wedge, 8 oz", p:6.49, t:"Grate it Sunday"},
-        {n:"Heavy cream, 16 oz", p:4.99, t:"Tuesday's sauce"},
-        {n:"Kerrygold butter, 8 oz", p:4.99},
-        {n:"Vanilla Greek yogurt, 32 oz", p:6.49, t:"Tier-2 — the one the kids actually eat"}
+        {n:"Sharp cheddar block, 8 oz ×2", p:9.98, t:"Grate your own, it melts better"},
+        {n:"Feta block, 8 oz", p:4.99, t:"Thursday's bowls"},
+        {n:"Plain whole-milk Greek yogurt, 32 oz", p:6.49, t:"Tzatziki, and it stands in for sour cream on the potato bar"},
+        {n:"Vanilla Greek yogurt, 32 oz", p:6.49, t:"Tier-2 — the one they actually eat"},
+        {n:"Kerrygold butter, 8 oz", p:4.99}
       ]},
       {name:"Pantry — this week", stockup:false, items:[
-        {n:"Clean marinara / pizza sauce", p:4.49, t:"Check for canola and added sugar"},
-        {n:"Sourdough par-baked crusts ×2", p:6.99},
-        {n:"Organic ziti or penne, 16 oz", p:3.49, t:"Tuesday's Florentine"},
-        {n:"Sun-dried tomatoes, 7 oz ×2 jars", p:11.98, t:"Get olive-oil-packed — most jars are sunflower or canola. This is the one label to actually read"},
-        {n:"Organic chicken stock, 32 oz", p:4.29, t:"Tuesday, and it's an emergency-shelf staple"},
-        {n:"Coconut aminos", p:6.49, t:"The clean soy-sauce swap"},
-        {n:"Large tortillas — Siete or organic", p:6.49, t:"Saturday's burritos"}
+        {n:"Organic spaghetti, 16 oz ×2", p:6.98},
+        {n:"Clean marinara ×2 jars", p:8.98, t:"Check for canola and added sugar"},
+        {n:"Beef broth, 32 oz", p:4.29, t:"Pot roast"},
+        {n:"Clean burger buns", p:5.49},
+        {n:"Dried dill + oregano", p:4.49}
       ]},
-      {name:"Pantry stock-up", stockup:true, note:"These last months. Skip anything you still have — that's where the number drops.", items:[
+      {name:"Pantry stock-up", stockup:true, note:"Trimmed to just the two you actually burn through. Skip either if you still have plenty.", items:[
         {n:"Rolled oats, 42 oz", p:6.99},
-        {n:"Natural peanut butter, 28 oz", p:6.99, t:"Peanuts + salt only"},
-        {n:"Almond flour, 16 oz", p:9.99, t:"Nugget breading and pancakes"},
-        {n:"Raw honey, 16 oz", p:7.99},
-        {n:"Avocado oil, 16 oz", p:11.99},
-        {n:"Real maple syrup, 8 oz", p:9.99},
-        {n:"Protein powder", p:29.99, t:"Only if you're actually out — biggest single line here"}
+        {n:"Natural peanut butter, 28 oz", p:6.99, t:"Peanuts + salt only"}
       ]},
-      {name:"Lunchbox — packs all week", stockup:false, note:"Rotated from last week so it doesn't go stale. Hard-boiled eggs, string cheese, carrots, cucumber, grapes and mandarins are already covered above.", items:[
-        {n:"Simple Mills almond-flour crackers", p:5.49},
-        {n:"Siete tortilla chips", p:5.29},
+      {name:"Lunchbox — packs all week", stockup:false, note:"Rotated off last week — cookies instead of crackers, Jackson's instead of Siete, raisins instead of freeze-dried. Hard-boiled eggs, carrots, cucumber, grapes and mandarins are already covered above.", items:[
+        {n:"Simple Mills cookies", p:5.49},
+        {n:"Jackson's sweet potato chips", p:4.99},
         {n:"No-nitrate deli turkey, 8 oz", p:7.99, t:"Celery-based cure is fine"},
         {n:"String cheese, 12-pack", p:6.49},
-        {n:"Applesauce pouches, 12 ct", p:6.99, t:"No added sugar"},
-        {n:"Freeze-dried strawberries", p:4.49, t:"New in the rotation this week"},
-        {n:"Avocado-oil popcorn", p:4.29},
-        {n:"Dark chocolate bar", p:3.29, t:"Simple label"}
+        {n:"That's It bars, 5 ct", p:6.49},
+        {n:"Raisins, 6 ct", p:4.29}
       ]},
-      {name:"Breakfast — school mornings", stockup:false, note:"Oats, eggs, peanut butter and maple syrup are already on the list above. Sunday's homemade bars cover the grab-and-go mornings.", items:[
+      {name:"Breakfast — school mornings", stockup:false, note:"Oats, eggs and peanut butter are already on the list above — those three plus the berries cover every school morning.", items:[
         {n:"Ezekiel bread", p:6.49},
         {n:"Frozen organic mixed berries, 3 lb", p:12.49, t:"Oats, yogurt, pancakes"}
       ]},
       {name:"Frozen", stockup:false, items:[
         {n:"Frozen organic broccoli ×2", p:5.98},
-        {n:"Frozen peas & carrots", p:2.79, t:"Monday's fried rice"},
-        {n:"Frozen organic green beans", p:2.99}
+        {n:"Frozen organic green beans", p:2.99},
+        {n:"Frozen organic peas & carrots", p:2.79}
       ]}
     ],
     notes: [
-      {h:"The stock-up split", b:"Pantry stock-up is __STOCKUP__ of the total and lasts two to three months. This week's actual food is __WEEKLY__ — that's the number to judge the week on. Skip the protein powder alone if you still have some and you're down about $30."},
-      {h:"Tier-2, flagged once", b:"Chocolate milk and vanilla Greek yogurt are tier-2 and they're on the list on purpose — the kids drink and eat them. Plain yogurt with honey and berries is there whenever you want it. Not mentioning it again."},
-      {h:"What the Florentine swap cost", b:"Trading chili for the Florentine ran about $31 net. Cream, parmesan, sun-dried tomatoes and chicken thighs are simply pricier than beans and canned tomatoes — that's the whole difference, and it's a fine trade for a meal you actually want to eat. Worth knowing the number, not worth feeling bad about."},
-      {h:"Budget", b:"Receipts logged: 8/1 Publix $178.56. That's one. Send me this week's total and we'll have two — at three I'll put a weekly target on the table and hold the plans to it."}
+      {h:"The stock-up split", b:"Only __STOCKUP__ of this is stock-up, so __WEEKLY__ is genuinely this week's food — and it's now covering six dinners instead of seven, since Sunday is handled. The big saver isn't on the list at all: your freezer covers every protein this week."},
+      {h:"Where you actually land", b:"Your last two rang up $178.56 (8/1) and $150.44 (8/8) — an average of $164.50. This list prices at $223.53, which tells me you're already editing in the aisle, and that's fine. Treat it as a menu, not a mandate. One more receipt and I'll set a real weekly target and hold the plans to it."},
+      {h:"Tier-2, flagged once", b:"Chocolate milk and vanilla Greek yogurt are tier-2 and they're here on purpose. Plain yogurt with honey and berries is on the list too, whenever you feel like it. Not mentioning it again."},
+      {h:"Eight-day produce", b:"Shopping Friday for a week that ends the 22nd means the delicate stuff would die on you. That's why there's no fresh spinach or fresh berries here — frozen berries do the breakfast job, and the veg on this list is all root, brassica or gourd. Use the cucumbers and tomatoes by Thursday and you're clear."}
     ]
   },
 
@@ -527,11 +506,11 @@ const PLAN = {
     kids: [
       {k:"Serve it, offer nothing else", v:"No alternative on the table, no pressure to finish. The proven pattern here is that they eat it when it's the only option."},
       {k:"Deconstruct for the 4-year-old", v:"Same food, components separated on the plate. Never cook a second dinner."},
-      {k:"Build-your-own wins across all three", v:"Tacos, pizza, baked potato bar, quesadillas. Best compliance you'll get."},
+      {k:"Build-your-own wins across all three", v:"Tacos, pizza, baked potato bar, quesadillas, bowls. Best compliance you'll get — three of this week's nights use it."},
       {k:"Give the 10-year-old a job", v:"Shredding cheese, the air-fryer button, the timer. Ownership increases eating, every time."},
-      {k:"New food rides shotgun", v:"Always alongside a guaranteed favorite, never on its own. That's why Thursday's new sheet pan is built on sausage and potatoes."}
+      {k:"New food rides shotgun", v:"Always alongside a guaranteed favorite, never on its own. And never more than one new thing on a night."}
     ],
-    swapNotSubtract: "Nothing gets taken away — it gets rebuilt clean. Nuggets become almond-flour nuggets. Fries become real potatoes in avocado oil. Mac becomes real cheddar. Pizza night is still pizza night. Subtraction is what makes a plan collapse in week three.",
+    swapNotSubtract: "Nothing gets taken away — it gets rebuilt clean. Nuggets become almond-flour nuggets. Fries become real potatoes in avocado oil. Mac becomes real cheddar. Burger night is still burger night. Subtraction is what makes a plan collapse in week three.",
     thawTable: [
       ["Whole chicken, 4–5 lb","24–36 hrs — pull two nights ahead"],
       ["Ground beef, 1–2 lb","12–24 hrs — the night before"],
@@ -539,7 +518,7 @@ const PLAN = {
       ["Fish fillets","12 hrs — the night before"],
       ["Pork or beef roast, 3–4 lb","48 hrs — two full days"]
     ],
-    thawNote: "If a protein gets cooked during the Sunday prep block instead of at dinner, count backward from the prep block, not from the meal.",
+    thawNote: "If a protein gets cooked during the Sunday prep block instead of at dinner, count backward from the prep block, not from the meal. And if a slow-cooker meal starts in the morning, count backward from the morning — that's why this week's roast comes out Thursday, not Friday.",
     thawWarn: "Never thaw on the counter. Fridge, or a sealed bag in cold water changed every 30 minutes. Counter-thawing leaves the outside of the meat sitting in the danger zone for hours while the middle is still frozen.",
     lunch: {
       packs: ["Simple Mills almond-flour crackers","Siete, Jackson's or Boulder Canyon chips","String cheese","No-nitrate deli turkey","Hard-boiled eggs","Natural peanut butter — peanuts and salt only","Applesauce pouches, no added sugar","Raisins or freeze-dried fruit","Avocado-oil popcorn","That's It bars","Simple Mills cookies","Homemade oat + peanut butter protein bars","Dark chocolate","Baby carrots, cucumber, grapes, mandarins"],
@@ -547,17 +526,18 @@ const PLAN = {
       traps: [
         "Flavored kid yogurts — almost always colors, \"natural flavors\" and a lot of added sugar. Plain whole-milk Greek with honey does the same job.",
         "Fruit snacks — corn syrup and Red 40 wearing a fruit costume.",
-        "Granola bars — the whole aisle is seed oils and brown rice syrup. The homemade oat + peanut butter bars replace this entire category."
+        "Granola bars — the whole aisle is seed oils and brown rice syrup. The homemade oat + peanut butter bars replace this entire category.",
+        "Goldfish and the cracker aisle generally — enriched flour and vegetable oils. Simple Mills is the swap, and it packs identically."
       ],
       breakfast: ["Rolled oats","Ezekiel or sourdough toast","Frozen organic berries","Batch-frozen pancakes — double the batch on any pancake night","Hard-boiled eggs from the Sunday prep block"],
-      breakfastTactic: "Batch on Sunday, assemble on weekdays. Twelve hard-boiled eggs and a pan of protein bars covers every school morning without anyone cooking at 6:45am."
+      breakfastTactic: "Batch on Sunday, assemble on weekdays. Twelve hard-boiled eggs and a container of overnight oats covers every school morning without anyone cooking at 6:45am."
     },
-    weekShape: ["4 planned dinners","1 leftovers night — name it, so it feels intentional","1 flex night — rotisserie chicken or breakfast for dinner","1 fun night — pizza or burgers, so eating out loses its pull"],
+    weekShape: ["4 planned dinners","1 leftovers night — name it, so it feels intentional","1 flex night — rotisserie chicken or breakfast for dinner","1 fun night — burgers or pizza, so eating out loses its pull"],
     store: [
       {k:"Weekly, one trip", v:"Kroger or Publix. Produce, dairy, weekly proteins, fill-ins. Pick whichever is on the route — never both in one week."},
-      {k:"Every 3–4 weeks", v:"Costco. Clean staples run 30–50% below grocery prices. This is the single biggest budget lever you have."},
+      {k:"Every 3–4 weeks", v:"Costco. Clean staples run 30–50% below grocery prices. This is the single biggest budget lever you have, and it's been three weeks."},
       {k:"Targeted only", v:"Whole Foods, ten items or fewer. Deli meat, specialty flours, sourdough. Never a full shop — that's how the budget died last time."},
-      {k:"At Publix specifically", v:"GreenWise covers most of the clean-label list. Walk the BOGO endcaps and stock up when a GreenWise staple lands on one."}
+      {k:"At Publix specifically", v:"GreenWise covers most of the clean-label list. Walk the BOGO endcaps and stock up when a GreenWise staple lands on one — your last receipt saved $26.28 doing exactly that."}
     ],
     dirty: ["Strawberries","Spinach","Kale","Grapes","Peaches","Apples","Cherries","Blueberries","Green beans","Potatoes"],
     clean: ["Avocado","Sweet corn","Pineapple","Onions","Papaya","Frozen sweet peas","Asparagus","Honeydew","Kiwi","Cabbage","Mango","Mushrooms"]
