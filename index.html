@@ -244,46 +244,89 @@ nav{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);
    Swap this object each week; the rest of the app is generic.
    ============================================================ */
 const PLAN = {
- "week": "Tue Sep 8 – Fri Sep 11, 2026",
- "updated": "Sep 6, 2026",
+ "week": "Tue Sep 15 – Fri Sep 18, 2026",
+ "updated": "Sep 15, 2026",
  "assumptions": [
-  "Four dinners: Tuesday through Friday. Monday is Labor Day and you said it is covered, and tonight is covered too.",
-  "Sports every evening Tuesday, Wednesday and Thursday. That is the constraint that shaped this whole plan — those three nights are slow-cooker, one-pot or oven-does-it-while-you-are-out. Nothing on a school night asks for more than 15 minutes of your attention.",
-  "You are back from a weekend away and the fridge is bare, so this list restocks the basics properly instead of trimming them.",
-  "Still plenty of chicken thighs and ground beef in the freezer, so there is no Meat section. All four dinners come out of what you already own."
+  "Four dinners: tonight through Friday. Shopping today, so tonight has to work with zero thaw time — that is the one real constraint on this week and it shaped Tuesday entirely.",
+  "Sports again Tuesday, Wednesday and Thursday. Those three nights are 15 minutes or a slow cooker. Friday is the only night that gets to be a project, and it is pizza.",
+  "Still plenty of chicken thighs and ground beef, so there is no Meat section. All four dinners come out of the freezer.",
+  "The anchor moved to Wednesday this week instead of the front. Three pounds of thighs cannot thaw between this afternoon and dinner tonight, but they thaw comfortably by tomorrow morning — so tonight is the quick beef night and Wednesday carries the week."
  ],
  "thaw": {
-  "lede": "Three pulls, all small. Nothing needs planning further ahead than the night before.",
+  "lede": "One of these needs doing in the next hour. Read the first one before you leave for the store.",
   "items": [
    {
-    "protein": "Chicken thighs, 4 lb",
-    "pull": "Tonight, Sunday Sep 6 — before bed",
-    "forMeal": "Tuesday's slow-cooker shredded chicken",
-    "why": "It goes into the cooker Tuesday <b>morning</b>, so count backward from the morning, not from dinner. Four pounds is a big cold mass and wants about 36 hrs — tonight is right on time."
+    "protein": "Ground beef, 1.5 lb",
+    "pull": "Right now — cold-water method, not the fridge",
+    "forMeal": "Tonight's taco bar",
+    "why": "The fridge is too slow for tonight. Seal it in a bag with no air, sit it in a bowl of cold water and change the water every 30 min — 1.5 lb thaws in about an hour, which is roughly how long the store takes. Start it before you walk out the door and it is ready when you get back."
    },
    {
-    "protein": "Ground beef, 1.5 lb",
-    "pull": "Tuesday Sep 8 evening",
-    "forMeal": "Wednesday's spaghetti",
-    "why": "1.5 lb wants 12–24 hrs and it gets cooked at dinnertime Wednesday, so the night before is the window."
-   },
-   {
-    "protein": "Ground beef, 1.5 lb",
-    "pull": "Thursday Sep 10 evening",
-    "forMeal": "Friday's burgers",
-    "why": "Second batch, kept frozen until now. A week in the fridge would have been far too long, so it waits."
+    "protein": "Chicken thighs, 3 lb",
+    "pull": "This afternoon, into the fridge",
+    "forMeal": "Wednesday's slow-cooker shredded chicken",
+    "why": "It goes into the cooker tomorrow <b>morning</b>, so count backward from the morning, not from dinner. Out this afternoon gives it 16–18 hrs, comfortably inside the 12–24 window for three pounds."
    }
   ],
-  "nothing": "Monday, Wednesday and Friday — nothing comes out on any of them. One pull tonight, then one each on Tuesday and Thursday evening.",
+  "nothing": "Thursday and Friday — nothing comes out on either. Both pulls happen today, then the freezer door stays shut for the rest of the week.",
   "counterRule": "Never thaw on the counter. Fridge, or a sealed bag in a cold-water bath changed every 30 min. Room-temp thawing puts the outside of the meat in the danger zone for hours while the middle is still frozen."
  },
  "days": [
   {
    "dow": "Tue",
-   "date": "8",
-   "title": "Slow-cooker chicken taco bar",
+   "date": "15",
+   "title": "Beef taco bar",
+   "type": "planned",
+   "note": "Serves 5 with beef left over. 15 minutes, one skillet, and it works with meat you thawed an hour ago.",
+   "tags": [
+    {
+     "t": "15 min",
+     "c": "green"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "Build-your-own",
+     "c": "accent"
+    },
+    {
+     "t": "No thaw time",
+     "c": "plain"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "1.5 lb ground beef, cold-water thawed",
+    "1 tbsp chili powder",
+    "2 tsp ground cumin",
+    "1 tsp kosher salt",
+    "1/2 tsp smoked paprika",
+    "1/2 cup water",
+    "20 tortillas, 8-inch",
+    "8 oz sharp cheddar, grated",
+    "1/2 head cabbage, shredded thin",
+    "2 roma tomatoes, diced",
+    "1 cup plain Greek yogurt",
+    "1 jar salsa"
+   ],
+   "how": [
+    "Large skillet over medium-high. Beef in, broken up with a spoon, 7 min until no pink is left. Do not drain the fat.",
+    "Add 1 tbsp chili powder, 2 tsp cumin, 1 tsp salt and 1/2 tsp paprika directly to the hot fat and stir for 60 seconds before adding anything wet. Blooming the spices in fat is the entire difference between this and a seasoning packet.",
+    "Pour in 1/2 cup water, scrape the bottom of the pan, and simmer 3 min until it thickens and clings to the meat.",
+    "While that simmers: shred the cabbage, dice the tomatoes, grate the cheddar. Ten minutes total and the kids can do the cheese.",
+    "Warm the tortillas — 30 seconds a side in a dry pan, or the whole stack wrapped in a damp towel in the microwave for 45 seconds.",
+    "Everything on the counter in separate bowls, everyone builds their own. Put about a cup of the seasoned beef aside before you sit down — it is Friday's pizza topping if anyone wants a taco pizza."
+   ],
+   "why": "This is the meal that exists because you are shopping today. Nothing here needed planning, the only protein is a pound and a half that thaws in a bowl of water while you shop, and it is on the table fifteen minutes after you walk in. Build-your-own means the 4-year-old eats plain beef and cheese without anyone cooking twice."
+  },
+  {
+   "dow": "Wed",
+   "date": "16",
+   "title": "Slow-cooker shredded chicken",
    "type": "anchor",
-   "note": "Serves 5 with half the meat left over. 10 min in the morning, 6 hrs hands-off, 5 min when you walk in the door.",
+   "note": "Serves 5 with half the meat left over. 10 min before you leave, 6 hrs hands-off, 5 min when you get home.",
    "tags": [
     {
      "t": "Anchor meal",
@@ -304,238 +347,198 @@ const PLAN = {
    ],
    "thaw": null,
    "need": [
-    "4 lb chicken thighs, thawed — from the freezer",
-    "16 oz jar salsa",
+    "3 lb chicken thighs, thawed — from the freezer",
+    "1 jar salsa, 16 oz",
     "1 tbsp chili powder",
     "2 tsp ground cumin",
     "2 tsp kosher salt",
-    "TO SERVE: 20 tortillas · 8 oz sharp cheddar, grated Monday · 1/2 head cabbage, shredded Monday · 1 cup plain Greek yogurt · the second jar of salsa"
+    "TO SERVE: 2 lb yellow potatoes, roasted · 8 oz cheddar, grated · 1 cup plain Greek yogurt · 12 oz frozen corn",
+    "2 tbsp avocado oil + 1 tsp salt, for the potatoes"
    ],
    "how": [
-    "Morning, before you leave: thighs into the slow cooker in one layer. Sprinkle over 1 tbsp chili powder, 2 tsp cumin and 2 tsp salt, then pour the whole jar of salsa on top. No water — the thighs release plenty. Lid on, low, 6 hours.",
-    "That is the entire morning job. Four ingredients, no browning, no chopping — the onion and garlic are skipped on purpose because the salsa already has both.",
-    "When you get home: lift the thighs onto a board and shred with two forks. It falls apart with almost no pressure. Back into the pot juices, stir, taste, add salt if it is flat.",
-    "Everything else was done Monday. Put the cheese, cabbage, yogurt and salsa on the counter with warm tortillas and let all five of you build your own.",
-    "Before anyone goes back for seconds: pull about 3 cups of chicken into a container labeled THURSDAY, into the fridge. Two days out is well inside the safe window."
+    "Morning, before you leave: thighs into the slow cooker in one layer, 1 tbsp chili powder, 2 tsp cumin and 2 tsp salt over the top, then the whole jar of salsa. No water — the thighs release plenty. Lid on, low, 6 hours.",
+    "That is the whole morning job. No browning, no chopping — the salsa brings the onion and garlic already.",
+    "Home: potatoes cut into chunks, tossed with 2 tbsp avocado oil and 1 tsp salt, 425°F for 25 min while you deal with everything else.",
+    "Lift the thighs onto a board and shred with two forks — they fall apart with no real pressure. Back into the pot juices, stir, taste, add salt if it is flat.",
+    "Corn straight from frozen into a covered bowl, microwave 4 min. Grate the cheddar.",
+    "Chicken, potatoes, corn, cheese and yogurt on the table — they build their own bowls. Before seconds: pull about 3 cups of chicken into a container labelled THURSDAY."
    ],
-   "why": "The lowest-effort dinner in the rotation, and it still covers two nights. A sports Tuesday can absorb ten minutes at 7am far better than thirty minutes at 6pm — and build-your-own means the 4-year-old eats plain chicken and cheese without anyone cooking twice."
-  },
-  {
-   "dow": "Wed",
-   "date": "9",
-   "title": "Spaghetti and quick meat sauce",
-   "type": "planned",
-   "note": "Serves 5 with sauce left over. 15 minutes, one pot and one skillet, start to finish.",
-   "tags": [
-    {
-     "t": "15 min",
-     "c": "green"
-    },
-    {
-     "t": "Sports night",
-     "c": "amber"
-    },
-    {
-     "t": "One skillet",
-     "c": "plain"
-    }
-   ],
-   "thaw": null,
-   "need": [
-    "1.5 lb ground beef, thawed",
-    "16 oz organic spaghetti",
-    "2 jars clean marinara, 24 oz each",
-    "1 tbsp kosher salt, for the pasta water",
-    "2 tbsp butter",
-    "4 oz sharp cheddar or parmesan, grated, for the table",
-    "12 oz frozen green beans",
-    "1 tbsp butter + 1 tsp salt, for the beans"
-   ],
-   "how": [
-    "Water on to boil first, with 1 tbsp salt in it. It should taste like the sea — the only chance the pasta gets to be seasoned.",
-    "Large skillet over medium-high. Beef in, broken up with a spoon, 7 min until no pink is left. Do not drain the fat, it is flavor.",
-    "Both jars of marinara straight into the skillet with the beef. Simmer on low while the pasta cooks. That is the sauce — no chopping, no grating, nothing hidden this week.",
-    "Spaghetti in, cooked 1 minute under the box time. Scoop out 1 cup of pasta water before you drain.",
-    "Drained pasta back in the pot with 2 tbsp butter and a ladle of sauce, tossed. A splash of pasta water if it looks tight.",
-    "Green beans in a pot with 1 inch of water, lid on, 6 min. Drain, toss with 1 tbsp butter and 1 tsp salt. Cheese on the table."
-   ],
-   "why": "Fifteen minutes and two pans on a sports night. I left the grated zucchini and carrot out this week on purpose — it is five more minutes of knife work and this is not the week for it. Jar sauce plus real beef is still miles from a drive-through."
+   "why": "Ten minutes at 7am buys a sports Wednesday back completely. It also covers Thursday, which is the whole reason the anchor sits here rather than on a night you could actually cook. Thighs are the cheapest good protein you own and they are impossible to overcook in a slow cooker."
   },
   {
    "dow": "Thu",
-   "date": "10",
-   "title": "Baked potato bar off Tuesday's chicken",
+   "date": "17",
+   "title": "Chicken soup and grilled cheese",
    "type": "leftovers",
-   "note": "Serves 5. 5 minutes of work. The oven does the whole thing while you are at the field.",
+   "note": "Serves 5. 20 minutes, most of it the soup simmering by itself while you make sandwiches.",
    "tags": [
     {
      "t": "Leftovers night",
      "c": "amber"
     },
     {
-     "t": "5 min active",
+     "t": "20 min",
      "c": "green"
     },
     {
-     "t": "Oven while you are out",
-     "c": "accent"
-    },
-    {
-     "t": "Build-your-own",
-     "c": "accent"
+     "t": "One pot",
+     "c": "plain"
     }
    ],
-   "thaw": {
-    "chip": "Pull the ground beef tonight",
-    "detail": "Move 1.5 lb of ground beef from the freezer down to the fridge before bed — it is tomorrow's burgers and it needs 12–24 hrs."
-   },
+   "thaw": null,
    "need": [
-    "8 russet potatoes, scrubbed and poked Monday",
-    "2 tbsp avocado oil and 1 tsp kosher salt, for the skins",
-    "The container labeled THURSDAY, about 3 cups shredded chicken",
-    "8 oz sharp cheddar, grated",
-    "1 cup plain Greek yogurt",
+    "The container labelled THURSDAY, about 3 cups shredded chicken",
+    "2 qt organic chicken stock",
+    "3 carrots, sliced into coins",
+    "2 celery stalks, sliced",
+    "1 yellow onion, diced",
     "2 tbsp butter",
-    "About 1 cup of whatever salsa is left from Tuesday",
-    "Baby carrots and 1 cucumber, sliced, on the side"
+    "1 tsp kosher salt, 1/2 tsp black pepper",
+    "1 bay leaf",
+    "1 cup small pasta or rice",
+    "GRILLED CHEESE: 10 slices bread · 8 oz cheddar, sliced · 4 tbsp butter, softened"
    ],
    "how": [
-    "Before you leave: rub the scrubbed potatoes with 2 tbsp avocado oil and 1 tsp salt, straight onto the oven rack, 400°F for 60 min. Set the oven timer — they hold fine for another 30 min after it goes off, so they can outlast a long practice.",
-    "If you will be out more than 90 minutes, use the slow cooker instead: potatoes wrapped in foil, low for 6 hours, no supervision at all.",
-    "Home: chicken into a bowl and microwave 2 min. Grate the cheddar if Monday's container is empty.",
-    "Split each potato lengthwise, push the ends together to open it up, fork the inside a bit and drop in a knob of butter.",
-    "Everything out on the counter — chicken, cheddar, yogurt, salsa. They build their own. Carrots and cucumber on the side.",
-    "Before bed: 1.5 lb ground beef out of the freezer into the fridge."
+    "Big pot over medium. 2 tbsp butter, then the diced onion, sliced carrots and celery. 6 min until softened — this is the only knife work of the night and it is five minutes.",
+    "Pour in 2 qt stock, add the bay leaf, 1 tsp salt and 1/2 tsp pepper. Bring to a simmer.",
+    "Add 1 cup pasta or rice and simmer 10 min, until the pasta is just done and the carrots give to a fork.",
+    "Shredded chicken in at the very end, 2 min just to heat through. Adding it early makes it stringy. Pull the bay leaf out. Taste and salt again — soup almost always needs more than you think.",
+    "Grilled cheese while the soup simmers: butter the OUTSIDE of every slice, cheese in the middle, medium-low skillet, 3 min a side until deep golden. Low and slow so the cheese melts before the bread burns.",
+    "Cut the sandwiches into halves or soldiers for dipping. Dipping is the entire reason this works on a 4-year-old."
    ],
-   "why": "This is the easiest real dinner there is. The oven works while you are gone, the toppings are all Tuesday's leftovers, and a loaded potato reads like a treat to a 6-year-old. Total hands-on time after a practice: about five minutes."
+   "why": "Second dinner off Wednesday's cooker, and September is finally cool enough for it. Soup plus grilled cheese is the most reliable dinner in the whole rotation for kids this age — the sandwich is the guaranteed favourite riding alongside, so nobody has to be persuaded about the soup."
   },
   {
    "dow": "Fri",
-   "date": "11",
-   "title": "Smash burger night and oven fries",
+   "date": "18",
+   "title": "Homemade pizza night",
    "type": "fun",
-   "note": "Serves 5. 20 minutes, and the fries do most of it unattended. No sports tonight.",
+   "note": "Serves 5, one pizza each. 15 min of building, 10 of baking. No sports tonight.",
    "tags": [
     {
      "t": "Fun night",
      "c": "accent"
     },
     {
-     "t": "20 min",
+     "t": "25 min",
      "c": "green"
     },
     {
-     "t": "Build-your-own",
-     "c": "accent"
+     "t": "Kids cook",
+     "c": "green"
+    },
+    {
+     "t": "Oven 500°F",
+     "c": "plain"
     }
    ],
    "thaw": null,
    "need": [
-    "1.5 lb ground beef, thawed, divided into 6 loose balls — do not pack them tight",
-    "3 lb russet potatoes, cut into 1/2-inch thick fries",
-    "3 tbsp avocado oil + 1.5 tsp kosher salt, for the fries",
-    "6 slices real cheddar",
-    "6 burger buns — check for canola and dough conditioners",
-    "1 tbsp butter, for the buns",
-    "Lettuce, 1 tomato sliced, pickles",
-    "1 tsp kosher salt and 1/2 tsp black pepper, for seasoning the patties",
-    "Primal Kitchen ketchup and yellow mustard, about 2 tbsp each"
+    "5 par-baked crusts, 8–10 inch",
+    "1 cup pizza sauce — about 3 tbsp per pizza",
+    "16 oz mozzarella, grated (about 4 cups)",
+    "4 oz pepperoni, no nitrates — celery-based cure is fine",
+    "About 1 cup leftover taco beef from Tuesday, if anyone wants a taco pizza",
+    "About 2 cups of veg from the drawer — peppers, onion, leftover cabbage, sliced thin",
+    "2 tbsp olive oil, for brushing the rims"
    ],
    "how": [
-    "Fries first — preheat to 425°F, toss the cut fries with 3 tbsp avocado oil and 1.5 tsp salt, spread on a sheet pan without crowding. 35–40 min, flipping once at 20. They run unattended while you do everything else.",
-    "Cast-iron or heavy skillet on high for 3 full minutes. It needs to be genuinely hot — this is the whole difference between a smash burger and a grey one.",
-    "One ball in the dry pan, then immediately smash it flat with a stiff spatula and hold for 10 seconds. Salt and pepper the top.",
-    "90 seconds until the edges are brown and lacy, then flip. Cheese on straight away, 60 more seconds. Out. Two at a time, and do not move them around while they cook.",
-    "Butter the buns and toast them cut-side down in the same pan for 30 seconds while the burgers rest.",
-    "Toppings out on the counter, everyone builds their own. Give the 10-year-old the fry pan and the timer."
+    "Preheat as hot as the oven goes — 500°F if it will do it — with the sheet pan or stone inside. Give it a full 20 min. A hot pan is the difference between a crisp bottom and a soggy one.",
+    "Set up a station while it heats: sauce in one bowl, grated mozzarella in another, toppings in the rest. Everyone gets their own crust.",
+    "Rules for them: about 3 tbsp of sauce spread thin, stopping half an inch from the edge. Cheese next, toppings last, and do not pile it — a loaded pizza steams and never crisps.",
+    "Brush the bare rim with 2 tbsp olive oil. Bake two at a time, 8–10 min, until the cheese bubbles and the edges have brown spots.",
+    "Watch the first one closely to learn your oven's timing, then run the rest on that number.",
+    "Rest 2 min before cutting. The 10-year-old runs the timer and calls the pulls."
    ],
-   "why": "Friday is when ordering out has the strongest pull, so it gets the meal that competes with it. Grass-fed beef, real cheese and actual potatoes — twenty minutes, no drive, no $60. Loose balls and a screaming-hot dry pan are the only two things that matter here."
+   "why": "Friday is when ordering out has the strongest pull, so it gets the meal that competes with ordering out. It is also the only night this week with no practice, which is exactly why the one meal the kids actually make themselves lands here."
   }
  ],
  "committed": [
   {
-   "title": "Monday Sep 7 — Labor Day, dinner covered",
-   "body": "You said Monday is handled. It holds a short prep block though — about 20 minutes of shredding, grating and scrubbing that turns three sports nights into five-minute nights. Everyone is home anyway."
+   "title": "Sports Tuesday, Wednesday and Thursday",
+   "body": "Every school night again. Tonight is fifteen minutes because the beef thaws in a bowl of water while you shop; Wednesday is ten minutes at 7am and nothing at 6pm; Thursday is one pot off Wednesday's chicken. Friday is the only night asked to do any real work."
   },
   {
-   "title": "Sports Tuesday, Wednesday and Thursday",
-   "body": "Every school night this week has something. That is why Tuesday is a slow cooker, Thursday is an oven that runs while you are out, and Wednesday is fifteen minutes in two pans. Nothing on those nights asks you to cook after a practice — the only real cooking session all week is Friday, and that one is on purpose."
+   "title": "Costco is now about seven weeks overdue",
+   "body": "Not this week either — you are shopping today for four dinners and there is no room for a second trip. But it has gone from due to genuinely costing you money. Bulk thighs, ground beef and oil would pay for the trip on their own, and the first free Saturday should open with it."
   }
  ],
  "prep": {
-  "title": "Labor Day prep block",
-  "when": "Monday Sep 7, afternoon",
-  "mins": "20 min hands-on",
+  "title": "Tonight, while the beef browns",
+  "when": "Tuesday Sep 15, before dinner",
+  "mins": "15 min hands-on",
   "tasks": [
    {
+    "t": "Start the cold-water thaw first",
+    "d": "1.5 lb ground beef, sealed in a bag with the air pressed out, in a bowl of cold water. Change the water every 30 min. About an hour. Do this before you leave for the store, not after — it is the one task that decides whether dinner happens tonight.",
+    "m": "2 min"
+   },
+   {
+    "t": "Chicken thighs into the fridge",
+    "d": "3 lb out of the freezer onto a tray on the bottom shelf to catch drips. Tomorrow morning's slow cooker. 16–18 hrs from now, which is exactly right.",
+    "m": "1 min"
+   },
+   {
     "t": "Grate 16 oz of cheddar",
-    "d": "Into one container, and it covers Tuesday's taco bar and Thursday's potato bar both. Pre-shredded is coated in potato starch and does not melt properly. 10-year-old's job.",
+    "d": "Into one container — it covers tonight's taco bar and Wednesday's bowls both. Pre-shredded is coated in potato starch and does not melt properly. 10-year-old's job while the beef browns.",
     "m": "6 min"
    },
    {
     "t": "Shred half a head of cabbage",
-    "d": "About 1/2 head of cabbage sliced thin — roughly 4 cups — for Tuesday's taco slaw, into a bag. The other half keeps all week. Cabbage is the one fresh vegetable that will not wilt on you by Thursday.",
+    "d": "About 4 cups, sliced thin, into a bag. Tonight's taco slaw and Friday's pizza topping. Cabbage is the one fresh vegetable that will not wilt on you by Friday.",
     "m": "4 min"
    },
    {
-    "t": "Scrub and poke 8 russets",
-    "d": "Washed, dried, and pricked 4 or 5 times each with a fork so they do not burst. Straight into a bag in the pantry. Thursday they go into the oven with zero prep on a night you will not be home to do any.",
-    "m": "4 min"
-   },
-   {
-    "t": "Hard-boil 12 eggs",
-    "d": "Into already-boiling water, 11 min at a low boil, then straight into an ice bath for 5 min — that is what makes them peel cleanly. Fridge in the shell, good for a week. Lunchboxes and school mornings.",
-    "m": "5 min hands-on, 20 min total"
-   },
-   {
-    "t": "Carrot sticks, cucumber and fruit into containers",
-    "d": "About 2 lb of carrots into sticks, 1 cucumber sliced, grapes off the stem, apples washed. Eye level in the fridge. If it is not at eye level and already cut, it does not get eaten.",
-    "m": "6 min"
+    "t": "Carrot sticks and fruit into containers",
+    "d": "About 2 lb of carrots into sticks, grapes off the stem and rinsed, apples washed. Eye level in the fridge. If it is not at eye level and already cut, it does not get eaten.",
+    "m": "5 min"
    }
   ],
-  "why": "Twenty minutes on a day you are home anyway. The grated cheese and the scrubbed potatoes are the two that matter — they are what make Thursday a five-minute night instead of a takeaway night."
+  "why": "Fifteen minutes tonight, most of it standing next to a skillet you are already watching. The cold-water thaw and the thighs into the fridge are the two that matter — everything else can slip."
  },
  "shop": {
   "shopped": false,
   "store": "Publix — Winchester Plaza",
-  "tagline": "Today's trip, and a proper restock after the weekend away. Simple week — nothing on this list needs a technique.",
   "receiptTotal": null,
+  "tagline": "Today's trip. Short list — you restocked the pantry nine days ago, so this is mostly produce, dairy and the pizza night.",
   "sections": [
    {
     "name": "Produce",
     "stockup": false,
-    "note": "Back to a full load. Russets are the big line and they cover both Thursday and Friday.",
+    "note": "Normal load for four dinners. Cabbage does double duty again — taco slaw tonight, pizza topping Friday.",
     "items": [
      {
-      "n": "Russet potatoes, 10 lb",
-      "p": 8.99,
-      "t": "8 baked Thursday, the rest into Friday's fries"
+      "n": "Yellow potatoes, 3 lb",
+      "p": 3.99,
+      "t": "Roasted alongside Wednesday's chicken"
      },
      {
       "n": "Green cabbage, 1 head",
       "p": 2.49,
-      "t": "Taco slaw Tuesday, and it keeps all week"
+      "t": "Tacos tonight, pizza Friday"
      },
      {
-      "n": "Roma tomatoes ×4",
-      "p": 2.79,
-      "t": "Burgers Friday"
+      "n": "Carrots, 2 lb",
+      "p": 2.49,
+      "t": "Thursday's soup and lunchbox sticks"
      },
      {
-      "n": "Green leaf lettuce, 1 head",
-      "p": 2.49
+      "n": "Celery, 1 bunch",
+      "p": 2.29,
+      "t": "Thursday's soup"
      },
      {
       "n": "Yellow onions, 3 lb",
       "p": 3.49
      },
      {
-      "n": "Carrots, 2 lb",
-      "p": 2.49
+      "n": "Roma tomatoes ×4",
+      "p": 2.79
      },
      {
-      "n": "Baby carrots, 2 lb",
-      "p": 2.99
+      "n": "Bell peppers ×2",
+      "p": 2.98,
+      "t": "Friday's pizza"
      },
      {
       "n": "Cucumbers ×2",
@@ -560,7 +563,7 @@ const PLAN = {
    {
     "name": "Dairy & Eggs",
     "stockup": false,
-    "note": "The restock section. Cheddar does double duty across Tuesday and Thursday, so it is the one thing worth buying three blocks of.",
+    "note": "Cheddar spans three nights and mozzarella is the pizza. These two are most of the section.",
     "items": [
      {
       "n": "Pasture-raised eggs, 2 dozen",
@@ -571,19 +574,19 @@ const PLAN = {
       "p": 3.99
      },
      {
-      "n": "Sharp cheddar block, 8 oz ×2",
-      "p": 8.98,
-      "t": "Taco bar and potato bar — grate Monday"
+      "n": "Sharp cheddar block, 8 oz ×3",
+      "p": 13.47,
+      "t": "Tacos, Wednesday's bowls, Thursday's grilled cheese"
      },
      {
-      "n": "Sliced real cheddar, 8 oz",
-      "p": 4.49,
-      "t": "Friday's burgers"
+      "n": "Mozzarella block, 16 oz",
+      "p": 5.49,
+      "t": "Friday's pizza — grate your own"
      },
      {
       "n": "Plain whole-milk Greek yogurt, 32 oz",
       "p": 6.49,
-      "t": "Taco and potato topping — stands in for sour cream"
+      "t": "Taco and bowl topping"
      },
      {
       "n": "Butter, 1 lb",
@@ -594,17 +597,8 @@ const PLAN = {
    {
     "name": "Pantry — this week",
     "stockup": false,
-    "note": "Nine things, and most of them are jars. Skip any you already have.",
+    "note": "Short, because you stocked up on the 6th. Skip anything you still have.",
     "items": [
-     {
-      "n": "Organic spaghetti, 16 oz",
-      "p": 3.49
-     },
-     {
-      "n": "Clean marinara ×2 jars",
-      "p": 8.98,
-      "t": "Check for canola and added sugar"
-     },
      {
       "n": "Salsa, 16 oz ×2",
       "p": 7.98,
@@ -615,49 +609,39 @@ const PLAN = {
       "p": 7.98
      },
      {
-      "n": "Burger buns",
-      "p": 4.99,
-      "t": "Check for canola and dough conditioners"
-     },
-     {
-      "n": "Pickles",
-      "p": 3.99
-     },
-     {
-      "n": "Chili powder + cumin",
-      "p": 4.49,
-      "t": "Skip if you still have both"
-     }
-    ]
-   },
-   {
-    "name": "Pantry stock-up",
-    "stockup": true,
-    "note": "The trip emptied the emergency shelf. These put it back and they last months — infrastructure, not groceries.",
-    "items": [
-     {
-      "n": "Organic canned beans ×3",
-      "p": 5.97
-     },
-     {
       "n": "Organic chicken stock, 32 oz ×2",
-      "p": 5.98
+      "p": 5.98,
+      "t": "Thursday's soup"
      },
      {
-      "n": "Primal Kitchen ketchup",
-      "p": 6.49,
-      "t": "Avocado oil, no cane sugar"
+      "n": "Small pasta or rice, 16 oz",
+      "p": 3.49,
+      "t": "Thursday's soup"
      },
      {
-      "n": "Yellow mustard, clean label",
+      "n": "Par-baked pizza crusts ×5",
+      "p": 7.99,
+      "t": "Check the label for canola"
+     },
+     {
+      "n": "Pizza sauce",
       "p": 3.49
+     },
+     {
+      "n": "Pepperoni, no nitrates",
+      "p": 5.49
+     },
+     {
+      "n": "Sandwich bread",
+      "p": 4.49,
+      "t": "Thursday's grilled cheese"
      }
     ]
    },
    {
     "name": "Lunchbox — packs all week",
     "stockup": false,
-    "note": "Hard-boiled eggs, carrots, cucumber, grapes and apples are already covered above and they carry most of it.",
+    "note": "Four days. Hard-boiled eggs, carrots, cucumber, grapes and apples are covered above.",
     "items": [
      {
       "n": "Simple Mills almond-flour crackers",
@@ -665,8 +649,7 @@ const PLAN = {
      },
      {
       "n": "Siete or Boulder Canyon chips",
-      "p": 4.99,
-      "t": "Also Tuesday's taco night"
+      "p": 4.99
      },
      {
       "n": "String cheese, 12-pack",
@@ -681,24 +664,17 @@ const PLAN = {
    {
     "name": "Breakfast — school mornings",
     "stockup": false,
+    "note": "Oats and peanut butter came home on the 6th and should still be going. Grab these two only if they are out.",
     "items": [
-     {
-      "n": "Rolled oats, 42 oz",
-      "p": 6.99
-     },
-     {
-      "n": "Natural peanut butter, 28 oz",
-      "p": 6.99,
-      "t": "Peanuts + salt only"
-     },
-     {
-      "n": "Honey, 16 oz",
-      "p": 6.49
-     },
      {
       "n": "Frozen organic mixed berries, 3 lb",
       "p": 12.49,
       "t": "Oats and yogurt all week"
+     },
+     {
+      "n": "Honey, 16 oz",
+      "p": 6.49,
+      "t": "Skip if the last jar is still going"
      }
     ]
    },
@@ -707,28 +683,33 @@ const PLAN = {
     "stockup": false,
     "items": [
      {
-      "n": "Frozen organic green beans ×2",
-      "p": 5.98
+      "n": "Frozen organic corn",
+      "p": 2.79,
+      "t": "Wednesday's bowls"
+     },
+     {
+      "n": "Frozen organic green beans",
+      "p": 2.99
      }
     ]
    }
   ],
   "notes": [
    {
-    "h": "Under target, and simpler than last draft",
-    "b": "__WEEKLY__ against a $185 target and a $164.50 running average. Dropping the meatball and nugget batches took about $25 straight off — no almond flour, no parmesan, no sub rolls. What is left is jars, cheese and potatoes."
+    "h": "Under target, and a short list",
+    "b": "__WEEKLY__ against a $185 target and a $164.50 running average. It is low because you stocked the pantry nine days ago — no oil, no flour, no beans, no stock-up section at all this week. This is produce, dairy and one pizza night."
    },
    {
-    "h": "Stock-up is separate from the weekly number",
-    "b": "__STOCKUP__ of this trip is stock-up rather than this week's food. The emergency shelf got emptied while you were away; beans, stock, ketchup and mustard put it back and they last months."
+    "h": "Read the thaw card before you leave",
+    "b": "Tonight is the only dinner this week with a hard dependency, and it is a one-hour one. Ground beef sealed in a bag, sitting in cold water, changed every 30 min, started before you walk out the door. If you forget it, tonight becomes breakfast for dinner and that is a perfectly fine outcome — but starting it costs two minutes."
    },
    {
-    "h": "Cheddar and potatoes are the two workhorses",
-    "b": "Grated cheddar covers Tuesday's taco bar and Thursday's potato bar. The 10 lb bag of russets covers Thursday's eight baked potatoes and Friday's fries. Buying both bigger than one meal needs is what keeps the rest of this list short."
+    "h": "Cheddar is doing a lot of work",
+    "b": "Three blocks looks like a lot until you count: taco bar tonight, Wednesday's bowls, Thursday's grilled cheese. Grate all of it in one go tonight while the beef browns and none of those three nights needs a box grater again."
    },
    {
-    "h": "The batch nights are still worth doing",
-    "b": "Meatballs and homemade nuggets are the two highest-value things in the rotation — they bank about six future dinners each. They are just wrong for a week with practice three nights running. Put them on the first free weekend and the freezer refills itself."
+    "h": "The batch nights are still waiting",
+    "b": "Meatballs and homemade nuggets each bank about six future dinners and they are the fastest way to fill a freezer shelf. Three sports nights is still the wrong week. First free Saturday, do one of them alongside the Costco run and the whole month gets easier."
    }
   ]
  },
