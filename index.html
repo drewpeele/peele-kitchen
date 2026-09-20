@@ -244,40 +244,201 @@ nav{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);
    Swap this object each week; the rest of the app is generic.
    ============================================================ */
 const PLAN = {
- "week": "Tue Sep 15 – Fri Sep 18, 2026",
- "updated": "Sep 15, 2026",
+ "week": "Sun Sep 20 – Fri Sep 25, 2026",
+ "updated": "Sep 20, 2026",
  "assumptions": [
-  "Four dinners: tonight through Friday. Shopping today, so tonight has to work with zero thaw time — that is the one real constraint on this week and it shaped Tuesday entirely.",
-  "Sports again Tuesday, Wednesday and Thursday. Those three nights are 15 minutes or a slow cooker. Friday is the only night that gets to be a project, and it is pizza.",
-  "Still plenty of chicken thighs and ground beef, so there is no Meat section. All four dinners come out of the freezer.",
-  "The anchor moved to Wednesday this week instead of the front. Three pounds of thighs cannot thaw between this afternoon and dinner tonight, but they thaw comfortably by tomorrow morning — so tonight is the quick beef night and Wednesday carries the week."
+  "Tori is solo with all three kids Monday through Friday. That is the only thing that shaped this week. Every plan below is built so that one adult, alone, at 5:30pm, with a 10, a 6 and a 4-year-old, can put dinner on the table without it being a battle.",
+  "Sunday changed at Tori's request — no sheet-pan chicken thighs. Hot turkey and cheese sandwiches instead, which take fifteen minutes. She also flagged that spaghetti Sunday would collide with ziti Monday, and she is right, so that idea is out too. The chicken the rest of the week needs still gets cooked tonight, it just happens quietly in the slow cooker instead of being dinner.",
+  "Tonight is the whole plan. Drew is home and shopping today, so tonight cooks for four of the next five nights. One real session now buys an oven-only Monday, a ten-minute Tuesday, a zero-cook Wednesday and a fifteen-minute Thursday.",
+  "Nothing thaws this week — on purpose. Meat is bought fresh today rather than pulled from the freezer, so Tori never has to remember a pull at 9pm. That costs about $25 more than a freezer week and it is the best $25 on this list."
  ],
  "thaw": {
-  "lede": "One of these needs doing in the next hour. Read the first one before you leave for the store.",
-  "items": [
-   {
-    "protein": "Ground beef, 1.5 lb",
-    "pull": "Right now — cold-water method, not the fridge",
-    "forMeal": "Tonight's taco bar",
-    "why": "The fridge is too slow for tonight. Seal it in a bag with no air, sit it in a bowl of cold water and change the water every 30 min — 1.5 lb thaws in about an hour, which is roughly how long the store takes. Start it before you walk out the door and it is ready when you get back."
-   },
-   {
-    "protein": "Chicken thighs, 3 lb",
-    "pull": "This afternoon, into the fridge",
-    "forMeal": "Wednesday's slow-cooker shredded chicken",
-    "why": "It goes into the cooker tomorrow <b>morning</b>, so count backward from the morning, not from dinner. Out this afternoon gives it 16–18 hrs, comfortably inside the 12–24 window for three pounds."
-   }
-  ],
-  "nothing": "Thursday and Friday — nothing comes out on either. Both pulls happen today, then the freezer door stays shut for the rest of the week.",
+  "lede": "Nothing. Not one thing, all week — and that is deliberate, not an oversight.",
+  "items": [],
+  "nothing": "Every night. The chicken and the beef are bought fresh today and both get cooked tonight, so there is no freezer pull to remember on any evening this week. On a solo week the thing most likely to fail is not the cooking, it is remembering at 9pm that tomorrow needed something moved down a shelf. This week removes that failure entirely.",
   "counterRule": "Never thaw on the counter. Fridge, or a sealed bag in a cold-water bath changed every 30 min. Room-temp thawing puts the outside of the meat in the danger zone for hours while the middle is still frozen."
  },
  "days": [
   {
-   "dow": "Tue",
-   "date": "15",
-   "title": "Beef taco bar",
+   "dow": "Sun",
+   "date": "20",
+   "title": "Hot turkey and cheese sandwiches",
+   "type": "anchor",
+   "note": "Serves 5. 15 minutes, one sheet pan. Meanwhile the slow cooker quietly does the chicken for Tuesday and Wednesday.",
+   "tags": [
+    {
+     "t": "Anchor meal",
+     "c": "accent"
+    },
+    {
+     "t": "15 min",
+     "c": "green"
+    },
+    {
+     "t": "Cooker runs alongside",
+     "c": "accent"
+    },
+    {
+     "t": "Drew cooks",
+     "c": "plain"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "1.5 lb no-nitrate deli turkey, sliced — celery-based cure is fine",
+    "8 oz provolone or Swiss, sliced",
+    "10 slices good bread, or 5 sub rolls",
+    "4 tbsp butter, softened",
+    "1 tsp garlic powder",
+    "2 tbsp dijon or yellow mustard, optional",
+    "Baby carrots and 1 cucumber, sliced, on the side",
+    "SEPARATELY, FOR THE WEEK: 3 lb chicken thighs · 1 jar salsa, 16 oz · 1 tbsp chili powder · 2 tsp cumin · 2 tsp kosher salt"
+   ],
+   "how": [
+    "FIRST, before anything else: 3 lb chicken thighs into the slow cooker, spices and the whole jar of salsa over the top, lid on, low for 6 hours. This is not tonight's dinner. It is Tuesday and Wednesday, and it cooks itself in the corner while you do everything else.",
+    "Preheat to 400°F. Mix the 4 tbsp softened butter with 1 tsp garlic powder.",
+    "Build the sandwiches open-faced on a sheet pan: bottom slice, mustard if you want it, a pile of turkey, then the cheese on top. Leave the top slice off for now.",
+    "Into the oven open-faced for 8 min, until the cheese is fully melted and the turkey edges start to crisp. Open-faced is the whole trick — it melts properly instead of steaming under a lid of bread.",
+    "Butter the top slices with the garlic butter, lay them on, and press down. Back in for 3–4 min until golden.",
+    "Cut in half, carrots and cucumber alongside. Done in fifteen.",
+    "After dinner: shred the slow-cooker chicken with two forks, back into its juices, then into two containers labelled TUESDAY and WEDNESDAY, about 2 cups each. Fridge."
+   ],
+   "why": "Tori asked to lose the sheet-pan thighs, so they are gone. Hot turkey and cheese is faster anyway, and the kids will take a melted cheese sandwich every time. The chicken the rest of the week runs on still gets made tonight, it just never appears on a plate as a thigh. Buy extra turkey and the leftovers cover lunchboxes too."
+  },
+  {
+   "dow": "Mon",
+   "date": "21",
+   "title": "Baked ziti — assembled last night",
    "type": "planned",
-   "note": "Serves 5 with beef left over. 15 minutes, one skillet, and it works with meat you thawed an hour ago.",
+   "note": "Serves 5 with leftovers. Tori's hands-on time: about 3 minutes. Turn on the oven, put in the dish, set a timer.",
+   "tags": [
+    {
+     "t": "3 min active",
+     "c": "green"
+    },
+    {
+     "t": "Assembled Sunday",
+     "c": "accent"
+    },
+    {
+     "t": "Oven does it",
+     "c": "green"
+    },
+    {
+     "t": "Makes leftovers",
+     "c": "green"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "The covered 9x13 dish from the fridge",
+    "About 4 oz mozzarella, grated, held back in a small bag",
+    "About 2 cups of carrot sticks and cucumber from Sunday's containers, on the side"
+   ],
+   "how": [
+    "Preheat to 375°F. Take the foil-covered dish out of the fridge when you turn the oven on — 20 minutes on the counter takes the chill off so it heats evenly.",
+    "Covered, 35 min. Do not skip the foil; uncovered from cold dries the top out before the middle is hot.",
+    "Uncover, scatter the reserved 4 oz of mozzarella over the top, back in for 10–12 min until it is bubbling at the edges and browned in patches.",
+    "Rest 10 min before cutting. This is not optional — straight from the oven it slides apart on the plate, and ten minutes of rest is ten minutes you can use for something else anyway.",
+    "Carrot sticks from the container on the side. Nothing else needs doing.",
+    "Cover and fridge whatever is left — it reheats well and it is the backup for any night this week that goes sideways."
+   ],
+   "why": "Monday is the night a solo week is most likely to collapse, because everyone is tired and nothing has been prepped yet. So this one was fully assembled last night. Three minutes of work, and the 4-year-old will eat it because it is pasta and cheese."
+  },
+  {
+   "dow": "Tue",
+   "date": "22",
+   "title": "Chicken quesadillas",
+   "type": "leftovers",
+   "note": "Serves 5. 10 minutes, one skillet, and the chicken and cheese were both done Sunday.",
+   "tags": [
+    {
+     "t": "10 min",
+     "c": "green"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "One skillet",
+     "c": "plain"
+    },
+    {
+     "t": "Kids help",
+     "c": "green"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "The container labelled TUESDAY, about 2 cups chopped chicken",
+    "10 tortillas, 8-inch",
+    "About 2 cups grated cheddar from Sunday's container",
+    "1 cup salsa",
+    "1 tbsp butter or avocado oil per batch",
+    "Baby carrots and 1 cucumber, sliced, from the containers"
+   ],
+   "how": [
+    "Large dry skillet over medium. Tortilla down, handful of cheese, scatter of chicken, another handful of cheese, second tortilla on top. Cheese on both layers is the glue.",
+    "3 min a side until golden and the cheese has gone. Press flat once with a spatula, then flip.",
+    "Onto a board, wait a full minute, then cut into 6 wedges. Cutting straight off the heat makes the filling run out.",
+    "Repeat for 5 total. Hold the finished ones on a sheet pan in a 200°F oven so everyone eats together instead of in shifts — that matters more when there is only one adult at the table.",
+    "Salsa, carrots and cucumber out. Done.",
+    "Give the 10-year-old the job of assembling them while you run the pan. It is genuinely useful help and it keeps one kid occupied."
+   ],
+   "why": "Practice night, one adult, and this is ten minutes of standing at a skillet with everything already prepped. No knife, no thawing, no decisions. If the evening runs long, quesadillas are just as good at 7pm as at 6."
+  },
+  {
+   "dow": "Wed",
+   "date": "23",
+   "title": "Baked potato bar",
+   "type": "flex",
+   "note": "Serves 5. About 5 minutes of actual work. The oven runs the whole thing while you are at practice.",
+   "tags": [
+    {
+     "t": "5 min active",
+     "c": "green"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "Oven while you are out",
+     "c": "accent"
+    },
+    {
+     "t": "Build-your-own",
+     "c": "accent"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "8 russet potatoes, scrubbed and poked Sunday",
+    "2 tbsp avocado oil and 1 tsp kosher salt, for the skins",
+    "The container labelled WEDNESDAY, about 2 cups chopped chicken",
+    "About 2 cups grated cheddar",
+    "1 cup plain Greek yogurt",
+    "3 tbsp butter",
+    "About 4 cups of leftover ziti from Monday, reheated 5 min, as the alternate for anyone who wants it",
+    "About 1 cup of whatever salsa is left"
+   ],
+   "how": [
+    "Before you leave for practice: rub the potatoes with 2 tbsp avocado oil and 1 tsp salt, straight onto the oven rack, 400°F for 60 min. They hold fine for another 30 min after the timer, so they will outlast a long practice.",
+    "If you will be gone more than 90 minutes, use the slow cooker instead — potatoes wrapped in foil, low for 6 hours, no supervision at all. Set it before school drop-off.",
+    "Home: chicken into a bowl, microwave 2 min. That is the only cooking.",
+    "Split each potato lengthwise, squeeze the ends together to open it up, fork the inside and drop in a knob of butter.",
+    "Chicken, cheddar, yogurt and salsa out on the counter. They build their own. Monday's ziti is in the fridge for anyone who would rather have that.",
+    "Nothing to clean but plates and one bowl."
+   ],
+   "why": "This is the easiest real dinner that exists, and it lands on the hardest night — solo, midweek, practice. The oven works while nobody is home, every topping was made Sunday, and a loaded potato reads like a treat to a 6-year-old."
+  },
+  {
+   "dow": "Thu",
+   "date": "24",
+   "title": "Breakfast for dinner",
+   "type": "flex",
+   "note": "Serves 5. 15 minutes. Costs about four dollars and has never once failed here.",
    "tags": [
     {
      "t": "15 min",
@@ -288,143 +449,50 @@ const PLAN = {
      "c": "amber"
     },
     {
-     "t": "Build-your-own",
-     "c": "accent"
+     "t": "Pantry only",
+     "c": "plain"
     },
     {
-     "t": "No thaw time",
-     "c": "plain"
+     "t": "Kid favourite",
+     "c": "accent"
     }
    ],
    "thaw": null,
    "need": [
-    "1.5 lb ground beef, cold-water thawed",
-    "1 tbsp chili powder",
-    "2 tsp ground cumin",
+    "10 large eggs",
+    "3 tbsp butter, for the eggs",
+    "1/4 cup whole milk",
     "1 tsp kosher salt",
-    "1/2 tsp smoked paprika",
-    "1/2 cup water",
-    "20 tortillas, 8-inch",
-    "8 oz sharp cheddar, grated",
-    "1/2 head cabbage, shredded thin",
-    "2 roma tomatoes, diced",
-    "1 cup plain Greek yogurt",
-    "1 jar salsa"
+    "PANCAKES: 2 cups flour · 2 tsp baking powder · 1 tsp salt · 2 cups milk · 2 eggs · 2 tbsp honey · 3 tbsp melted butter",
+    "1/2 cup real maple syrup or honey",
+    "About 3 cups fruit, sliced"
    ],
    "how": [
-    "Large skillet over medium-high. Beef in, broken up with a spoon, 7 min until no pink is left. Do not drain the fat.",
-    "Add 1 tbsp chili powder, 2 tsp cumin, 1 tsp salt and 1/2 tsp paprika directly to the hot fat and stir for 60 seconds before adding anything wet. Blooming the spices in fat is the entire difference between this and a seasoning packet.",
-    "Pour in 1/2 cup water, scrape the bottom of the pan, and simmer 3 min until it thickens and clings to the meat.",
-    "While that simmers: shred the cabbage, dice the tomatoes, grate the cheddar. Ten minutes total and the kids can do the cheese.",
-    "Warm the tortillas — 30 seconds a side in a dry pan, or the whole stack wrapped in a damp towel in the microwave for 45 seconds.",
-    "Everything on the counter in separate bowls, everyone builds their own. Put about a cup of the seasoned beef aside before you sit down — it is Friday's pizza topping if anyone wants a taco pizza."
+    "Pancake batter: whisk 2 cups flour, 2 tsp baking powder and 1 tsp salt in one bowl. In another, 2 cups milk, 2 eggs, 2 tbsp honey and 3 tbsp melted butter. Combine and stir just until it comes together — lumps are correct, overmixing makes them tough. Rest 10 min.",
+    "Griddle over medium, lightly buttered. 1/4 cup batter each. Flip when the bubbles on top stay open, about 2 min, then 90 sec on the second side. Double the batch and freeze half on a sheet pan — that is next month's fast breakfast.",
+    "Eggs: crack all 10 into a bowl with 1/4 cup milk and 1 tsp salt, whisk 30 seconds until uniform.",
+    "3 tbsp butter in a nonstick pan over LOW heat. Eggs in, stirred slowly and constantly, pulling from the edges. 5–6 min. Low and slow is the whole secret — high heat is what makes them rubbery.",
+    "Pull the eggs while they still look slightly underdone; they finish in the pan. Fruit and syrup on the table."
    ],
-   "why": "This is the meal that exists because you are shopping today. Nothing here needed planning, the only protein is a pound and a half that thaws in a bowl of water while you shop, and it is on the table fifteen minutes after you walk in. Build-your-own means the 4-year-old eats plain beef and cheese without anyone cooking twice."
-  },
-  {
-   "dow": "Wed",
-   "date": "16",
-   "title": "Slow-cooker shredded chicken",
-   "type": "anchor",
-   "note": "Serves 5 with half the meat left over. 10 min before you leave, 6 hrs hands-off, 5 min when you get home.",
-   "tags": [
-    {
-     "t": "Anchor meal",
-     "c": "accent"
-    },
-    {
-     "t": "10 min AM",
-     "c": "green"
-    },
-    {
-     "t": "Sports night",
-     "c": "amber"
-    },
-    {
-     "t": "Seeds Thursday",
-     "c": "accent"
-    }
-   ],
-   "thaw": null,
-   "need": [
-    "3 lb chicken thighs, thawed — from the freezer",
-    "1 jar salsa, 16 oz",
-    "1 tbsp chili powder",
-    "2 tsp ground cumin",
-    "2 tsp kosher salt",
-    "TO SERVE: 2 lb yellow potatoes, roasted · 8 oz cheddar, grated · 1 cup plain Greek yogurt · 12 oz frozen corn",
-    "2 tbsp avocado oil + 1 tsp salt, for the potatoes"
-   ],
-   "how": [
-    "Morning, before you leave: thighs into the slow cooker in one layer, 1 tbsp chili powder, 2 tsp cumin and 2 tsp salt over the top, then the whole jar of salsa. No water — the thighs release plenty. Lid on, low, 6 hours.",
-    "That is the whole morning job. No browning, no chopping — the salsa brings the onion and garlic already.",
-    "Home: potatoes cut into chunks, tossed with 2 tbsp avocado oil and 1 tsp salt, 425°F for 25 min while you deal with everything else.",
-    "Lift the thighs onto a board and shred with two forks — they fall apart with no real pressure. Back into the pot juices, stir, taste, add salt if it is flat.",
-    "Corn straight from frozen into a covered bowl, microwave 4 min. Grate the cheddar.",
-    "Chicken, potatoes, corn, cheese and yogurt on the table — they build their own bowls. Before seconds: pull about 3 cups of chicken into a container labelled THURSDAY."
-   ],
-   "why": "Ten minutes at 7am buys a sports Wednesday back completely. It also covers Thursday, which is the whole reason the anchor sits here rather than on a night you could actually cook. Thighs are the cheapest good protein you own and they are impossible to overcook in a slow cooker."
-  },
-  {
-   "dow": "Thu",
-   "date": "17",
-   "title": "Chicken soup and grilled cheese",
-   "type": "leftovers",
-   "note": "Serves 5. 20 minutes, most of it the soup simmering by itself while you make sandwiches.",
-   "tags": [
-    {
-     "t": "Leftovers night",
-     "c": "amber"
-    },
-    {
-     "t": "20 min",
-     "c": "green"
-    },
-    {
-     "t": "One pot",
-     "c": "plain"
-    }
-   ],
-   "thaw": null,
-   "need": [
-    "The container labelled THURSDAY, about 3 cups shredded chicken",
-    "2 qt organic chicken stock",
-    "3 carrots, sliced into coins",
-    "2 celery stalks, sliced",
-    "1 yellow onion, diced",
-    "2 tbsp butter",
-    "1 tsp kosher salt, 1/2 tsp black pepper",
-    "1 bay leaf",
-    "1 cup small pasta or rice",
-    "GRILLED CHEESE: 10 slices bread · 8 oz cheddar, sliced · 4 tbsp butter, softened"
-   ],
-   "how": [
-    "Big pot over medium. 2 tbsp butter, then the diced onion, sliced carrots and celery. 6 min until softened — this is the only knife work of the night and it is five minutes.",
-    "Pour in 2 qt stock, add the bay leaf, 1 tsp salt and 1/2 tsp pepper. Bring to a simmer.",
-    "Add 1 cup pasta or rice and simmer 10 min, until the pasta is just done and the carrots give to a fork.",
-    "Shredded chicken in at the very end, 2 min just to heat through. Adding it early makes it stringy. Pull the bay leaf out. Taste and salt again — soup almost always needs more than you think.",
-    "Grilled cheese while the soup simmers: butter the OUTSIDE of every slice, cheese in the middle, medium-low skillet, 3 min a side until deep golden. Low and slow so the cheese melts before the bread burns.",
-    "Cut the sandwiches into halves or soldiers for dipping. Dipping is the entire reason this works on a 4-year-old."
-   ],
-   "why": "Second dinner off Wednesday's cooker, and September is finally cool enough for it. Soup plus grilled cheese is the most reliable dinner in the whole rotation for kids this age — the sandwich is the guaranteed favourite riding alongside, so nobody has to be persuaded about the soup."
+   "why": "Thursday of a solo week is when everyone is worn through, including Tori. This night asks nothing — no protein to plan, no leftovers to track, and all three kids treat it as a treat. Put the 6-year-old on pancake-flipping duty and it becomes the good part of the day rather than another thing to get through."
   },
   {
    "dow": "Fri",
-   "date": "18",
+   "date": "25",
    "title": "Homemade pizza night",
    "type": "fun",
-   "note": "Serves 5, one pizza each. 15 min of building, 10 of baking. No sports tonight.",
+   "note": "Serves 5, one pizza each. 15 min of building, 10 of baking — and the kids do most of the building.",
    "tags": [
     {
      "t": "Fun night",
      "c": "accent"
     },
     {
-     "t": "25 min",
+     "t": "Kids cook",
      "c": "green"
     },
     {
-     "t": "Kids cook",
+     "t": "25 min",
      "c": "green"
     },
     {
@@ -436,104 +504,128 @@ const PLAN = {
    "need": [
     "5 par-baked crusts, 8–10 inch",
     "1 cup pizza sauce — about 3 tbsp per pizza",
-    "16 oz mozzarella, grated (about 4 cups)",
+    "About 2 cups grated mozzarella, the rest of Sunday's container",
     "4 oz pepperoni, no nitrates — celery-based cure is fine",
-    "About 1 cup leftover taco beef from Tuesday, if anyone wants a taco pizza",
-    "About 2 cups of veg from the drawer — peppers, onion, leftover cabbage, sliced thin",
+    "About 1 cup of veg from the drawer, sliced thin",
     "2 tbsp olive oil, for brushing the rims"
    ],
    "how": [
-    "Preheat as hot as the oven goes — 500°F if it will do it — with the sheet pan or stone inside. Give it a full 20 min. A hot pan is the difference between a crisp bottom and a soggy one.",
-    "Set up a station while it heats: sauce in one bowl, grated mozzarella in another, toppings in the rest. Everyone gets their own crust.",
+    "Preheat as hot as the oven goes — 500°F if it will do it — with the sheet pan inside. A full 20 min. A hot pan is the difference between a crisp bottom and a soggy one.",
+    "Set up a station while it heats: sauce in one bowl, cheese in another, toppings in the rest. Everyone gets their own crust.",
     "Rules for them: about 3 tbsp of sauce spread thin, stopping half an inch from the edge. Cheese next, toppings last, and do not pile it — a loaded pizza steams and never crisps.",
-    "Brush the bare rim with 2 tbsp olive oil. Bake two at a time, 8–10 min, until the cheese bubbles and the edges have brown spots.",
-    "Watch the first one closely to learn your oven's timing, then run the rest on that number.",
+    "Brush the bare rim with olive oil. Bake two at a time, 8–10 min, until the cheese bubbles and the edges have brown spots.",
+    "Watch the first one to learn the timing, then run the rest on that number.",
     "Rest 2 min before cutting. The 10-year-old runs the timer and calls the pulls."
    ],
-   "why": "Friday is when ordering out has the strongest pull, so it gets the meal that competes with ordering out. It is also the only night this week with no practice, which is exactly why the one meal the kids actually make themselves lands here."
+   "why": "Five days of solo parenting deserves to end with the night the kids actually run. Tori supervises rather than cooks, everybody gets exactly what they want on their own pizza, and Friday is the night takeout has the strongest pull — so it gets the meal that beats takeout on its own terms."
   }
  ],
  "committed": [
   {
-   "title": "Sports Tuesday, Wednesday and Thursday",
-   "body": "Every school night again. Tonight is fifteen minutes because the beef thaws in a bowl of water while you shop; Wednesday is ten minutes at 7am and nothing at 6pm; Thursday is one pot off Wednesday's chicken. Friday is the only night asked to do any real work."
+   "title": "Drew out of town Monday through Friday",
+   "body": "Tori has all three every evening. That is why tonight is a cook-ahead session rather than a normal Sunday, why nothing thaws all week, and why three of the five nights are oven-only or reheat-only. Sunday's menu changed at her request; the slow-cooker chicken behind it did not, because Tuesday and Wednesday both run on it."
   },
   {
-   "title": "Costco is now about seven weeks overdue",
-   "body": "Not this week either — you are shopping today for four dinners and there is no room for a second trip. But it has gone from due to genuinely costing you money. Bulk thighs, ground beef and oil would pay for the trip on their own, and the first free Saturday should open with it."
+   "title": "Sports Tuesday, Wednesday and Thursday",
+   "body": "Solo with three kids and a practice run is the hardest combination in the rotation. Tuesday is ten minutes at a skillet, Wednesday the oven runs while nobody is home, Thursday is breakfast for dinner. Not one of those nights asks her to cook after a practice."
+  },
+  {
+   "title": "If a night falls apart, it is fine",
+   "body": "There is leftover ziti from Monday in the fridge and the 5pm SOS tab has a dozen meals under 20 minutes off the shelf. Using one of them on a solo week is not the plan failing — it is the plan working. Nobody needs to cook five nights out of five alone."
   }
  ],
  "prep": {
-  "title": "Tonight, while the beef browns",
-  "when": "Tuesday Sep 15, before dinner",
-  "mins": "15 min hands-on",
+  "title": "Sunday cook-ahead — Drew does this",
+  "when": "Sunday Sep 20, afternoon and evening",
+  "mins": "60 min hands-on",
   "tasks": [
    {
-    "t": "Start the cold-water thaw first",
-    "d": "1.5 lb ground beef, sealed in a bag with the air pressed out, in a bowl of cold water. Change the water every 30 min. About an hour. Do this before you leave for the store, not after — it is the one task that decides whether dinner happens tonight.",
-    "m": "2 min"
+    "t": "Assemble the baked ziti, do not bake it",
+    "d": "Boil 16 oz ziti 3 min UNDER the box time — it finishes in the oven tomorrow and fully-cooked pasta turns to mush. Brown 2 lb ground beef, 7 min, then add 2 jars of marinara and 1 tsp salt and simmer 10. Layer in a 9x13: sauce, pasta, 16 oz ricotta dotted over, half the mozzarella, then repeat. Hold back 4 oz of mozzarella in a small bag for tomorrow. Cover tight with foil, into the fridge. This is the most important task on the list — it turns Monday into a three-minute night.",
+    "m": "25 min"
    },
    {
-    "t": "Chicken thighs into the fridge",
-    "d": "3 lb out of the freezer onto a tray on the bottom shelf to catch drips. Tomorrow morning's slow cooker. 16–18 hrs from now, which is exactly right.",
-    "m": "1 min"
+    "t": "Start the slow cooker first, then shred it after dinner",
+    "d": "3 lb chicken thighs, 1 tbsp chili powder, 2 tsp cumin, 2 tsp kosher salt and a full 16 oz jar of salsa. Low, 6 hours, lid on. No water, no browning. After dinner shred it with two forks, stir it back into the juices, and split into two containers of about 2 cups each, labelled TUESDAY and WEDNESDAY in marker, not memory. Start this before you do anything else today or it will not be ready.",
+    "m": "10 min hands-on, 6 hrs in the cooker"
    },
    {
-    "t": "Grate 16 oz of cheddar",
-    "d": "Into one container — it covers tonight's taco bar and Wednesday's bowls both. Pre-shredded is coated in potato starch and does not melt properly. 10-year-old's job while the beef browns.",
-    "m": "6 min"
+    "t": "Grate 24 oz of cheese",
+    "d": "16 oz sharp cheddar and 8 oz mozzarella into labelled containers. It covers Monday's top, Tuesday's quesadillas, Wednesday's potatoes and Friday's pizza. Pre-shredded is coated in potato starch and will not melt properly. Best job to hand the 10-year-old.",
+    "m": "8 min"
    },
    {
-    "t": "Shred half a head of cabbage",
-    "d": "About 4 cups, sliced thin, into a bag. Tonight's taco slaw and Friday's pizza topping. Cabbage is the one fresh vegetable that will not wilt on you by Friday.",
+    "t": "Scrub and poke 8 russets",
+    "d": "Washed, dried, pricked 4 or 5 times each with a fork so they do not burst. Into a bag in the pantry. Wednesday they go straight into the oven with no prep on a night nobody will be home to do any.",
     "m": "4 min"
    },
    {
-    "t": "Carrot sticks and fruit into containers",
-    "d": "About 2 lb of carrots into sticks, grapes off the stem and rinsed, apples washed. Eye level in the fridge. If it is not at eye level and already cut, it does not get eaten.",
-    "m": "5 min"
+    "t": "Hard-boil 12 eggs",
+    "d": "Into already-boiling water, 11 min at a low boil, then straight into an ice bath for 5 min — that is what makes them peel cleanly. Fridge in the shell, good for a week. Lunchboxes and school mornings.",
+    "m": "5 min hands-on, 20 min total"
+   },
+   {
+    "t": "Carrot sticks, cucumber and fruit into containers",
+    "d": "About 2 lb of carrots into sticks, 2 cucumbers sliced, grapes off the stem, apples washed. Eye level in the fridge. On a solo week the side dish only happens if it is already cut.",
+    "m": "8 min"
    }
   ],
-  "why": "Fifteen minutes tonight, most of it standing next to a skillet you are already watching. The cold-water thaw and the thighs into the fridge are the two that matter — everything else can slip."
+  "why": "About an hour tonight, most of it while the sandwiches are in the oven and the cooker is running itself. It buys a three-minute Monday, a ten-minute Tuesday and a five-minute Wednesday. If time runs short, the slow cooker and the ziti are the two that matter, and the cooker has to be started early."
  },
  "shop": {
   "shopped": false,
   "store": "Publix — Winchester Plaza",
   "receiptTotal": null,
-  "tagline": "Today's trip. Short list — you restocked the pantry nine days ago, so this is mostly produce, dairy and the pizza night.",
+  "tagline": "Drew shops today, before leaving. One trip for the whole week so that nobody has to take three kids into a grocery store alone.",
   "sections": [
+   {
+    "name": "Meat — bought fresh on purpose",
+    "stockup": false,
+    "note": "The freezer stays shut this week. Fresh means no pull to remember on any evening, which is the single most likely thing to go wrong when one person is running the house. Buy the turkey generously — Sunday's leftovers cover lunchboxes.",
+    "items": [
+     {
+      "n": "No-nitrate deli turkey, 1.5 lb",
+      "p": 16.49,
+      "t": "Sunday's sandwiches, and the leftovers pack all week"
+     },
+     {
+      "n": "Chicken thighs, boneless, 3 lb",
+      "p": 8.49,
+      "t": "Slow cooker tonight — Tuesday and Wednesday only, never served as a thigh"
+     },
+     {
+      "n": "Ground beef, 2 lb",
+      "p": 13.98,
+      "t": "Browned tonight into the ziti"
+     }
+    ]
+   },
    {
     "name": "Produce",
     "stockup": false,
-    "note": "Normal load for four dinners. Cabbage does double duty again — taco slaw tonight, pizza topping Friday.",
+    "note": "Everything here gets cut tonight and put at eye level. On a solo week an uncut vegetable does not get eaten.",
     "items": [
      {
       "n": "Yellow potatoes, 3 lb",
       "p": 3.99,
-      "t": "Roasted alongside Wednesday's chicken"
+      "t": "Tonight's sheet pan"
      },
      {
-      "n": "Green cabbage, 1 head",
-      "p": 2.49,
-      "t": "Tacos tonight, pizza Friday"
+      "n": "Russet potatoes, 5 lb",
+      "p": 5.49,
+      "t": "Wednesday's potato bar"
      },
      {
       "n": "Carrots, 2 lb",
-      "p": 2.49,
-      "t": "Thursday's soup and lunchbox sticks"
+      "p": 2.49
      },
      {
-      "n": "Celery, 1 bunch",
-      "p": 2.29,
-      "t": "Thursday's soup"
+      "n": "Baby carrots, 2 lb",
+      "p": 2.99
      },
      {
-      "n": "Yellow onions, 3 lb",
-      "p": 3.49
-     },
-     {
-      "n": "Roma tomatoes ×4",
-      "p": 2.79
+      "n": "Cucumbers ×2",
+      "p": 1.98
      },
      {
       "n": "Bell peppers ×2",
@@ -541,8 +633,16 @@ const PLAN = {
       "t": "Friday's pizza"
      },
      {
-      "n": "Cucumbers ×2",
-      "p": 1.98
+      "n": "Yellow onions, 3 lb",
+      "p": 3.49
+     },
+     {
+      "n": "Garlic, 3-pack",
+      "p": 1.99
+     },
+     {
+      "n": "Lemon ×1",
+      "p": 0.79
      },
      {
       "n": "Organic grapes, 2 lb",
@@ -563,30 +663,41 @@ const PLAN = {
    {
     "name": "Dairy & Eggs",
     "stockup": false,
-    "note": "Cheddar spans three nights and mozzarella is the pizza. These two are most of the section.",
+    "note": "Cheese is the biggest line and it spans four nights. Grate all of it tonight and no evening this week needs a box grater.",
     "items": [
      {
       "n": "Pasture-raised eggs, 2 dozen",
-      "p": 10.98
+      "p": 10.98,
+      "t": "Hard-boiled, the ziti, and Thursday's dinner"
      },
      {
       "n": "Whole milk, 1 gal",
-      "p": 3.99
+      "p": 3.99,
+      "t": "Pancakes take 2 cups on their own"
      },
      {
-      "n": "Sharp cheddar block, 8 oz ×3",
-      "p": 13.47,
-      "t": "Tacos, Wednesday's bowls, Thursday's grilled cheese"
+      "n": "Sharp cheddar block, 8 oz ×2",
+      "p": 8.98,
+      "t": "Quesadillas and the potato bar"
+     },
+     {
+      "n": "Provolone or Swiss, sliced, 8 oz",
+      "p": 5.49,
+      "t": "Sunday's sandwiches"
      },
      {
       "n": "Mozzarella block, 16 oz",
       "p": 5.49,
-      "t": "Friday's pizza — grate your own"
+      "t": "Ziti Monday, pizza Friday"
+     },
+     {
+      "n": "Whole-milk ricotta, 16 oz",
+      "p": 4.99,
+      "t": "The ziti"
      },
      {
       "n": "Plain whole-milk Greek yogurt, 32 oz",
-      "p": 6.49,
-      "t": "Taco and bowl topping"
+      "p": 6.49
      },
      {
       "n": "Butter, 1 lb",
@@ -597,26 +708,28 @@ const PLAN = {
    {
     "name": "Pantry — this week",
     "stockup": false,
-    "note": "Short, because you stocked up on the 6th. Skip anything you still have.",
     "items": [
      {
-      "n": "Salsa, 16 oz ×2",
-      "p": 7.98,
-      "t": "One in the slow cooker, one on the table"
+      "n": "Good sandwich bread or 5 sub rolls",
+      "p": 4.99,
+      "t": "Check for canola and dough conditioners"
+     },
+     {
+      "n": "Ziti or penne, 16 oz",
+      "p": 3.49
+     },
+     {
+      "n": "Clean marinara ×2 jars",
+      "p": 8.98,
+      "t": "Check for canola and added sugar"
      },
      {
       "n": "Tortillas, 8-inch, 30 ct",
       "p": 7.98
      },
      {
-      "n": "Organic chicken stock, 32 oz ×2",
-      "p": 5.98,
-      "t": "Thursday's soup"
-     },
-     {
-      "n": "Small pasta or rice, 16 oz",
-      "p": 3.49,
-      "t": "Thursday's soup"
+      "n": "Salsa, 16 oz",
+      "p": 3.99
      },
      {
       "n": "Par-baked pizza crusts ×5",
@@ -632,16 +745,29 @@ const PLAN = {
       "p": 5.49
      },
      {
-      "n": "Sandwich bread",
-      "p": 4.49,
-      "t": "Thursday's grilled cheese"
+      "n": "All-purpose flour, 2 lb",
+      "p": 2.99,
+      "t": "Thursday's pancakes"
+     },
+     {
+      "n": "Baking powder",
+      "p": 2.29
+     },
+     {
+      "n": "Real maple syrup",
+      "p": 9.99
+     },
+     {
+      "n": "Salsa, 16 oz",
+      "p": 3.99,
+      "t": "Goes in the slow cooker tonight"
      }
     ]
    },
    {
     "name": "Lunchbox — packs all week",
     "stockup": false,
-    "note": "Four days. Hard-boiled eggs, carrots, cucumber, grapes and apples are covered above.",
+    "note": "Four items. Sunday's leftover turkey covers sandwiches, and the hard-boiled eggs, carrots, cucumber, grapes and apples are all covered above.",
     "items": [
      {
       "n": "Simple Mills almond-flour crackers",
@@ -664,52 +790,68 @@ const PLAN = {
    {
     "name": "Breakfast — school mornings",
     "stockup": false,
-    "note": "Oats and peanut butter came home on the 6th and should still be going. Grab these two only if they are out.",
     "items": [
      {
-      "n": "Frozen organic mixed berries, 3 lb",
-      "p": 12.49,
-      "t": "Oats and yogurt all week"
+      "n": "Rolled oats, 42 oz",
+      "p": 6.99
      },
      {
-      "n": "Honey, 16 oz",
-      "p": 6.49,
-      "t": "Skip if the last jar is still going"
+      "n": "Natural peanut butter, 28 oz",
+      "p": 6.99,
+      "t": "Peanuts + salt only"
+     },
+     {
+      "n": "Frozen organic mixed berries, 3 lb",
+      "p": 12.49
      }
     ]
    },
    {
-    "name": "Frozen",
-    "stockup": false,
+    "name": "Emergency shelf — the point of this section",
+    "stockup": true,
+    "note": "This is insurance, not dinner. If a night falls apart while Drew is gone, these are what stand between Tori and a $60 takeout order. Buy them even if the week goes perfectly.",
     "items": [
      {
-      "n": "Frozen organic corn",
-      "p": 2.79,
-      "t": "Wednesday's bowls"
+      "n": "Clean frozen pizza ×2",
+      "p": 15.98,
+      "t": "Tier-2 and completely fine on a night like that"
      },
      {
-      "n": "Frozen organic green beans",
-      "p": 2.99
+      "n": "Applegate chicken nuggets",
+      "p": 8.99,
+      "t": "Tier-2 — the backup for the backup"
+     },
+     {
+      "n": "Frozen organic broccoli ×2",
+      "p": 5.98
+     },
+     {
+      "n": "Frozen organic peas & carrots",
+      "p": 2.79
+     },
+     {
+      "n": "Organic canned beans ×2",
+      "p": 3.98
      }
     ]
    }
   ],
   "notes": [
    {
-    "h": "Under target, and a short list",
-    "b": "__WEEKLY__ against a $185 target and a $164.50 running average. It is low because you stocked the pantry nine days ago — no oil, no flour, no beans, no stock-up section at all this week. This is produce, dairy and one pizza night."
+    "h": "Still the most expensive week, and still worth it",
+    "b": "__WEEKLY__ against a $185 target. Swapping the thighs for hot turkey added about $10 net — deli turkey is the priciest protein in the store, but Sunday's leftovers replace the lunchbox turkey and cover sandwiches all week, so some of it comes back. The bigger driver is unchanged: buying meat fresh instead of pulling from the freezer is what removes every thaw deadline from a solo week. If you want it closer to target, the maple syrup goes if there is honey in the cupboard ($9.99) and the frozen berries are skippable ($12.49)."
    },
    {
-    "h": "Read the thaw card before you leave",
-    "b": "Tonight is the only dinner this week with a hard dependency, and it is a one-hour one. Ground beef sealed in a bag, sitting in cold water, changed every 30 min, started before you walk out the door. If you forget it, tonight becomes breakfast for dinner and that is a perfectly fine outcome — but starting it costs two minutes."
+    "h": "The emergency shelf is not optional this week",
+    "b": "__STOCKUP__ of the trip is the emergency shelf, and on a solo week it is the most valuable thing in the cart. Two frozen pizzas and a bag of nuggets sitting in the freezer is what turns a bad Thursday into a fine Thursday. Buy them and hope they are still there Saturday."
    },
    {
-    "h": "Cheddar is doing a lot of work",
-    "b": "Three blocks looks like a lot until you count: taco bar tonight, Wednesday's bowls, Thursday's grilled cheese. Grate all of it in one go tonight while the beef browns and none of those three nights needs a box grater again."
+    "h": "Grate everything tonight",
+    "b": "Twenty-four ounces of cheese covers Monday's ziti top, Tuesday's quesadillas, Wednesday's potatoes and Friday's pizza. Grate it all in one go while the chicken roasts, into labelled containers, and not one evening this week needs a box grater or a decision."
    },
    {
-    "h": "The batch nights are still waiting",
-    "b": "Meatballs and homemade nuggets each bank about six future dinners and they are the fastest way to fill a freezer shelf. Three sports nights is still the wrong week. First free Saturday, do one of them alongside the Costco run and the whole month gets easier."
+    "h": "What Drew should actually do before leaving",
+    "b": "In order of value: assemble the ziti, chop the chicken into the two labelled containers, grate the cheese, scrub the potatoes. Those four are worth more to Tori's week than anything else, including the shopping. If something has to give, let it be the lunchbox list — not the ziti."
    }
   ]
  },
