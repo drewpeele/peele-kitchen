@@ -244,53 +244,123 @@ nav{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);
    Swap this object each week; the rest of the app is generic.
    ============================================================ */
 const PLAN = {
- "week": "Tue Oct 27 – Fri Oct 30, 2026",
- "updated": "Oct 26, 2026",
+ "week": "Tue Nov 3 – Fri Nov 13, 2026",
+ "updated": "Nov 3, 2026",
  "assumptions": [
-  "Four dinners, Tuesday through Friday. Shopping today, Monday.",
-  "Freezer covers every protein again — chicken tenderloins and ground beef — so there is no Meat section. Better still, Costco's meat run is this Saturday the 31st, so this is the week to spend the freezer down rather than protect it. Six pounds of tenderloins go out this week and get replaced in five days.",
-  "Sports Tuesday, Wednesday and Thursday. Those three are slow-cooker or sheet-pan only. Friday is the first free evening in weeks, which is why the nugget batch finally lands there.",
-  "No stock-up section. Costco on Saturday is the stock-up, and doubling it at Publix five days early is just paying grocery prices for the same box."
+  "Ten dinners over eleven days, in two blocks: Tuesday the 3rd through Friday the 6th, then Sunday the 8th through Friday the 13th. Saturday the 7th is off.",
+  "ONE shopping trip, today. That is the constraint that shaped everything. Week one gets all the delicate produce — peppers, lettuce, fresh broccoli. Week two is built on freezer protein, frozen vegetables, pantry and root vegetables only, because nothing fresh and soft survives to the 13th.",
+  "Freezer covers every protein: ground beef and chicken tenderloins. No Meat section at all. It is a big ask though — about 5.5 lb of beef and 6 lb of tenderloins across ten dinners, so check you actually have that before you leave.",
+  "Sports Tuesday, Wednesday and Thursday both weeks. Six of the ten nights are practice nights, and every one of them is a slow cooker, a sheet pan, or fifteen minutes of assembly."
  ],
  "thaw": {
-  "lede": "Three pulls, one tonight and then one each on Tuesday and Thursday evening.",
+  "lede": "Six pulls over eleven days. Two of them matter more than the rest — the first one is today, and the fourth one is the Sunday anchor.",
   "items": [
    {
     "protein": "Ground beef, 2 lb",
-    "pull": "Tonight, Monday Oct 26 — before bed",
-    "forMeal": "Tuesday's slow-cooker chili",
-    "why": "It goes into the cooker tomorrow <b>morning</b>, so count backward from the morning, not from dinner. Tonight gives it 12–14 hrs, which is exactly the window for 2 lb."
+    "pull": "Right now, before you leave for the store",
+    "forMeal": "Tonight's taco soup",
+    "why": "Cold-water method is the one to use: sealed bag with the air pressed out, submerged in cold water, changed every 30 min. About an hour for 2 lb, which is roughly a shopping trip. The fridge would also work if it went in first thing this morning, but cold water is the version that definitely has it ready when you walk back in."
    },
    {
     "protein": "Chicken tenderloins, 2 lb",
-    "pull": "Tuesday Oct 27 evening",
-    "forMeal": "Wednesday's sheet-pan fajitas",
-    "why": "Tenderloins are thin and thaw faster than thighs or breasts — 12 hrs is plenty and much more than that leaves them watery. The night before, not earlier."
+    "pull": "Tuesday Nov 3 evening",
+    "forMeal": "Wednesday's chicken parmesan",
+    "why": "Tenderloins are thin and thaw fast. Twelve hours is plenty and much longer leaves them watery."
    },
    {
-    "protein": "Chicken tenderloins, 3 lb",
-    "pull": "Thursday Oct 29 evening",
-    "forMeal": "Friday's nugget batch",
-    "why": "Three pounds is the big one. Thursday evening gives it a full overnight, and half-frozen tenderloin is genuinely unpleasant to cut into cubes."
+    "protein": "Chicken tenderloins, 4 lb",
+    "pull": "Friday Nov 6 evening",
+    "forMeal": "Sunday's sheet-pan anchor",
+    "why": "Four pounds is the biggest pull of the fortnight and it carries three dinners. Friday evening gives it a day and a half, which is right for that quantity. Set a reminder — this is the one that breaks week two if it slips."
+   },
+   {
+    "protein": "Ground beef, 2 lb",
+    "pull": "Saturday Nov 7 evening",
+    "forMeal": "Monday's baked ziti — but browned during Sunday's prep block",
+    "why": "The beef gets cooked Sunday afternoon, not Monday night. Count backward from the PREP BLOCK, not the meal: 12–24 hrs means Saturday evening."
+   },
+   {
+    "protein": "Cooked chicken, about 3 cups",
+    "pull": "Wednesday Nov 11 evening",
+    "forMeal": "Thursday's chicken noodle soup",
+    "why": "This is the batch you freeze on Sunday, not raw meat. Sunday to Thursday is four days and cooked chicken is only reliable for three in the fridge, so it goes in the freezer flat on Sunday and comes down Wednesday."
+   },
+   {
+    "protein": "Ground beef, 1.5 lb",
+    "pull": "Thursday Nov 12 evening",
+    "forMeal": "Friday's burgers",
+    "why": "Last pull of the fortnight. A week in the fridge would have been far too long, so it waits until the night before."
    }
   ],
-  "nothing": "Tuesday, Wednesday and Friday — nothing comes out on any of them. One pull tonight, then Tuesday and Thursday evening, and that is the whole week.",
+  "nothing": "Wednesday the 4th, Thursday the 5th, Friday the 6th, Sunday the 8th, Monday the 9th, Tuesday the 10th and Friday the 13th — nothing comes out on any of them.",
   "counterRule": "Never thaw on the counter. Fridge, or a sealed bag in a cold-water bath changed every 30 min — about 1 hr per 1.5 lb. Room-temp thawing puts the outside of the meat in the danger zone for hours while the middle is still frozen."
  },
  "days": [
   {
    "dow": "Tue",
-   "date": "27",
-   "title": "Slow-cooker chili, nacho-style",
-   "type": "anchor",
-   "note": "Serves 5 with about a quart left over. 10 min in the morning, 8 hrs hands-off, nothing at dinner.",
+   "date": "3",
+   "title": "Crockpot taco soup",
+   "type": "planned",
+   "note": "Serves 5 with about a quart left over. 15 min hands-on, then either 4 hrs in the crockpot on high or 30 min on the stovetop — both paths below.",
    "tags": [
     {
-     "t": "Anchor meal",
-     "c": "accent"
+     "t": "15 min active",
+     "c": "green"
     },
     {
-     "t": "10 min AM",
+     "t": "Crockpot or stovetop",
+     "c": "plain"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "Seeds Thursday",
+     "c": "accent"
+    }
+   ],
+   "thaw": {
+    "chip": "Pull the tenderloins tonight",
+    "detail": "Move 2 lb of chicken tenderloins from the freezer down to the fridge before bed — they are tomorrow's chicken parmesan and they want about 12 hrs."
+   },
+   "need": [
+    "2 lb ground beef, thawed",
+    "1 yellow onion, diced",
+    "1 bell pepper, diced",
+    "4 cloves garlic, minced",
+    "2 × 15 oz cans organic black or pinto beans, drained and rinsed",
+    "1 × 15 oz can organic kidney beans, drained and rinsed",
+    "1 × 28 oz can diced tomatoes, juice and all",
+    "1 × 15 oz can organic corn, drained — or 2 cups frozen",
+    "2 cups chicken or beef stock",
+    "3 tbsp chili powder",
+    "1 tbsp ground cumin",
+    "2 tsp kosher salt",
+    "1 tsp smoked paprika",
+    "1 tsp dried oregano",
+    "TO SERVE: 8 oz sharp cheddar, grated · 1 bag Siete chips · 1 cup plain Greek yogurt · 1 lime, cut into wedges"
+   ],
+   "how": [
+    "FIRST, before the store: get the 2 lb of beef thawing. Sealed bag in a bowl of cold water, changed every 30 min — about an hour for 2 lb, which is roughly how long shopping takes.",
+    "Home: large skillet on high, brown the beef in two batches so it sears rather than steams, 4 min a batch. Leave the fat in. Add the onion, pepper and garlic to the same pan for 5 min, then stir in the 3 tbsp chili powder, 1 tbsp cumin, 2 tsp salt, 1 tsp paprika and 1 tsp oregano and cook 60 seconds. Blooming the spices in the fat is what separates this from a seasoning packet.",
+    "CROCKPOT PATH, if you are home by about 1pm: everything into the cooker — beef mixture, all three cans of drained beans, the whole can of tomatoes, the corn, 2 cups stock. Stir once, lid on, HIGH for 4 hours. Low for 7 if you are home earlier.",
+    "STOVETOP PATH, if it is later than that: same ingredients straight into a big pot instead, brought to a simmer and held there uncovered for 30 min. It is 90% as good and tonight is not the night to be precious about it.",
+    "Either way, taste at the end and add salt if it is flat — it should taste slightly too salty in the pot, because the chips and the yogurt pull it back.",
+    "Serve in bowls with the chips crushed over the top rather than on the side, plus cheddar, yogurt and a squeeze of lime. Crushed chips on top is what makes a 4-year-old read this as nachos rather than soup.",
+    "Before anyone goes back for seconds, put about a quart in a container labelled THURSDAY."
+   ],
+   "why": "Called soup it is a hard sell at 4 and 6; served in a bowl under a pile of crushed chips and melted cheddar it disappears. Both cooking paths are here on purpose — you are shopping this morning and the crockpot only works if you get home early enough, so there is no version of tonight where this plan fails you."
+  },
+  {
+   "dow": "Wed",
+   "date": "4",
+   "title": "Baked chicken parmesan tenderloins",
+   "type": "planned",
+   "note": "Serves 5. 10 min hands-on, 20 in the oven. Baked, not fried, so there is one pan and no splatter.",
+   "tags": [
+    {
+     "t": "30 min",
      "c": "green"
     },
     {
@@ -298,40 +368,312 @@ const PLAN = {
      "c": "amber"
     },
     {
-     "t": "Banks a freezer meal",
+     "t": "Oven 425°F",
+     "c": "plain"
+    },
+    {
+     "t": "Kid headliner",
      "c": "accent"
     }
    ],
    "thaw": null,
    "need": [
-    "2 lb ground beef, thawed",
-    "2 yellow onions + 1 bell pepper, diced — done tonight, in the bag",
-    "4 cloves garlic, minced",
-    "2 × 15 oz cans organic beans, drained and rinsed",
-    "1 × 28 oz can diced tomatoes, juice and all",
-    "3 tbsp chili powder",
-    "1 tbsp ground cumin",
-    "2 tsp kosher salt",
-    "1 tsp smoked paprika",
-    "1 cup chicken or beef stock",
-    "TO SERVE: 8 oz sharp cheddar, grated · 1 bag Siete chips · 1 cup plain Greek yogurt"
+    "2 lb chicken tenderloins, thawed and patted dry",
+    "1 cup almond flour",
+    "1 cup grated parmesan",
+    "1 tsp garlic powder, 1 tsp dried oregano, 1 tsp kosher salt, 1/2 tsp black pepper",
+    "2 large eggs, beaten",
+    "2 tbsp avocado oil",
+    "1.5 cups clean marinara",
+    "8 oz mozzarella, grated",
+    "16 oz spaghetti or linguine",
+    "1 tbsp kosher salt, for the pasta water",
+    "3 tbsp butter",
+    "1 lb fresh broccoli, cut into florets",
+    "1 tbsp avocado oil + 1/2 tsp salt, for the broccoli"
    ],
    "how": [
-    "Morning, around 7am: skillet on high, brown the 2 lb of beef in two batches so it sears rather than steams. 4 min a batch. Leave the fat in, it is flavour.",
-    "Everything into the slow cooker: beef, the bag of onion and pepper, garlic, both cans of drained beans, the whole can of tomatoes, 3 tbsp chili powder, 1 tbsp cumin, 2 tsp salt, 1 tsp paprika, 1 cup stock. Stir once.",
-    "Low for 8 hours. Lid stays on — every peek costs about 20 minutes.",
-    "6pm: taste and add salt if it is flat, which it usually is. It should taste slightly too salty in the pot, because the chips and the yogurt pull it back.",
-    "Grate the cheddar. Chips, cheese and yogurt out in separate bowls and let them build their own.",
-    "Ladle about a quart into a freezer bag before anyone goes back for seconds, press it FLAT and label it. Flat matters — a quart frozen flat thaws in a cold-water bath in about 30 min, the same chili in a tub is a two-hour job nobody waits for. That bag plus a bag of chips is a finished dinner on some future night you have not planned for."
+    "Preheat to 425°F. Pat the tenderloins completely dry — wet chicken steams the coating off.",
+    "Two shallow bowls: beaten eggs in one; almond flour, parmesan, garlic powder, oregano, 1 tsp salt and pepper whisked together in the other.",
+    "Each tenderloin into egg, then pressed firmly into the crumb mix. Pressing rather than sprinkling is what makes it stick. Onto an oiled sheet pan, not touching.",
+    "Drizzle with 2 tbsp avocado oil and bake 15 min. Then spoon about 2 tbsp marinara onto each, scatter the mozzarella, and back in 5–7 min until bubbling. Done at 165°F.",
+    "Pasta meanwhile, into heavily salted water, cooked to 1 min under the box time, drained and tossed with 3 tbsp butter and the rest of the marinara.",
+    "Broccoli on a second pan with 1 tbsp oil and 1/2 tsp salt, roasted 18 min alongside. Roasted is the version they eat, steamed is the version they push around.",
+    "Serve the tenderloins whole on top of the pasta."
    ],
-   "why": "Ten minutes at 7am buys a sports Tuesday back entirely. Called chili it is a hard sell at 4 and 6; served as nachos with chips and cheese on top it disappears. Same food, different frame. And the quart that goes in the freezer flat is the cheapest insurance in the house."
+   "why": "Chicken parm is a top-three kid meal and baking it turns a 45-minute fried recipe into a 30-minute one-pan job. Almond flour and parmesan make a better crust than breadcrumbs anyway. This is the night the fresh broccoli gets used, because it will not survive to week two."
+  },
+  {
+   "dow": "Thu",
+   "date": "5",
+   "title": "Taco soup baked potatoes",
+   "type": "leftovers",
+   "note": "Serves 5. 5 minutes of work. The oven runs the whole thing while you are at practice.",
+   "tags": [
+    {
+     "t": "Leftovers night",
+     "c": "amber"
+    },
+    {
+     "t": "5 min active",
+     "c": "green"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "Oven while you are out",
+     "c": "accent"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "8 russet potatoes, scrubbed and poked",
+    "2 tbsp avocado oil and 1 tsp kosher salt, for the skins",
+    "The container labelled THURSDAY, about 1 qt of taco soup",
+    "8 oz sharp cheddar, grated",
+    "1 cup plain Greek yogurt",
+    "3 tbsp butter",
+    "Whatever is left of the bag of chips, crushed",
+    "About 2 cups of baby carrots and 1 cucumber, sliced, on the side"
+   ],
+   "how": [
+    "Before you leave: rub the potatoes with 2 tbsp avocado oil and 1 tsp salt, straight onto the oven rack, 400°F for 60 min. They hold for another 30 min after the timer, so they outlast a long practice.",
+    "Gone more than 90 minutes? Wrap them in foil and use the slow cooker on low for 6 hours instead, set before school.",
+    "Home: the soup into a saucepan over medium, lid off, 8 min. Letting some liquid cook off matters here — you want it thick enough to sit on a potato rather than flood the plate.",
+    "Split each potato lengthwise, squeeze the ends together to open it up, fork the inside and drop in a knob of butter.",
+    "Spoon the thickened soup over, then cheddar, yogurt and crushed chips on top. They build their own.",
+    "Carrots and cucumber alongside. Nothing to wash but plates and one pan."
+   ],
+   "why": "Tuesday's pot in a completely different shape, which is the trick that keeps a leftovers night from feeling like one. Third practice night of the week and the oven does all of it before anyone gets home. Cooking the liquid down for eight minutes is the only step that matters."
+  },
+  {
+   "dow": "Fri",
+   "date": "6",
+   "title": "Homemade pizza night",
+   "type": "fun",
+   "note": "Serves 5, one pizza each. 15 min of building, 10 of baking, and the kids do most of it.",
+   "tags": [
+    {
+     "t": "Fun night",
+     "c": "accent"
+    },
+    {
+     "t": "Kids cook",
+     "c": "green"
+    },
+    {
+     "t": "25 min",
+     "c": "green"
+    },
+    {
+     "t": "Oven 500°F",
+     "c": "plain"
+    }
+   ],
+   "thaw": {
+    "chip": "Pull 4 lb of tenderloins tonight",
+    "detail": "The big one. Move 4 lb of chicken tenderloins from the freezer down to the fridge before bed — they are Sunday's anchor and they carry three of week two's dinners. Four pounds wants a day and a half, so tonight is right. If this slips, week two loses its spine."
+   },
+   "need": [
+    "5 par-baked crusts, 8–10 inch",
+    "1 cup pizza sauce — about 3 tbsp per pizza",
+    "About 3 cups grated mozzarella",
+    "4 oz pepperoni, no nitrates — celery-based cure is fine",
+    "About 2 cups of veg from the drawer, sliced thin",
+    "2 tbsp olive oil, for brushing the rims"
+   ],
+   "how": [
+    "Preheat as hot as the oven goes — 500°F if it will do it — with the sheet pan inside. Give it a full 20 min; a hot pan is the difference between a crisp bottom and a soggy one.",
+    "Set up a station while it heats: sauce in one bowl, cheese in another, toppings in the rest. Everyone gets their own crust.",
+    "Rules for them: about 3 tbsp of sauce spread thin, stopping half an inch from the edge. Cheese next, toppings last, and do not pile it — a loaded pizza steams and never crisps.",
+    "Brush the bare rim with olive oil. Bake two at a time, 8–10 min, until the cheese bubbles and the edges brown in patches.",
+    "Watch the first one to learn the timing, then run the rest on that number.",
+    "Rest 2 min before cutting. Before bed, the tenderloins come out of the freezer."
+   ],
+   "why": "End of the first block, no practice, and the night ordering out has the strongest pull — so it gets the meal that beats ordering out. This also clears the last of the drawer veg before the gap."
+  },
+  {
+   "dow": "Sun",
+   "date": "8",
+   "title": "Sheet-pan chicken tenderloins and root vegetables",
+   "type": "anchor",
+   "note": "Serves 5 with about 5 cups of chicken left over. 15 min hands-on, 35 in the oven — and the oven time is the prep block.",
+   "tags": [
+    {
+     "t": "Anchor meal",
+     "c": "accent"
+    },
+    {
+     "t": "15 min active",
+     "c": "green"
+    },
+    {
+     "t": "Seeds 2 nights",
+     "c": "accent"
+    },
+    {
+     "t": "Oven 425°F",
+     "c": "plain"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "4 lb chicken tenderloins, thawed and patted dry",
+    "2 lb yellow potatoes, cut into 1-inch chunks",
+    "4 carrots, cut into chunks",
+    "2 yellow onions, cut into wedges",
+    "4 tbsp avocado oil",
+    "2 tsp kosher salt, plus 1 tsp for the vegetables",
+    "1 tsp garlic powder",
+    "1 tsp smoked paprika",
+    "1/2 tsp black pepper",
+    "1 lemon, cut into wedges",
+    "16 oz frozen green beans",
+    "2 tbsp butter + 1/2 tsp salt, for the beans"
+   ],
+   "how": [
+    "Preheat to 425°F. Toss the potatoes, carrots and onion wedges with 2 tbsp avocado oil, 1 tsp salt and the pepper. Spread across two large sheet pans and roast 15 min on their own — root vegetables need the head start.",
+    "Meanwhile pat the tenderloins dry and toss with the remaining 2 tbsp oil, 2 tsp salt, 1 tsp garlic powder and 1 tsp paprika.",
+    "At 15 min, push the vegetables to the edges and lay the tenderloins down the middle of both pans in a single layer. Two pans matter here — 4 lb crowded onto one steams and goes grey.",
+    "Back in for 18–20 min. Done at 165°F, or when the thickest piece is opaque through. Check at 16; tenderloins go stringy if you push them.",
+    "Green beans in a pot with 1 inch of water, lid on, 6 min, drained and tossed with 2 tbsp butter and 1/2 tsp salt. Lemon squeezed over the pans.",
+    "AFTER DINNER, the important part: chop the leftover chicken, about 5 cups. Two cups into a fridge container labelled TUESDAY. Three cups into a freezer bag, pressed FLAT, labelled THURSDAY — that one has to last to the 12th and the fridge will not carry it."
+   ],
+   "why": "Four pounds in one oven session is the spine of week two. It is Sunday dinner, Tuesday's quesadillas and Thursday's soup, and the thirty-five minutes it spends roasting is exactly enough time to assemble the ziti and do the rest of the prep block."
+  },
+  {
+   "dow": "Mon",
+   "date": "9",
+   "title": "Baked ziti — assembled Sunday",
+   "type": "planned",
+   "note": "Serves 5 with leftovers for Wednesday. About 3 minutes of your time: turn on the oven, put in the dish, set a timer.",
+   "tags": [
+    {
+     "t": "3 min active",
+     "c": "green"
+    },
+    {
+     "t": "Assembled Sunday",
+     "c": "accent"
+    },
+    {
+     "t": "Oven does it",
+     "c": "green"
+    },
+    {
+     "t": "Feeds Wednesday",
+     "c": "accent"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "The covered 9x13 dish from the fridge",
+    "About 4 oz mozzarella, grated, held back in a bag",
+    "About 2 cups of carrot sticks from the containers, on the side"
+   ],
+   "how": [
+    "Preheat to 375°F. Take the foil-covered dish out of the fridge when you turn the oven on — 20 minutes on the counter takes the chill off so it heats evenly.",
+    "Covered, 35 min. Do not skip the foil; uncovered from cold dries the top before the middle is hot.",
+    "Uncover, scatter the reserved 4 oz of mozzarella over the top, back in 10–12 min until it is bubbling at the edges and browned in patches.",
+    "Rest 10 min before cutting. Straight from the oven it slides apart on the plate.",
+    "Carrot sticks on the side. Nothing else needs doing.",
+    "Cover and fridge what is left — that is Wednesday, and Wednesday is built around it."
+   ],
+   "why": "Monday after a weekend is where a fortnight plan usually breaks, so this one was fully assembled the day before. Three minutes of work, and pasta with cheese on top is the safest thing on either week's menu."
+  },
+  {
+   "dow": "Tue",
+   "date": "10",
+   "title": "Chicken quesadillas",
+   "type": "leftovers",
+   "note": "Serves 5. 10 minutes, one skillet, and both the chicken and the cheese were done Sunday.",
+   "tags": [
+    {
+     "t": "10 min",
+     "c": "green"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "One skillet",
+     "c": "plain"
+    },
+    {
+     "t": "Kids help",
+     "c": "green"
+    }
+   ],
+   "thaw": null,
+   "need": [
+    "The container labelled TUESDAY, about 2 cups chopped chicken",
+    "10 tortillas, 8-inch",
+    "About 2 cups grated cheddar",
+    "1 cup salsa",
+    "1 tbsp butter or avocado oil per batch",
+    "About 2 cups of baby carrots and 1 cucumber, sliced, on the side"
+   ],
+   "how": [
+    "Large dry skillet over medium. Tortilla down, handful of cheese, scatter of chicken, another handful of cheese, second tortilla on top. Cheese on both layers is the glue.",
+    "3 min a side until golden and the cheese has gone. Press flat once with a spatula, then flip.",
+    "Onto a board, wait a full minute, then cut into 6 wedges. Cutting straight off the heat makes the filling run out.",
+    "Repeat for 5 total. Hold the finished ones on a sheet pan in a 200°F oven so everyone eats together.",
+    "Salsa, carrots and cucumber on the table.",
+    "Give the 10-year-old the assembling while you run the pan — genuinely useful help on a practice night."
+   ],
+   "why": "Second dinner off Sunday's oven, ten minutes, nothing bought for it. Practice night and there is no knife work and no decisions."
   },
   {
    "dow": "Wed",
-   "date": "28",
-   "title": "Sheet-pan chicken fajitas",
+   "date": "11",
+   "title": "Ziti round two",
+   "type": "flex",
+   "note": "Serves 5. About 10 minutes, almost all of it reheating. The genuinely zero-effort night.",
+   "tags": [
+    {
+     "t": "Zero cook",
+     "c": "green"
+    },
+    {
+     "t": "Sports night",
+     "c": "amber"
+    },
+    {
+     "t": "10 min",
+     "c": "green"
+    }
+   ],
+   "thaw": {
+    "chip": "Pull the THURSDAY chicken tonight",
+    "detail": "Move the flat-frozen bag of about 3 cups of cooked chicken from the freezer down to the fridge before bed. It is tomorrow's soup, and frozen flat it will be ready by morning."
+   },
+   "need": [
+    "The leftover ziti from Monday, about half the dish",
+    "1/4 cup water, to loosen it",
+    "About 4 oz mozzarella or cheddar, grated, for the top",
+    "16 oz frozen peas and carrots",
+    "1 tbsp butter + 1/2 tsp salt, for the vegetables",
+    "1 loaf of garlic bread from the freezer, optional"
+   ],
+   "how": [
+    "Oven to 375°F. Ziti into an oven dish, splash 1/4 cup water over it and cover with foil — reheated pasta dries out without it.",
+    "25 min covered, then uncover, add the grated cheese and give it 8 more until it bubbles.",
+    "Frozen peas and carrots into a covered bowl with 2 tbsp water, microwave 4 min, drained and tossed with 1 tbsp butter and 1/2 tsp salt.",
+    "If there is garlic bread in the freezer it goes in for the last 8 minutes alongside.",
+    "Rest 5 min, then serve.",
+    "Before bed: the flat bag of chicken comes down to the fridge for tomorrow."
+   ],
+   "why": "Third practice night in a row and the second week is running on fumes by now. This asks nothing. Naming it a leftovers night in advance is the difference between feeling organised and feeling out of food — same meal either way."
+  },
+  {
+   "dow": "Thu",
+   "date": "12",
+   "title": "Chicken noodle soup and grilled cheese",
    "type": "planned",
-   "note": "Serves 5 with about 2 cups of chicken left over for Thursday. 10 min hands-on, 20 in the oven, one pan to wash.",
+   "note": "Serves 5. 20 minutes, most of it the soup simmering while you make sandwiches.",
    "tags": [
     {
      "t": "20 min",
@@ -342,200 +684,186 @@ const PLAN = {
      "c": "amber"
     },
     {
-     "t": "Sheet pan 425°F",
+     "t": "One pot",
      "c": "plain"
     },
     {
-     "t": "Seeds Thursday",
+     "t": "Pantry and freezer",
      "c": "accent"
     }
    ],
    "thaw": null,
    "need": [
-    "3 lb chicken tenderloins, thawed, sliced into 1/2-inch strips",
-    "3 bell peppers, sliced thin",
-    "2 yellow onions, sliced thin",
-    "3 tbsp avocado oil",
-    "1 tbsp chili powder",
-    "2 tsp ground cumin",
-    "1 tsp garlic powder",
-    "1.5 tsp kosher salt",
-    "1/2 tsp black pepper",
-    "Juice of 2 limes, added at the end",
-    "TO SERVE: 15 tortillas, 8-inch · 8 oz cheddar, grated · 1 cup plain Greek yogurt · 2 avocados, sliced · whatever salsa is left"
+    "The thawed bag, about 3 cups shredded chicken",
+    "2 qt organic chicken stock",
+    "4 carrots, sliced into coins",
+    "3 celery stalks, sliced",
+    "1 yellow onion, diced",
+    "2 tbsp butter",
+    "1 tsp kosher salt, 1/2 tsp black pepper",
+    "1 bay leaf",
+    "1.5 cups egg noodles or small pasta",
+    "GRILLED CHEESE: 10 slices bread from the freezer · 8 oz cheddar, sliced · 4 tbsp butter, softened"
    ],
    "how": [
-    "Preheat to 425°F. Slice the tenderloins into strips and the peppers and onions thin — about 8 minutes of knife work and it is the only knife work tonight.",
-    "Everything onto one large rimmed sheet pan: chicken, peppers, onions, 3 tbsp avocado oil, 1 tbsp chili powder, 2 tsp cumin, 1 tsp garlic powder, 1.5 tsp salt and the pepper. Toss with your hands right on the pan so there is nothing extra to wash.",
-    "Spread it in a single layer. Three pounds will want two pans — use them. Crowded fajitas steam and go grey instead of catching colour at the edges, and the whole point of the extra pound is that Thursday gets real chicken rather than scraps.",
-    "18–20 min. Tenderloins are thin and cook fast, so check at 16: done at 165°F, or when the thickest strip is opaque all the way through. Overcooked tenderloin goes stringy quickly.",
-    "Out of the oven, squeeze the juice of 2 limes over the whole pan and toss. The lime at the end is what makes it taste like fajitas rather than roasted chicken and peppers.",
-    "Warm the tortillas — 45 seconds for the stack wrapped in a damp towel in the microwave. Everything on the table, everyone builds their own.",
-    "Before you sit down, pull about 2 cups of the chicken and peppers into a container labelled THURSDAY. One day out, so the fridge is fine."
+    "Big pot over medium. 2 tbsp butter, then the onion, carrots and celery. 6 min until softened — the only knife work tonight and it is five minutes.",
+    "Pour in 2 qt stock, add the bay leaf, 1 tsp salt and 1/2 tsp pepper. Bring to a simmer.",
+    "Noodles in, 8–10 min, until just done and the carrots give to a fork.",
+    "Chicken in at the very end, 2 min only. Adding it early makes it stringy. Pull the bay leaf. Taste and salt again — soup almost always needs more than you think.",
+    "Grilled cheese while it simmers: butter the OUTSIDE of every slice, cheese in the middle, medium-low skillet, 3 min a side until deep golden. Low and slow so the cheese melts before the bread burns.",
+    "Cut the sandwiches into halves or soldiers for dipping. Dipping is the whole reason this works on a 4-year-old."
    ],
-   "why": "Tenderloins are the right cut for a fast weeknight: no trimming, no bone, fridge to done in under twenty minutes. Cooking the extra pound costs nothing when the oven is already on and it hands you Thursday. Build-your-own is still the best compliance you get across all three kids."
-  },
-  {
-   "dow": "Thu",
-   "date": "29",
-   "title": "Chicken and cheese flatbreads",
-   "type": "leftovers",
-   "note": "Serves 5. 15 minutes, almost all of it the oven. The chicken was cooked last night.",
-   "tags": [
-    {
-     "t": "Leftovers night",
-     "c": "amber"
-    },
-    {
-     "t": "15 min",
-     "c": "green"
-    },
-    {
-     "t": "Sports night",
-     "c": "amber"
-    },
-    {
-     "t": "Build-your-own",
-     "c": "accent"
-    }
-   ],
-   "thaw": {
-    "chip": "Pull the tenderloins tonight",
-    "detail": "Move 3 lb of chicken tenderloins from the freezer down to the fridge before bed. They are tomorrow's nugget batch and three pounds wants a full overnight — half-frozen tenderloin is miserable to cube."
-   },
-   "need": [
-    "5 flatbreads or naan — check the label for canola and dough conditioners",
-    "The container labelled THURSDAY, about 2 cups chicken and peppers from Wednesday",
-    "8 oz sharp cheddar, grated",
-    "4 oz mozzarella, grated",
-    "2 tbsp olive oil, for brushing",
-    "1/2 cup plain Greek yogurt and the juice of 1 lime, whisked, to drizzle",
-    "About 2 cups of baby carrots and 1 cucumber, sliced, on the side"
-   ],
-   "how": [
-    "Preheat to 450°F with the sheet pan already inside. A hot pan is the difference between a crisp flatbread and a floppy one, so give it a full 10 min.",
-    "Brush each flatbread lightly with olive oil on both sides. Chop the leftover chicken and peppers a bit smaller so they sit flat.",
-    "Everyone builds their own on a board: cheese first so it glues everything down, then chicken and peppers, then a little more cheese on top.",
-    "Straight onto the hot pan, 8–10 min, until the cheese is bubbling and the edges have gone deep golden. Two or three at a time depending on pan size.",
-    "Whisk 1/2 cup Greek yogurt with the juice of 1 lime and a pinch of salt. Drizzle over the adult ones; leave the kids' plain unless they ask.",
-    "Rest 2 min, then cut into strips rather than wedges — strips are easier for a 4-year-old to hold. Carrots and cucumber alongside."
-   ],
-   "why": "Third sports night in a row and this one is fifteen minutes, most of it hands-off. It is the same chicken as Wednesday in a completely different shape, which is the trick that makes a leftovers night not feel like one. Flatbread, cheese and chicken is about as safe as it gets across a 10, a 6 and a 4-year-old, and they get to build their own."
+   "why": "November, three practice nights deep, and everything in this comes from the pantry, the freezer and a bag of carrots that has been fine in the drawer for nine days. Soup plus grilled cheese is the most reliable dinner in the rotation for this age range."
   },
   {
    "dow": "Fri",
-   "date": "30",
-   "title": "Homemade chicken nuggets and real fries",
+   "date": "13",
+   "title": "Smash burger night and oven fries",
    "type": "fun",
-   "note": "Serves 5, and freezes two-thirds of the batch. 30 min hands-on, 25 in the oven and air fryer. No sports tonight.",
+   "note": "Serves 5. 20 minutes, and the fries do most of it unattended. No sports tonight.",
    "tags": [
     {
      "t": "Fun night",
      "c": "accent"
     },
     {
-     "t": "Triple batch",
+     "t": "20 min",
+     "c": "green"
+    },
+    {
+     "t": "Build-your-own",
      "c": "accent"
     },
     {
-     "t": "Kids cook",
-     "c": "green"
-    },
-    {
-     "t": "Refills the freezer",
-     "c": "green"
+     "t": "Cast iron",
+     "c": "plain"
     }
    ],
    "thaw": null,
    "need": [
-    "3 lb chicken tenderloins, thawed, cut into 1-inch cubes",
-    "2 cups almond flour",
-    "1 cup grated parmesan",
-    "2 tsp kosher salt, 1 tsp garlic powder, 1 tsp paprika, 1/2 tsp black pepper",
-    "3 large eggs, beaten with 2 tbsp water",
-    "Avocado oil spray, about 1/4 can",
-    "3 lb russet potatoes, cut into 1/2-inch thick-cut fries",
-    "3 tbsp avocado oil + 1.5 tsp salt, for the fries",
-    "Primal Kitchen ketchup, and honey mustard from 2 tbsp honey + 2 tbsp dijon"
+    "1.5 lb ground beef, thawed, divided into 6 loose balls — do not pack them tight",
+    "3 lb russet potatoes, cut into 1/2-inch fries",
+    "3 tbsp avocado oil + 1.5 tsp kosher salt, for the fries",
+    "6 slices real cheddar",
+    "6 burger buns from the freezer, thawed on the counter",
+    "1 tbsp butter, for the buns",
+    "1 tsp kosher salt and 1/2 tsp black pepper, for the patties",
+    "About 1/2 cup pickles, plus any lettuce or tomato still worth using",
+    "Primal Kitchen ketchup and mustard, about 2 tbsp each"
    ],
    "how": [
-    "Fries first, they take longest. Preheat to 425°F. Soak the cut fries in cold water 10 min to pull the surface starch, then dry them <b>completely</b> on a towel. Toss with 3 tbsp avocado oil and 1.5 tsp salt, spread on a sheet pan without crowding, 35–40 min, flipping once at 20.",
-    "Two shallow bowls: beaten eggs with 2 tbsp water in one; almond flour, parmesan, 2 tsp salt, garlic powder, paprika and pepper whisked together in the other.",
-    "Assembly line, and this is the kids' job: cube into egg, let it drip, then press firmly into the almond flour mix. Pressing rather than sprinkling is what makes the coating stay on. Onto a rack or a second sheet pan.",
-    "Cook a third of them tonight — air fryer at 400°F for 10–12 min, sprayed with avocado oil and flipped halfway, or on a sheet pan at 425°F for 15–18 min. Done at 165°F.",
-    "Whisk 2 tbsp honey with 2 tbsp dijon for the honey mustard. Ketchup out alongside.",
-    "THE OTHER TWO-THIRDS, raw and breaded: onto a parchment-lined sheet pan, not touching, into the freezer for 1 hour, then into a labelled bag. Loose-freeze first or they fuse into one brick. They cook from frozen at 400°F for 14–16 min."
+    "Buns out of the freezer onto the counter first thing — an hour is plenty.",
+    "Fries: preheat to 425°F, toss the cut fries with 3 tbsp avocado oil and 1.5 tsp salt, spread on a sheet pan without crowding. 35–40 min, flipping once at 20.",
+    "Cast-iron or heavy skillet on high for 3 full minutes. It has to be genuinely hot — that is the whole difference between a smash burger and a grey one.",
+    "One ball in the dry pan, smash it flat immediately with a stiff spatula and hold 10 seconds. Salt and pepper the top.",
+    "90 seconds until the edges are brown and lacy, then flip. Cheese on straight away, 60 more seconds. Out. Two at a time, and do not move them while they cook.",
+    "Butter the buns and toast them cut-side down in the same pan for 30 seconds while the burgers rest. Toppings out, everyone builds their own."
    ],
-   "why": "This batch has been waiting weeks for a free Friday and it finally has one. Tenderloins are the ideal cut for it — uniform, no trimming, no bone — and the timing is almost too neat: you spend the last of the freezer chicken tonight and Costco restocks it tomorrow. All three kids can run the breading line, and two-thirds of the batch goes straight back into the freezer as next month's 5pm answer."
+   "why": "Last night of a long fortnight and it should feel like one. Grass-fed beef, real cheese and actual potatoes, twenty minutes, no drive and no $60. Loose balls and a screaming-hot dry pan are the only two things that matter."
   }
  ],
  "committed": [
   {
-   "title": "Sports Tuesday, Wednesday and Thursday",
-   "body": "Three school nights with something on. Tuesday is ten minutes at 7am and nothing at six; Wednesday is one sheet pan and twenty minutes; Thursday is fifteen minutes in one pot off Tuesday's chili. None of them asks you to cook after a practice."
+   "title": "Saturday Nov 7 — no dinner planned",
+   "body": "The gap between the two blocks. Nothing on the menu, but two things happen that evening: the 2 lb of ground beef for Monday's ziti comes out of the freezer, and the 4 lb of tenderloins you pulled Friday finish thawing for Sunday. If Saturday ends up needing a dinner, the 5pm SOS tab has a dozen options off the shelf."
   },
   {
-   "title": "Costco — Saturday Oct 31, the meat run",
-   "body": "This is the one that has been sliding since Sep 26. It is the MEAT half: organic chicken thighs, ground beef, frozen wild salmon, breasts and more tenderloins, all portioned flat into freezer bags the same afternoon. Flat matters — a flat pack thaws in a cold-water bath in half an hour and a lump in a tub does not. Spend the freezer down freely this week; Saturday refills it."
+   "title": "Sports Tuesday, Wednesday and Thursday — both weeks",
+   "body": "Six practice nights out of ten dinners. Every one is a sheet pan, an oven that runs while you are out, a ten-minute skillet or a reheat. The only two nights asked to do real work are the two Fridays, and both of those are deliberately the fun ones."
+  },
+  {
+   "title": "You will need one small top-up run",
+   "body": "Milk and bread are the two things that cannot stretch eleven days for five people. Everything else on this list is sized to go the distance, but plan on a five-minute stop around Sunday the 8th for a gallon of milk and a loaf. That is the honest version — pretending one trip covers eleven days of breakfast would just leave you short on a Tuesday morning."
   }
  ],
  "prep": {
-  "title": "Tonight, after the store",
-  "when": "Monday Oct 26, when the bags are unpacked",
-  "mins": "20 min hands-on",
+  "title": "Two prep blocks — one today, one Sunday",
+  "when": "Today after the store, and Sunday Nov 8 while the chicken roasts",
+  "mins": "25 min today, 45 min Sunday",
   "tasks": [
    {
-    "t": "Ground beef out of the freezer",
-    "d": "2 lb into the fridge on a tray to catch drips, bottom shelf. Tomorrow morning's cooker. Do this first, before anything else gets put away — it is the one task that ruins Tuesday if it slips.",
-    "m": "1 min"
+    "t": "TODAY — ground beef out, and freeze what week two needs",
+    "d": "2 lb of beef into the fridge for tonight. Then, straight into the freezer before anything else: the burger buns for the 13th, the sandwich bread for the 12th, and the garlic bread if you bought it. Bread is the one thing that will be stale by week two and freezing it on day one costs ninety seconds.",
+    "m": "5 min"
    },
    {
-    "t": "Chop the chili veg",
-    "d": "2 yellow onions and 1 bell pepper diced to about 1/2 inch, plus 4 cloves garlic minced, all into one zip bag. Tuesday at 7am becomes a dump-and-go instead of a knife job before school.",
-    "m": "6 min"
+    "t": "TODAY — grate 16 oz of cheddar and 12 oz of mozzarella",
+    "d": "Into separate labelled containers. Cheddar covers Thursday's potatoes, Tuesday the 10th's quesadillas and Thursday the 12th's grilled cheese. Mozzarella covers Wednesday's chicken parm, Friday's pizza and Monday's ziti top. Grated cheese keeps about two weeks in a sealed container, which is exactly the window.",
+    "m": "10 min"
    },
    {
-    "t": "Grate 20 oz of cheese",
-    "d": "16 oz sharp cheddar and 4 oz mozzarella into one container. It covers Tuesday's chili, Wednesday's fajitas and Thursday's flatbreads. Pre-shredded is coated in potato starch and browns badly under a broiler. 10-year-old's job.",
-    "m": "7 min"
+    "t": "TODAY — carrot sticks, cucumber and fruit",
+    "d": "About 2 lb of carrots into sticks, 2 cucumbers sliced, apples washed. These are for week one. Leave the second bag of carrots whole in the drawer — whole carrots keep three weeks, cut ones go dry in about five days, and week two needs them for the soup.",
+    "m": "8 min"
    },
    {
-    "t": "Hard-boil 12 eggs",
-    "d": "Into already-boiling water, 11 min at a low boil, then straight into an ice bath for 5 min — that is what makes them peel cleanly. Fridge in the shell, good for a week. Lunchboxes and school mornings.",
-    "m": "5 min hands-on, 20 min total"
+    "t": "SUNDAY — assemble the baked ziti, do not bake it",
+    "d": "Boil 16 oz ziti 3 min UNDER the box time; it finishes in the oven Monday and fully-cooked pasta turns to mush. Brown the 2 lb of beef 7 min, add 2 jars of marinara and 1 tsp salt, simmer 10. Layer in a 9x13: sauce, pasta, 16 oz ricotta dotted over, half the mozzarella, repeat. Hold back 4 oz of mozzarella in a bag. Cover tight with foil, fridge. This is what makes Monday a three-minute night.",
+    "m": "25 min"
    },
    {
-    "t": "Carrot sticks, cucumber and fruit into containers",
-    "d": "About 2 lb of carrots into sticks, 2 cucumbers sliced, grapes off the stem and rinsed, apples washed. Eye level in the fridge. If it is not at eye level and already cut, it does not get eaten.",
-    "m": "7 min"
+    "t": "SUNDAY — split the leftover chicken two ways",
+    "d": "About 5 cups chopped. Two cups into a fridge container labelled TUESDAY. Three cups into a freezer bag pressed FLAT and labelled THURSDAY. Flat matters — a flat bag thaws overnight in the fridge and a lump does not. The fridge cannot carry chicken to the 12th, so this split is not optional.",
+    "m": "10 min"
+   },
+   {
+    "t": "SUNDAY — scrub 8 russets and hard-boil 12 eggs",
+    "d": "Potatoes washed, dried and pricked 4 or 5 times each with a fork so they do not burst; into a bag in the pantry. Eggs into already-boiling water, 11 min at a low boil, then an ice bath for 5 min so they peel cleanly.",
+    "m": "10 min"
    }
   ],
-  "why": "Twenty minutes tonight buys a ten-minute Tuesday morning and a fifteen-minute Thursday. The beef into the fridge and the chopped chili veg are the two that matter — if it gets late, do those and walk away."
+  "why": "Twenty-five minutes today and forty-five on Sunday. Today's three are small but two of them are load-bearing: the bread into the freezer, and the beef into the fridge. Sunday's ziti and the two-way chicken split are what make Monday, Tuesday and Thursday of week two work at all."
  },
  "shop": {
   "shopped": false,
   "store": "Publix — Winchester Plaza",
   "receiptTotal": null,
-  "tagline": "Today's trip, and a short one. No Meat section and no stock-up — the freezer carries every protein and Costco on Saturday is the stock-up.",
+  "tagline": "One trip for eleven days and ten dinners. Items marked WEEK 2 are the ones that have to survive to the 13th — nothing soft or leafy among them.",
   "sections": [
    {
     "name": "Produce",
     "stockup": false,
-    "note": "Peppers and onions are the biggest line and they are doing double duty across Tuesday's chili and Wednesday's fajitas.",
+    "note": "Split deliberately. Peppers, broccoli, cucumbers and lettuce all get used by Friday the 6th. Potatoes, onions, carrots, celery and apples are the week-two half — all of them keep two weeks or more in a cold drawer.",
     "items": [
      {
-      "n": "Bell peppers ×4",
-      "p": 5.96,
-      "t": "Chili Tuesday, fajitas Wednesday"
+      "n": "Russet potatoes, 10 lb",
+      "p": 8.99,
+      "t": "Fries Tuesday, baked Thursday, fries again the 13th"
      },
      {
-      "n": "Yellow onions, 3 lb",
-      "p": 3.49
+      "n": "Yellow potatoes, 3 lb",
+      "p": 3.99,
+      "t": "WEEK 2 — Sunday's sheet pan"
      },
      {
-      "n": "Russet potatoes, 5 lb",
-      "p": 5.49,
-      "t": "Friday's thick-cut fries"
+      "n": "Yellow onions, 5 lb",
+      "p": 4.99,
+      "t": "Both weeks — keeps for a month"
+     },
+     {
+      "n": "Carrots, 2 lb ×2",
+      "p": 4.98,
+      "t": "One bag cut now, one left WHOLE in the drawer for the soup on the 12th"
+     },
+     {
+      "n": "Celery, 1 bunch",
+      "p": 2.29,
+      "t": "WEEK 2 — the soup. Keeps three weeks wrapped in foil"
+     },
+     {
+      "n": "Bell peppers ×2",
+      "p": 2.98,
+      "t": "Week 1 only — taco soup and pizza"
+     },
+     {
+      "n": "Fresh broccoli, 1 lb",
+      "p": 3.49,
+      "t": "Week 1 only — Wednesday, roasted"
+     },
+     {
+      "n": "Cucumbers ×3",
+      "p": 2.97,
+      "t": "Week 1 mostly — the last one by the 10th at the outside"
      },
      {
       "n": "Garlic, 3-pack",
@@ -544,202 +872,272 @@ const PLAN = {
      {
       "n": "Limes ×4",
       "p": 1.0,
-      "t": "Wednesday, squeezed over the pan at the end"
+      "t": "Tuesday — squeezed over the bowls"
      },
      {
-      "n": "Avocados ×2",
-      "p": 1.98,
-      "t": "Clean Fifteen — conventional is fine"
+      "n": "Lemon ×1",
+      "p": 0.79
      },
      {
-      "n": "Carrots, 2 lb",
-      "p": 2.49
+      "n": "Apples, 5 lb bag",
+      "p": 6.99,
+      "t": "Both weeks — apples keep a month in the fridge"
      },
      {
-      "n": "Baby carrots, 2 lb",
-      "p": 2.99
-     },
-     {
-      "n": "Cucumbers ×2",
-      "p": 1.98
-     },
-     {
-      "n": "Organic grapes, 2 lb",
-      "p": 6.49,
-      "t": "Dirty Dozen — buy organic"
-     },
-     {
-      "n": "Apples, 3 lb bag",
-      "p": 4.99,
-      "t": "Dirty Dozen — organic if it is close on price"
-     },
-     {
-      "n": "Bananas",
-      "p": 1.59
+      "n": "Bananas ×2 bunches",
+      "p": 3.18,
+      "t": "Buy one green bunch for week two"
      }
     ]
    },
    {
     "name": "Dairy & Eggs",
     "stockup": false,
-    "note": "Cheese spans three of the four dinners. Grate all 20 oz tonight and no evening this week needs a box grater.",
+    "note": "Buy the cheese in blocks and grate it today — grated keeps two weeks sealed. Unopened ricotta is good for three weeks, so Sunday's ziti is safe.",
     "items": [
      {
-      "n": "Pasture-raised eggs, 2 dozen",
-      "p": 10.98,
-      "t": "Hard-boiled, and 3 go into Friday's breading"
+      "n": "Pasture-raised eggs, 3 dozen",
+      "p": 16.47,
+      "t": "Eleven days of breakfasts plus two recipes. Eggs keep five weeks"
      },
      {
       "n": "Whole milk, 1 gal",
       "p": 3.99,
-      "t": "Breakfasts and school mornings"
+      "t": "Week 1 — you will need a second gallon around the 8th"
      },
      {
-      "n": "Sharp cheddar block, 8 oz ×2",
-      "p": 8.98,
-      "t": "Chili, fajitas, flatbreads"
+      "n": "Sharp cheddar block, 8 oz ×3",
+      "p": 13.47,
+      "t": "Potatoes, quesadillas, grilled cheese, burgers"
      },
      {
-      "n": "Mozzarella block, 8 oz",
-      "p": 3.49,
-      "t": "Thursday's flatbreads"
+      "n": "Mozzarella block, 16 oz ×2",
+      "p": 10.98,
+      "t": "Chicken parm, pizza, ziti, and the Wednesday reheat"
      },
      {
       "n": "Grated parmesan, 8 oz",
       "p": 6.49,
-      "t": "Friday's nugget breading"
+      "t": "Wednesday's crust"
+     },
+     {
+      "n": "Whole-milk ricotta, 16 oz",
+      "p": 4.99,
+      "t": "WEEK 2 — the ziti. Leave it sealed until Sunday"
      },
      {
       "n": "Plain whole-milk Greek yogurt, 32 oz",
-      "p": 6.49,
-      "t": "Chili and fajita topping — stands in for sour cream"
+      "p": 6.49
      },
      {
-      "n": "Butter, 1 lb",
-      "p": 4.99
+      "n": "Butter, 1 lb ×2",
+      "p": 9.98,
+      "t": "Both weeks"
      }
     ]
    },
    {
-    "name": "Pantry — this week",
+    "name": "Pantry — both weeks",
     "stockup": false,
-    "note": "Skip anything you already have. Almond flour is the one real expense and it is the whole Friday batch.",
+    "note": "The pantry is what carries week two. None of this has a clock on it.",
     "items": [
      {
-      "n": "Almond flour, 3 lb",
-      "p": 12.99,
-      "t": "Friday's nuggets — covers the full triple batch"
+      "n": "Spaghetti or linguine, 16 oz",
+      "p": 3.49,
+      "t": "Wednesday the 4th"
      },
      {
-      "n": "Flatbreads or naan, 5-pack",
-      "p": 4.99,
-      "t": "Thursday — check for canola"
+      "n": "Ziti or penne, 16 oz",
+      "p": 3.49,
+      "t": "WEEK 2 — Monday"
      },
      {
-      "n": "Organic canned beans ×2",
-      "p": 3.98
+      "n": "Egg noodles, 12 oz",
+      "p": 3.29,
+      "t": "WEEK 2 — the soup"
+     },
+     {
+      "n": "Organic black or pinto beans, 15 oz ×2",
+      "p": 3.98,
+      "t": "Tuesday's taco soup"
+     },
+     {
+      "n": "Organic kidney beans, 15 oz",
+      "p": 1.99,
+      "t": "Tuesday's taco soup"
      },
      {
       "n": "Diced tomatoes, 28 oz",
-      "p": 1.99
+      "p": 2.49,
+      "t": "Tuesday's taco soup"
      },
      {
-      "n": "Chicken stock, 32 oz",
-      "p": 2.99
+      "n": "Organic corn, 15 oz can",
+      "p": 1.79,
+      "t": "Tuesday's taco soup"
+     },
+     {
+      "n": "Chili powder + cumin + smoked paprika",
+      "p": 8.97,
+      "t": "Skip any you already have"
+     },
+     {
+      "n": "Clean marinara ×4 jars",
+      "p": 17.96,
+      "t": "Chicken parm, ziti. Check for canola and added sugar"
+     },
+     {
+      "n": "Organic chicken stock, 32 oz ×4",
+      "p": 11.96,
+      "t": "2 cups for the taco soup, 2 qt for the soup on the 12th"
+     },
+     {
+      "n": "Almond flour, 2 lb",
+      "p": 9.99,
+      "t": "Wednesday's chicken parm crust"
+     },
+     {
+      "n": "Par-baked pizza crusts ×5",
+      "p": 7.99,
+      "t": "Friday the 6th — check for canola"
+     },
+     {
+      "n": "Pizza sauce",
+      "p": 3.49
+     },
+     {
+      "n": "Pepperoni, no nitrates",
+      "p": 5.49
+     },
+     {
+      "n": "Burger buns ×1 pack",
+      "p": 4.99,
+      "t": "FROZEN on arrival — Friday the 13th"
+     },
+     {
+      "n": "Sandwich bread ×2 loaves",
+      "p": 8.98,
+      "t": "One now, one FROZEN for the grilled cheese on the 12th"
      },
      {
       "n": "Tortillas, 8-inch, 30 ct",
-      "p": 7.98
+      "p": 7.98,
+      "t": "WEEK 2 — Tuesday the 10th"
      },
      {
-      "n": "Siete chips",
-      "p": 4.99,
-      "t": "Tuesday"
+      "n": "Salsa, 16 oz",
+      "p": 3.99
      },
      {
       "n": "Dijon mustard",
-      "p": 3.49,
-      "t": "Friday's honey mustard"
-     },
-     {
-      "n": "Avocado oil spray",
-      "p": 7.99,
-      "t": "The nugget batch runs on this"
-     }
-    ]
-   },
-   {
-    "name": "Lunchbox — packs all week",
-    "stockup": false,
-    "note": "Four days. Hard-boiled eggs, carrots, cucumber, grapes and apples are covered above and carry most of it.",
-    "items": [
-     {
-      "n": "Simple Mills almond-flour crackers",
-      "p": 5.29
-     },
-     {
-      "n": "String cheese, 12-pack",
-      "p": 5.99
-     },
-     {
-      "n": "Applesauce pouches, no added sugar",
-      "p": 4.99
-     },
-     {
-      "n": "No-nitrate deli turkey, 8 oz",
-      "p": 7.49,
-      "t": "Celery-based cure is fine"
-     }
-    ]
-   },
-   {
-    "name": "Breakfast — school mornings",
-    "stockup": false,
-    "note": "Oats, peanut butter and berries all came from Costco in September and should still be going. Grab these only if they are out.",
-    "items": [
-     {
-      "n": "Ezekiel or sourdough bread",
-      "p": 5.49
+      "p": 3.49
      },
      {
       "n": "Honey, 16 oz",
       "p": 6.49,
-      "t": "Skip if the last jar is still going"
+      "t": "Breakfasts and the oat bars"
+     },
+     {
+      "n": "Pickles",
+      "p": 3.99
+     }
+    ]
+   },
+   {
+    "name": "Lunchbox — ten school days",
+    "stockup": false,
+    "note": "Double quantities, because this has to cover two full weeks of lunchboxes rather than one.",
+    "items": [
+     {
+      "n": "Simple Mills almond-flour crackers ×2",
+      "p": 10.58
+     },
+     {
+      "n": "Siete or Boulder Canyon chips ×2",
+      "p": 9.98,
+      "t": "Also Tuesday's soup topping and Thursday's potatoes"
+     },
+     {
+      "n": "String cheese, 12-pack ×2",
+      "p": 11.98
+     },
+     {
+      "n": "Applesauce pouches, no added sugar ×2",
+      "p": 9.98
+     },
+     {
+      "n": "No-nitrate deli turkey, 8 oz",
+      "p": 7.49,
+      "t": "Week 1 only — deli meat does not make it to the 13th"
+     },
+     {
+      "n": "That's It bars, 5 ct",
+      "p": 6.49
+     }
+    ]
+   },
+   {
+    "name": "Breakfast — ten school mornings",
+    "stockup": false,
+    "note": "Oats and peanut butter are the backbone and both keep indefinitely. Frozen berries beat fresh by a mile over eleven days.",
+    "items": [
+     {
+      "n": "Rolled oats, 42 oz",
+      "p": 6.99
+     },
+     {
+      "n": "Natural peanut butter, 28 oz",
+      "p": 6.99,
+      "t": "Peanuts + salt only"
+     },
+     {
+      "n": "Frozen organic mixed berries, 3 lb ×2",
+      "p": 24.98,
+      "t": "Both weeks — frozen is the right call here"
      }
     ]
    },
    {
     "name": "Frozen",
     "stockup": false,
+    "note": "Frozen vegetables are what let week two skip fresh greens entirely.",
     "items": [
      {
-      "n": "Frozen organic corn",
-      "p": 2.79,
-      "t": "Thursday"
+      "n": "Frozen organic green beans ×2",
+      "p": 5.98
      },
      {
-      "n": "Frozen organic broccoli",
-      "p": 2.99
+      "n": "Frozen organic peas & carrots ×2",
+      "p": 5.58
+     },
+     {
+      "n": "Frozen organic broccoli ×2",
+      "p": 5.98
+     },
+     {
+      "n": "Garlic bread",
+      "p": 4.49,
+      "t": "WEEK 2 — Wednesday the 11th, optional"
      }
     ]
    }
   ],
   "notes": [
    {
-    "h": "Four dinners plus a batch night",
-    "b": "__WEEKLY__ against a $185 target. Your own data says a four-dinner week lands near $140, so judge it against that. The gap is almost exactly Friday's batch night: almond flour $12.99, parmesan $6.49 and the avocado oil spray $7.99 come to $27, and none of that is this week's food — it is the two-thirds of a nugget batch going into the freezer. Take the batch out and the four dinners land near $147. There is still no Meat section at all, which is roughly $50 the freezer is covering now that Wednesday cooks three pounds instead of two."
+    "h": "Two weeks in one cart",
+    "b": "__WEEKLY__ at the register, which is a big number to look at. Per dinner it is about $35, which is exactly your normal rate — a four-dinner week runs about $140 and a seven-dinner week about $230, both landing in the same place. Nothing here is more expensive than usual, there is just twice as much of it. Ten school days of lunchboxes and breakfasts is about $95 of it on its own, and the pantry is stocked to carry week two without a second trip. There is still no Meat section — 5.5 lb of ground beef and 6 lb of tenderloins come out of the freezer, roughly $90 that never hits this list."
    },
    {
-    "h": "Spend the freezer down on purpose this week",
-    "b": "Normally the advice is to protect what is in there. Not this week — Costco's meat run is Saturday the 31st, so anything you use between now and then gets replaced in five days. Wednesday cooks an extra pound of tenderloins so Thursday has real chicken, and Friday's batch spends the last three pounds the night before Costco restocks them. You end the week with the freezer refilled, two-thirds of a nugget batch in it, and a quart of chili frozen flat."
+    "h": "What has to go in the freezer the moment you get home",
+    "b": "Both packs of burger buns except the one for tonight, the second loaf of sandwich bread, and the garlic bread. Bread is the only thing on this list that genuinely cannot make it to the 13th, and freezing it on day one solves that completely. Take the buns out on the morning of the 13th and the bread the night before the 12th."
    },
    {
-    "h": "The almond flour is not a grocery, it is six dinners",
-    "b": "$12.99 is the biggest line on this list and it covers the entire triple nugget batch. Two-thirds of that batch goes into the freezer raw and breaded, which is roughly four future dinners plus the nights you would otherwise have ordered out. Measured per meal it is the cheapest thing in the cart."
+    "h": "The produce split is doing real work",
+    "b": "Peppers, fresh broccoli, cucumbers and the deli turkey are week one and they are meant to be gone by Friday the 6th. Potatoes, onions, whole carrots, celery and apples are week two. The one rule worth remembering: leave the SECOND bag of carrots whole. Cut carrots go dry in about five days, whole ones last three weeks, and the soup on the 12th needs them."
    },
    {
-    "h": "Still waiting on two things",
-    "b": "The Publix receipt totals still are not logged, so the running budget stops at Sep 26 and every target above is built on two real numbers and an average. The other is kid verdicts: which of the last fortnight's meals actually got eaten — the taco bar, the potato-cheddar soup, the quesadillas, the shrimp bowls, the spaghetti, the teriyaki bowls. Winners get repeated, rejects get benched a month. Right now the rotation runs on structure rather than on what they actually ate, and the second one works better."
+    "h": "One thing I still do not have",
+    "b": "No receipt total has been logged since August, so the running budget is two real numbers and a lot of estimating. Snap a photo of today's and I will finally be able to tell you what a fortnight actually costs instead of guessing. Same standing ask on kid verdicts — the chicken parm and the taco soup are the two most likely to land this week, and knowing which did is worth more than any rotation rule."
    }
   ]
  },
